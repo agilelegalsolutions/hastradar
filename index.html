@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hastradar Consultancy - Expert Legal Advisory & Intellectual Property Services</title>
+    <meta name="description" content="Leading consultancy firm specializing in arbitration, IPR, corporate law, cyber law, and legal process outsourcing. Expert legal advisory for corporates, startups, and law firms.">
+    <meta name="keywords" content="legal consultancy, arbitration, intellectual property, trademark, patent, copyright, corporate law, cyber law, legal outsourcing">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #1e40af 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-balance-scale text-blue-800 text-2xl mr-3"></i>
+                        <span class="font-bold text-xl text-gray-800">Hastradar Consultancy</span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-800 px-3 py-2 font-medium">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-800 px-3 py-2 font-medium">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-800 px-3 py-2 font-medium">Services</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-800 px-3 py-2 font-medium">Contact</a>
+                    <button class="bg-blue-800 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-900 transition-colors">
+                        Get Consultation
+                    </button>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-800 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-blue-800 font-medium">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-blue-800 font-medium">About</a>
+                <a href="#services" class="block px-3 py-2 text-gray-700 hover:text-blue-800 font-medium">Services</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-blue-800 font-medium">Contact</a>
+                <button class="w-full mt-2 bg-blue-800 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-900 transition-colors">
+                    Get Consultation
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-in">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Expert Legal Advisory for 
+                        <span class="text-yellow-400">Modern Businesses</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100 leading-relaxed">
+                        Professional consultancy and advisory services in IPR, Arbitration, Commercial & Corporate Laws with 
+                        cutting-edge IT and AI-enabled solutions. Serving Indian and international clients including corporates, 
+                        MSMEs, startups, institutions, and individuals.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-colors">
+                            Get Expert Legal Advisory
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-900 transition-colors">
+                            View Our Services
+                        </button>
+                    </div>
+                </div>
+                <div class="hidden lg:block">
+                    <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl">
+                        <div class="grid grid-cols-2 gap-6 text-center">
+                            <div>
+                                <div class="text-3xl font-bold text-yellow-400">500+</div>
+                                <div class="text-sm text-blue-100">Cases Handled</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-yellow-400">15+</div>
+                                <div class="text-sm text-blue-100">Years Experience</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-yellow-400">200+</div>
+                                <div class="text-sm text-blue-100">Satisfied Clients</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-yellow-400">24/7</div>
+                                <div class="text-sm text-blue-100">Support</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">About Hastradar Consultancy</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    A trusted partner in legal excellence, providing comprehensive advisory services 
+                    to navigate complex legal landscapes with confidence and expertise.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Our Mission</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        To provide professional consultancy and advisory services in IPR, Arbitration, Commercial and Corporate Laws 
+                        through innovative IT and AI-enabled solutions. We bridge traditional legal expertise with cutting-edge 
+                        technology to serve corporates, MSMEs, startups, institutions, and promote access to justice for all.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-800 text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Expert Team</h4>
+                                <p class="text-gray-600 text-sm">Seasoned legal professionals with diverse expertise</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-shield-alt text-blue-800 text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Trusted Service</h4>
+                                <p class="text-gray-600 text-sm">Confidential and reliable legal solutions</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-globe text-blue-800 text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Global Reach</h4>
+                                <p class="text-gray-600 text-sm">International legal expertise and compliance</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-blue-800 text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Timely Delivery</h4>
+                                <p class="text-gray-600 text-sm">Efficient and prompt service delivery</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Our Values</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-800 text-white rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Integrity</h4>
+                                <p class="text-gray-600 text-sm">Ethical practices in all our dealings</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-800 text-white rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Innovation</h4>
+                                <p class="text-gray-600 text-sm">Creative solutions for complex challenges</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-800 text-white rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Collaboration</h4>
+                                <p class="text-gray-600 text-sm">Partnership approach with clients</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Core Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive legal solutions tailored to meet the diverse needs of modern businesses and organizations.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Arbitration & IPR -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-800 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-copyright text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Arbitration & IPR</h3>
+                    <p class="text-gray-600 mb-6">
+                        Expert handling of arbitration cases and comprehensive intellectual property rights including 
+                        trademark, copyright, patent, design, and geographical indications.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-blue-800 mr-2"></i>Trademark Registration & Protection</li>
+                        <li><i class="fas fa-check text-blue-800 mr-2"></i>Patent Filing & Prosecution</li>
+                        <li><i class="fas fa-check text-blue-800 mr-2"></i>Copyright & Design Registration</li>
+                        <li><i class="fas fa-check text-blue-800 mr-2"></i>Arbitration Proceedings</li>
+                    </ul>
+                </div>
+
+                <!-- LPO/KPO Services -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-green-100 text-green-800 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-cogs text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Legal Process Outsourcing</h3>
+                    <p class="text-gray-600 mb-6">
+                        Specialized LPO and KPO services for corporates, startups, MSMEs, and law firms to 
+                        streamline operations and reduce costs.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-green-800 mr-2"></i>Document Review & Analysis</li>
+                        <li><i class="fas fa-check text-green-800 mr-2"></i>Legal Research & Writing</li>
+                        <li><i class="fas fa-check text-green-800 mr-2"></i>Contract Management</li>
+                        <li><i class="fas fa-check text-green-800 mr-2"></i>Compliance Monitoring</li>
+                    </ul>
+                </div>
+
+                <!-- Cyber & Corporate Law -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-red-100 text-red-800 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Cyber & Corporate Law</h3>
+                    <p class="text-gray-600 mb-6">
+                        Specialized consultancy in data protection, cyber laws, privacy, fintech regulations, 
+                        cybersecurity, e-governance, and comprehensive corporate law advisory.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-red-800 mr-2"></i>Data Protection & Privacy Laws</li>
+                        <li><i class="fas fa-check text-red-800 mr-2"></i>Fintech Regulations</li>
+                        <li><i class="fas fa-check text-red-800 mr-2"></i>Cybersecurity & E-Governance</li>
+                        <li><i class="fas fa-check text-red-800 mr-2"></i>Corporate Governance & Compliance</li>
+                    </ul>
+                </div>
+
+                <!-- Legal Education -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-purple-100 text-purple-800 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-graduation-cap text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Research, Training & Education</h3>
+                    <p class="text-gray-600 mb-6">
+                        Legal and business research, policy analysis, training programmes, seminars, workshops, 
+                        conferences on education and professional development in IPR, arbitration, and commercial laws.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-purple-800 mr-2"></i>Legal & Business Research</li>
+                        <li><i class="fas fa-check text-purple-800 mr-2"></i>Policy Analysis & Advisory</li>
+                        <li><i class="fas fa-check text-purple-800 mr-2"></i>Training Programs & Conferences</li>
+                        <li><i class="fas fa-check text-purple-800 mr-2"></i>IPR & Arbitration Workshops</li>
+                    </ul>
+                </div>
+
+                <!-- Brand Management -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 text-yellow-800 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-bullhorn text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Brand Management & Valuation</h3>
+                    <p class="text-gray-600 mb-6">
+                        Strategic corporate governance, brand management, and comprehensive 
+                        intangible asset valuation services.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-yellow-800 mr-2"></i>Brand Strategy & Protection</li>
+                        <li><i class="fas fa-check text-yellow-800 mr-2"></i>Asset Valuation Services</li>
+                        <li><i class="fas fa-check text-yellow-800 mr-2"></i>Corporate Governance Advisory</li>
+                        <li><i class="fas fa-check text-yellow-800 mr-2"></i>Risk Management</li>
+                    </ul>
+                </div>
+
+                <!-- Legal Technology & AI -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-teal-100 text-teal-800 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Legal Technology & AI Solutions</h3>
+                    <p class="text-gray-600 mb-6">
+                        Cutting-edge IT and AI-enabled solutions for legal, arbitration, and IPR consultancy 
+                        including software development, digital platforms, and compliance automation tools.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-teal-800 mr-2"></i>AI-Powered Legal Research</li>
+                        <li><i class="fas fa-check text-teal-800 mr-2"></i>Document Management Systems</li>
+                        <li><i class="fas fa-check text-teal-800 mr-2"></i>Compliance Automation Tools</li>
+                        <li><i class="fas fa-check text-teal-800 mr-2"></i>Digital Platform Development</li>
+                    </ul>
+                </div>
+
+                <!-- Social Welfare -->
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-indigo-100 text-indigo-800 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-hands-helping text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Social & Legal Welfare</h3>
+                    <p class="text-gray-600 mb-6">
+                        Legal awareness, public welfare initiatives, and access to justice programs for 
+                        general public, undertrial prisoners, and collaboration with government/NGOs.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-indigo-800 mr-2"></i>Access to Justice for Undertrials</li>
+                        <li><i class="fas fa-check text-indigo-800 mr-2"></i>Legal Awareness Programs</li>
+                        <li><i class="fas fa-check text-indigo-800 mr-2"></i>Public Welfare Initiatives</li>
+                        <li><i class="fas fa-check text-indigo-800 mr-2"></i>Government/NGO Collaboration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innovation & Technology Section -->
+    <section class="py-20 bg-blue-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Innovation & Digital Transformation</h2>
+                <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                    Pioneering the future of legal services through cutting-edge IT and AI-enabled solutions, 
+                    collaborating with technology partners for innovation in legal-tech and compliance-tech sectors.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-yellow-400 text-blue-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-brain text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">AI-Powered Solutions</h3>
+                    <p class="text-blue-100 leading-relaxed">
+                        Advanced artificial intelligence tools for legal research, document analysis, 
+                        compliance automation, and knowledge management systems.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-yellow-400 text-blue-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-code text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Digital Platforms</h3>
+                    <p class="text-blue-100 leading-relaxed">
+                        Custom software development, digital platforms, databases, and online knowledge 
+                        systems designed specifically for legal and business consultancy needs.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-yellow-400 text-blue-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-network-wired text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Strategic Partnerships</h3>
+                    <p class="text-blue-100 leading-relaxed">
+                        Collaboration with technology partners, developers, and institutions to drive 
+                        innovation and digital transformation in the legal industry.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Why Choose Hastradar Consultancy</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Discover what sets us apart in delivering exceptional legal advisory services.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 text-blue-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-award text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Comprehensive Expertise</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Specialized consultancy in IPR, Arbitration, Commercial & Corporate Laws combined with 
+                        cutting-edge IT and AI solutions for Indian and international clients.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-100 text-green-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Diverse Client Base</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Serving corporates, MSMEs, startups, institutions, and individuals with tailored 
+                        legal solutions and technology-enabled services across multiple sectors.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-purple-100 text-purple-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Social Impact</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Committed to access to justice initiatives, legal awareness programs, and 
+                        collaboration with government and non-government organizations for public welfare.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Statistics -->
+            <div class="mt-16 bg-gray-50 rounded-2xl p-8">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-bold text-blue-800 mb-2">500+</div>
+                        <div class="text-gray-600">Cases Successfully Handled</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-blue-800 mb-2">200+</div>
+                        <div class="text-gray-600">Satisfied Clients</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-blue-800 mb-2">15+</div>
+                        <div class="text-gray-600">Years of Experience</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-blue-800 mb-2">24/7</div>
+                        <div class="text-gray-600">Client Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Ready to discuss your legal requirements? Contact us for a consultation 
+                    and discover how we can help your business succeed.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Send us a Message</h3>
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name*</label>
+                                <input type="text" id="firstName" name="firstName" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name*</label>
+                                <input type="text" id="lastName" name="lastName" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address*</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="serviceInterest" class="block text-sm font-medium text-gray-700 mb-2">Service Interest*</label>
+                            <select id="serviceInterest" name="serviceInterest" required 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">Select a service...</option>
+                                <option value="arbitration-ipr">Arbitration & Intellectual Property Rights</option>
+                                <option value="lpo-kpo">Legal Process Outsourcing (LPO/KPO)</option>
+                                <option value="cyber-corporate">Cyber Law & Corporate Law</option>
+                                <option value="legal-tech-ai">Legal Technology & AI Solutions</option>
+                                <option value="research-training">Research, Training & Education</option>
+                                <option value="brand-management">Brand Management & Valuation</option>
+                                <option value="social-welfare">Social & Legal Welfare</option>
+                                <option value="general-consultation">General Consultation</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message*</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                      placeholder="Please describe your legal requirements or questions..."
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-900 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-blue-100 text-blue-800 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Office Address</h4>
+                                    <p class="text-gray-600">House No - 224, Second Floor, Block - A<br>Pocket - 7, Sector - 17, Rohini<br>New Delhi 110089</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-green-100 text-green-800 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Phone Numbers</h4>
+                                    <p class="text-gray-600">+91 11 2345 6789<br>+91 9811343159</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-purple-100 text-purple-800 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Email Addresses</h4>
+                                    <p class="text-gray-600">info@hastradar.com<br>legal@hastradar.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-yellow-100 text-yellow-800 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Business Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 2:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-800 text-white p-8 rounded-2xl">
+                        <h3 class="text-2xl font-semibold mb-4">Emergency Legal Support</h3>
+                        <p class="text-blue-100 mb-4">
+                            Need urgent legal assistance? Our emergency support team is available 24/7 
+                            for critical legal matters.
+                        </p>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt text-2xl mr-3"></i>
+                            <div>
+                                <div class="font-semibold">Emergency Hotline</div>
+                                <div class="text-blue-100">+91 99999 88888</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-balance-scale text-2xl mr-3"></i>
+                        <span class="font-bold text-xl">Hastradar Consultancy</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Leading the way in legal excellence with comprehensive advisory services 
+                        for modern businesses. Your trusted partner in navigating complex legal landscapes.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="team.html" class="text-gray-300 hover:text-white transition-colors">Our Team</a></li>
+                        <li><a href="events.html" class="text-gray-300 hover:text-white transition-colors">Events</a></li>
+                        <li><a href="resources.html" class="text-gray-300 hover:text-white transition-colors">Resources</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="privacy-policy.html" class="text-gray-300 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="text-gray-300 hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="cookie-policy.html" class="text-gray-300 hover:text-white transition-colors">Cookie Policy</a></li>
+                        <li><a href="disclaimer.html" class="text-gray-300 hover:text-white transition-colors">Disclaimer</a></li>
+                        <li><a href="accessibility.html" class="text-gray-300 hover:text-white transition-colors">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div class="flex flex-col sm:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 Hastradar Consultancy. All rights reserved.
+                    </p>
+                    <p class="text-gray-400 text-sm mt-2 sm:mt-0">
+                        Designed with excellence for legal professionals.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact Form Handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Simple form validation
+            if (!data.firstName || !data.lastName || !data.email || !data.serviceInterest || !data.message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Simulate form submission
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+            this.reset();
+        });
+
+        // Navbar Background on Scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
