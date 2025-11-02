@@ -1,0 +1,8 @@
+# robots.txt for Hastradar Consultancy
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.hastradar.com/sitemap.xml
