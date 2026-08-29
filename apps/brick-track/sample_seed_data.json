@@ -1,0 +1,49 @@
+{
+  "categories": [
+    { "id": 1, "name": "Plinth & Foundation", "parentId": null },
+    { "id": 2, "name": "Structure & Superstructure", "parentId": null },
+    { "id": 3, "name": "Plaster & Masonry", "parentId": null },
+    { "id": 4, "name": "Paint & Finishes", "parentId": null },
+    { "id": 5, "name": "Interior Fit-outs", "parentId": null },
+    { "id": 6, "name": "Furniture & Woodwork", "parentId": null },
+    { "id": 7, "name": "Electrical & Plumbing", "parentId": null },
+    { "id": 11, "name": "Excavation & Footing", "parentId": 1 },
+    { "id": 12, "name": "Slab & Beams", "parentId": 2 },
+    { "id": 31, "name": "Brickwork & Mortar", "parentId": 3 },
+    { "id": 61, "name": "Kitchen Cabinets", "parentId": 6 }
+  ],
+  "skus": [
+    {
+      "id": 1,
+      "name": "Cement (PPC/OPC)",
+      "defaultUnit": "bag",
+      "defaultUnitPrice": 400.0,
+      "suggestedMainCategories": [1, 2, 3],
+      "suggestedSubCategories": [11, 12, 31]
+    },
+    {
+      "id": 2,
+      "name": "River Sand / M-Sand",
+      "defaultUnit": "cu.ft",
+      "defaultUnitPrice": 65.0,
+      "suggestedMainCategories": [1, 2, 3],
+      "suggestedSubCategories": [11, 12, 31]
+    },
+    {
+      "id": 3,
+      "name": "Ply board (18mm Marine)",
+      "defaultUnit": "sheet",
+      "defaultUnitPrice": 1200.0,
+      "suggestedMainCategories": [6, 5],
+      "suggestedSubCategories": [61]
+    },
+    {
+      "id": 4,
+      "name": "Mason Labour",
+      "defaultUnit": "days",
+      "defaultUnitPrice": 900.0,
+      "suggestedMainCategories": [1, 2, 3, 5],
+      "suggestedSubCategories": [11, 12, 31]
+    }
+  ]
+}
