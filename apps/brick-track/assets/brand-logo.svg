@@ -1,0 +1,25 @@
+<svg width="250" height="50" viewBox="0 0 250 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Icon Container (46x46 Rounded Tile) -->
+    <rect x="2" y="2" width="46" height="46" rx="12" fill="#162032" stroke="#F97316" stroke-width="1.8"/>
+    
+    <!-- Brick Wall Graphic inside Icon Tile -->
+    <rect x="13.5" y="16" width="9.5" height="4.5" rx="1" fill="#FB923C"/>
+    <rect x="25" y="16" width="12" height="4.5" rx="1" fill="#EA580C"/>
+    <rect x="13.5" y="22" width="5" height="4.5" rx="1" fill="#F97316"/>
+    <rect x="20" y="22" width="9.5" height="4.5" rx="1" fill="#FB923C"/>
+    <rect x="31" y="22" width="5" height="4.5" rx="1" fill="#F97316"/>
+    <rect x="13.5" y="28" width="12" height="4.5" rx="1" fill="#EA580C"/>
+    <rect x="27" y="28" width="9.5" height="4.5" rx="1" fill="#FB923C"/>
+    
+    <!-- Emerald Growth Line -->
+    <path d="M 11,35 Q 25,41 39,34" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    
+    <!-- Gold Star Motif -->
+    <path d="M 38,7 Q 38,12 43,12 Q 38,12 38,17 Q 38,12 33,12 Q 38,12 38,7 Z" fill="#FBBF24"/>
+    
+    <!-- Text Block (BrickTrack) -->
+    <text x="60" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="22.5" fill="#FFFFFF" letter-spacing="-0.3">BrickTrack</text>
+    
+    <!-- Company Tag (BY HASTRADAR) -->
+    <text x="60" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="11" fill="#FFB703" letter-spacing="1.2">BY HASTRADAR</text>
+</svg>

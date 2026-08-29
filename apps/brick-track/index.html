@@ -15,29 +15,14 @@
     <!-- Header & Glass Navbar -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="logo-brand-wrap">
-                <!-- Exact App Icon SVG matching ic_launcher_foreground.xml -->
-                <svg class="app-logo-svg" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="54" cy="54" r="30" fill="#162032" stroke="#F97316" stroke-width="2.5"/>
-                    <rect x="38" y="40" width="13" height="7" rx="1" fill="#FB923C"/>
-                    <rect x="54" y="40" width="16" height="7" rx="1" fill="#EA580C"/>
-                    <rect x="38" y="49" width="7" height="7" rx="1" fill="#F97316"/>
-                    <rect x="48" y="49" width="13" height="7" rx="1" fill="#FB923C"/>
-                    <rect x="64" y="49" width="6" height="7" rx="1" fill="#F97316"/>
-                    <rect x="38" y="58" width="15" height="7" rx="1" fill="#EA580C"/>
-                    <rect x="56" y="58" width="14" height="7" rx="1" fill="#FB923C"/>
-                    <path d="M 36,68 Q 54,76 72,66" stroke="#10B981" stroke-width="3" stroke-linecap="round" fill="none"/>
-                    <path d="M 72,28 Q 72,34 78,34 Q 72,34 72,40 Q 72,34 66,34 Q 72,34 72,28 Z" fill="#FBBF24"/>
-                    <path d="M 36,32 Q 36,35 39,35 Q 36,35 36,38 Q 36,35 33,35 Q 36,35 36,32 Z" fill="#38BDF8"/>
-                </svg>
-                <div class="brand-text-block">
-                    <span class="brand-name">BrickTrack</span>
-                    <span class="brand-company">by <a href="https://hastradar.com" target="_blank" rel="noopener">HastRadar</a></span>
-                </div>
+            <a href="index.html" class="brand-logo-link">
+                <img src="assets/brand-logo.svg" alt="BrickTrack by HastRadar" class="brand-logo-img">
             </a>
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
-                <li><a href="#showcase">Interactive Demo</a></li>
+                <li><a href="#showcase">Live Showcase</a></li>
+                <li><a href="guide.html">User Guide</a></li>
+                <li><a href="#gallery">App Gallery</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="privacy-policy.html">Privacy</a></li>
@@ -63,7 +48,7 @@
                         <span>📱 Download on Google Play</span>
                     </button>
                     <a href="#showcase" class="btn btn-secondary">
-                        <span>▶ Explore Live Demo</span>
+                        <span>▶ Explore Live Showcase</span>
                     </a>
                 </div>
 
@@ -83,8 +68,15 @@
                 </div>
             </div>
 
-            <div class="hero-mockup-container">
-                <img src="assets/hero-mockup.jpg" alt="BrickTrack Android Dashboard App Mockup by HastRadar" class="hero-mockup-img">
+            <div class="hero-phone-composition">
+                <!-- Primary Front Phone Mockup -->
+                <div class="phone-mockup-frame hero-phone-primary">
+                    <img src="assets/Home.jpeg" alt="BrickTrack Home Dashboard Screen" class="phone-screen-img">
+                </div>
+                <!-- Secondary Angled Back Phone Mockup -->
+                <div class="phone-mockup-frame hero-phone-secondary">
+                    <img src="assets/Contractor Payment.jpeg" alt="BrickTrack Contractor Payments Screen" class="phone-screen-img">
+                </div>
             </div>
         </div>
     </header>
@@ -141,66 +133,201 @@
         <div class="container">
             <div class="section-tag">📱 App Experience</div>
             <h2 class="section-title">Explore BrickTrack <span class="gradient-text">In Action</span></h2>
-            <p class="section-desc">Click through the interactive tabs to preview key screens and features.</p>
+            <p class="section-desc">Click through the interactive tabs to preview real Android app screens and capabilities.</p>
 
             <div class="showcase-tabs">
                 <button class="tab-btn active" data-tab="dashboard">Dashboard Overview</button>
-                <button class="tab-btn" data-tab="ocr">AI OCR Scanner</button>
-                <button class="tab-btn" data-tab="contractors">Contractor Manager</button>
+                <button class="tab-btn" data-tab="expenses">Expenses &amp; SKUs</button>
+                <button class="tab-btn" data-tab="contractors">Contractor Payments</button>
                 <button class="tab-btn" data-tab="reports">PDF Reports</button>
+                <button class="tab-btn" data-tab="categories">Material Catalog</button>
+                <button class="tab-btn" data-tab="settings">Cloud &amp; Settings</button>
             </div>
 
             <div class="showcase-display">
                 <!-- Tab 1: Dashboard -->
                 <div class="tab-content active" id="tab-dashboard">
-                    <h3>📊 Real-Time Project Dashboard</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Aggregates material purchases and labour payments into one unified financial progress bar.</p>
-                    <div style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-weight: 700;">
-                            <span>Project Spent: ₹4,50,000</span>
-                            <span style="color: var(--primary-teal);">Total Estimate: ₹6,00,000</span>
+                    <div class="showcase-tab-grid">
+                        <div class="showcase-tab-info">
+                            <span class="pricing-badge" style="margin-bottom: 0.8rem;">REAL-TIME FINANCIAL RING</span>
+                            <h3>Project Budget Overview</h3>
+                            <p>Aggregates all material purchases and labour payouts into one clean circular financial progress bar. Know exactly how much budget remains before placing new orders.</p>
+                            <ul class="feature-bullets">
+                                <li>✓ Instant Spent vs Total Estimate Breakdown</li>
+                                <li>✓ Safe, Warning, and Over-Budget Color Indicators</li>
+                                <li>✓ Quick Add Expense &amp; Contractor Action Shortcuts</li>
+                            </ul>
                         </div>
-                        <div style="width: 100%; height: 12px; background: rgba(255,255,255,0.1); border-radius: 6px; overflow: hidden;">
-                            <div style="width: 75%; height: 100%; background: linear-gradient(90deg, var(--primary-teal), var(--secondary-emerald));"></div>
+                        <div class="showcase-tab-visual">
+                            <div class="phone-mockup-frame">
+                                <img src="assets/Home.jpeg" alt="BrickTrack Dashboard Screen" class="phone-screen-img">
+                            </div>
                         </div>
-                        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--accent-gold);">⭐ SAFE TIER: 75% of budget allocated. Remaining balance: ₹1,50,000.</p>
                     </div>
                 </div>
 
-                <!-- Tab 2: OCR -->
-                <div class="tab-content" id="tab-ocr">
-                    <h3>⚡ AI Receipt &amp; Site Note Scanner</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Uses Google Gemini AI to parse handwritten site notes and convert addition terms (e.g., `5000 + 3500`) into clean double totals.</p>
-                    <div style="background: rgba(0,168,150,0.08); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--primary-teal);">
-                        <p style="font-family: monospace; color: var(--secondary-emerald);">[OCR MATCH DETECTED]</p>
-                        <p style="font-weight: 600;">Scanned Text: "Chaukath - 30000 + Plumber 5000 5feb + 5000 13 feb"</p>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Auto-Evaluated Amount: ₹40,000.00 • Confidence Score: 96%</p>
+                <!-- Tab 2: Expenses -->
+                <div class="tab-content" id="tab-expenses">
+                    <div class="showcase-tab-grid">
+                        <div class="showcase-tab-info">
+                            <span class="pricing-badge" style="margin-bottom: 0.8rem; background: var(--secondary-emerald); color: #fff;">ITEMIZED EXPENSE LOGS</span>
+                            <h3>Material &amp; Site Expenditure Log</h3>
+                            <p>Log every bag of cement, truckload of sand, and bundle of steel rebar with precise timestamps, quantities, rates, and store vendor tags.</p>
+                            <ul class="feature-bullets">
+                                <li>✓ Itemized Material Category Tagging (Steel, Sand, Cement)</li>
+                                <li>✓ Instant Quantity x Rate Auto-Calculation</li>
+                                <li>✓ AI Receipt OCR Scan Integration</li>
+                            </ul>
+                        </div>
+                        <div class="showcase-tab-visual">
+                            <div class="phone-mockup-frame">
+                                <img src="assets/Expenses.jpeg" alt="BrickTrack Expenses Log Screen" class="phone-screen-img">
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Tab 3: Contractors -->
                 <div class="tab-content" id="tab-contractors">
-                    <h3>👷 Contractor Milestone Manager</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Log installment payments for Masons, Electricians, Plumbers, and Painters with digital vouchers.</p>
-                    <div style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <div>
-                                <h4 style="font-size: 1.1rem;">Rajesh Mistri (Masonry Trade)</h4>
-                                <p style="font-size: 0.85rem; color: var(--text-muted);">Agreed Contract: ₹1,20,000 • Paid: ₹80,000</p>
+                    <div class="showcase-tab-grid">
+                        <div class="showcase-tab-info">
+                            <span class="pricing-badge" style="margin-bottom: 0.8rem; background: var(--accent-gold); color: #000;">WORKER &amp; TRADE PAYMENTS</span>
+                            <h3>Contractor Milestone Manager</h3>
+                            <p>Manage trade contractors (Masons, Plumbers, Electricians, Painters). Track agreed contract rates against partial milestone advance payments.</p>
+                            <ul class="feature-bullets">
+                                <li>✓ Track Total Agreed Rate vs Paid Installments</li>
+                                <li>✓ Instant Remaining Balance Calculation</li>
+                                <li>✓ Digital Voucher Generation for Labor Logs</li>
+                            </ul>
+                        </div>
+                        <div class="showcase-tab-visual">
+                            <div class="phone-mockup-frame">
+                                <img src="assets/Contractor Payment.jpeg" alt="BrickTrack Contractor Payments Screen" class="phone-screen-img">
                             </div>
-                            <span style="background: var(--primary-teal); color: #fff; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; font-weight: 700;">Remaining: ₹40,000</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Tab 4: Reports -->
                 <div class="tab-content" id="tab-reports">
-                    <h3>📄 Executive A4 PDF Report Exporter</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Generates clean executive PDF reports with itemized tables and budget breakdowns ready to share via WhatsApp.</p>
-                    <div style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color); text-align: center;">
-                        <p style="font-weight: 700; color: var(--text-primary);">📁 Executive_Financial_Report_2026.pdf</p>
-                        <p style="font-size: 0.85rem; color: var(--text-muted);">Generated via Android Native PdfDocument Engine</p>
+                    <div class="showcase-tab-grid">
+                        <div class="showcase-tab-info">
+                            <span class="pricing-badge" style="margin-bottom: 0.8rem;">EXECUTIVE EXPORTS</span>
+                            <h3>A4 PDF Financial Reports</h3>
+                            <p>Export formatted, executive A4 PDF summaries of your house construction expenses. Share reports directly via WhatsApp, Telegram, or Email.</p>
+                            <ul class="feature-bullets">
+                                <li>✓ Professional Styled Executive A4 PDF Layout</li>
+                                <li>✓ Itemized Expenditure Tables &amp; Contractor Ledgers</li>
+                                <li>✓ One-Tap WhatsApp &amp; Email Exporting</li>
+                            </ul>
+                        </div>
+                        <div class="showcase-tab-visual">
+                            <div class="phone-mockup-frame">
+                                <img src="assets/Reports.jpeg" alt="BrickTrack PDF Reports Screen" class="phone-screen-img">
+                            </div>
+                        </div>
                     </div>
+                </div>
+
+                <!-- Tab 5: Categories -->
+                <div class="tab-content" id="tab-categories">
+                    <div class="showcase-tab-grid">
+                        <div class="showcase-tab-info">
+                            <span class="pricing-badge" style="margin-bottom: 0.8rem; background: var(--primary-teal); color: #fff;">MATERIAL SKU CATALOG</span>
+                            <h3>Custom Material &amp; Labor Categories</h3>
+                            <p>Organize construction site costs across custom building stages: Foundation, Structure, Masonry, Plumbing, Electrical, and Finishing.</p>
+                            <ul class="feature-bullets">
+                                <li>✓ Pre-Configured Construction Material Catalogs</li>
+                                <li>✓ Custom Category Creation &amp; Color Badges</li>
+                                <li>✓ Subtotal Spent per Material Category</li>
+                            </ul>
+                        </div>
+                        <div class="showcase-tab-visual">
+                            <div class="phone-mockup-frame">
+                                <img src="assets/Categories.jpeg" alt="BrickTrack Categories Screen" class="phone-screen-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 6: Settings -->
+                <div class="tab-content" id="tab-settings">
+                    <div class="showcase-tab-grid">
+                        <div class="showcase-tab-info">
+                            <span class="pricing-badge" style="margin-bottom: 0.8rem; background: #6366f1; color: #fff;">SECURITY &amp; CLOUD SYNC</span>
+                            <h3>Google Drive Cloud Backup &amp; Settings</h3>
+                            <p>100% offline-first security with optional personal Google Drive cloud backup. Seamlessly switch between English and Hindi languages.</p>
+                            <ul class="feature-bullets">
+                                <li>✓ Local Room SQLite Encrypted Storage</li>
+                                <li>✓ Google Drive Personal Cloud Auto-Sync</li>
+                                <li>✓ English &amp; हिंदी Bilingual Language Switcher</li>
+                            </ul>
+                        </div>
+                        <div class="showcase-tab-visual">
+                            <div class="phone-mockup-frame">
+                                <img src="assets/Settings.jpeg" alt="BrickTrack Settings Screen" class="phone-screen-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-tag">🖼️ Full Screen Gallery</div>
+            <h2 class="section-title">Designed for Exceptional <span class="gradient-text">Mobile UX</span></h2>
+            <p class="section-desc">Clean, dark-mode Material 3 interface crafted specifically for field usage under direct sunlight.</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <div class="phone-mockup-frame">
+                        <img src="assets/Home.jpeg" alt="BrickTrack Home Dashboard" class="phone-screen-img">
+                    </div>
+                    <h4>Project Dashboard</h4>
+                    <p>Real-Time Budget Ring &amp; Spend Variance</p>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="phone-mockup-frame">
+                        <img src="assets/Expenses.jpeg" alt="BrickTrack Expenses Log" class="phone-screen-img">
+                    </div>
+                    <h4>Site Expense Logs</h4>
+                    <p>Material SKUs, Quantities &amp; Store Tags</p>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="phone-mockup-frame">
+                        <img src="assets/Contractor Payment.jpeg" alt="BrickTrack Contractor Payments" class="phone-screen-img">
+                    </div>
+                    <h4>Contractor Payments</h4>
+                    <p>Trade Workers, Advances &amp; Balance Due</p>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="phone-mockup-frame">
+                        <img src="assets/Reports.jpeg" alt="BrickTrack PDF Reports" class="phone-screen-img">
+                    </div>
+                    <h4>PDF Report Generator</h4>
+                    <p>Executive A4 Statements for WhatsApp</p>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="phone-mockup-frame">
+                        <img src="assets/Categories.jpeg" alt="BrickTrack Categories" class="phone-screen-img">
+                    </div>
+                    <h4>Material Categories</h4>
+                    <p>Cement, Steel, Sand &amp; Labor Catalogs</p>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="phone-mockup-frame">
+                        <img src="assets/Settings.jpeg" alt="BrickTrack Settings" class="phone-screen-img">
+                    </div>
+                    <h4>Cloud Backup &amp; Settings</h4>
+                    <p>Google Drive Backup &amp; Hindi Localization</p>
                 </div>
             </div>
         </div>
@@ -374,24 +501,8 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-brand">
-                <a href="index.html" class="logo-brand-wrap">
-                    <svg class="app-logo-svg" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="54" cy="54" r="30" fill="#162032" stroke="#F97316" stroke-width="2.5"/>
-                        <rect x="38" y="40" width="13" height="7" rx="1" fill="#FB923C"/>
-                        <rect x="54" y="40" width="16" height="7" rx="1" fill="#EA580C"/>
-                        <rect x="38" y="49" width="7" height="7" rx="1" fill="#F97316"/>
-                        <rect x="48" y="49" width="13" height="7" rx="1" fill="#FB923C"/>
-                        <rect x="64" y="49" width="6" height="7" rx="1" fill="#F97316"/>
-                        <rect x="38" y="58" width="15" height="7" rx="1" fill="#EA580C"/>
-                        <rect x="56" y="58" width="14" height="7" rx="1" fill="#FB923C"/>
-                        <path d="M 36,68 Q 54,76 72,66" stroke="#10B981" stroke-width="3" stroke-linecap="round" fill="none"/>
-                        <path d="M 72,28 Q 72,34 78,34 Q 72,34 72,40 Q 72,34 66,34 Q 72,34 72,28 Z" fill="#FBBF24"/>
-                        <path d="M 36,32 Q 36,35 39,35 Q 36,35 36,38 Q 36,35 33,35 Q 36,35 36,32 Z" fill="#38BDF8"/>
-                    </svg>
-                    <div class="brand-text-block">
-                        <span class="brand-name">BrickTrack</span>
-                        <span class="brand-company">by <a href="https://hastradar.com" target="_blank" rel="noopener">HastRadar</a></span>
-                    </div>
+                <a href="index.html" class="brand-logo-link">
+                    <img src="assets/brand-logo.svg" alt="BrickTrack by HastRadar" class="brand-logo-img">
                 </a>
                 <p>Mobile-first Android application developed by <a href="https://hastradar.com" target="_blank" style="color: var(--primary-teal); font-weight: 600;">HastRadar</a> for homeowners, civil engineers, contractors, and site supervisors.</p>
             </div>
@@ -400,7 +511,8 @@
                 <h4>Navigation</h4>
                 <ul>
                     <li><a href="#features">Features</a></li>
-                    <li><a href="#showcase">Interactive Demo</a></li>
+                    <li><a href="#showcase">Live Showcase</a></li>
+                    <li><a href="#gallery">App Gallery</a></li>
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#faq">FAQ</a></li>
                 </ul>

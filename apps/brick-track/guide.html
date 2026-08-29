@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Guide & How-To Tutorial — BrickTrack by HastRadar</title>
+    <meta name="description" content="Step-by-step guide in English and Hindi on how to use BrickTrack Android app for house construction budget tracking, contractor payments, AI receipt OCR, and PDF exports.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans Devanagari', sans-serif; }
+        .guide-hero { padding: 7rem 0 3rem 0; text-align: center; background: var(--bg-surface); border-bottom: 1px solid var(--border-color); }
+        .lang-switch-wrapper { display: inline-flex; background: rgba(255,255,255,0.06); padding: 4px; border-radius: var(--radius-full); border: 1px solid var(--border-color); margin-top: 1.5rem; }
+        .lang-btn { padding: 0.5rem 1.4rem; border-radius: var(--radius-full); border: none; background: transparent; color: var(--text-secondary); font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: all var(--transition-fast); }
+        .lang-btn.active { background: var(--primary-teal); color: #ffffff; box-shadow: 0 4px 14px var(--primary-teal-glow); }
+        
+        .guide-section { padding: 4rem 0; border-bottom: 1px solid var(--border-color); }
+        .guide-step-card { display: grid; grid-template-columns: 1fr 340px; gap: 3.5rem; align-items: center; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 3rem; margin-bottom: 3rem; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        @media (max-width: 900px) { .guide-step-card { grid-template-columns: 1fr; } }
+        
+        .step-number-badge { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; background: rgba(0, 168, 150, 0.15); border: 1px solid var(--primary-teal); color: var(--primary-teal); font-weight: 800; font-size: 1.3rem; margin-bottom: 1.2rem; }
+        .guide-step-info h2 { font-size: 1.8rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem; }
+        .guide-step-info p { color: var(--text-secondary); font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.2rem; }
+        
+        .instruction-list { list-style: none; padding: 0; margin: 0 0 1.5rem 0; }
+        .instruction-list li { position: relative; padding-left: 2rem; margin-bottom: 0.8rem; color: var(--text-primary); font-size: 1rem; line-height: 1.5; }
+        .instruction-list li::before { content: "➔"; position: absolute; left: 0; color: var(--accent-gold); font-weight: 800; }
+        
+        .pro-tip-box { background: rgba(255, 183, 3, 0.08); border-left: 4px solid var(--accent-gold); padding: 1rem 1.2rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; font-size: 0.95rem; color: var(--accent-gold); }
+        
+        .lang-hi { display: none; }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Glass Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo-link">
+                <img src="assets/brand-logo.svg" alt="BrickTrack by HastRadar" class="brand-logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#showcase">Live Showcase</a></li>
+                <li><a href="guide.html" class="active">User Guide</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="contact.html">Support</a></li>
+            </ul>
+            <a href="index.html#download" class="btn btn-primary">
+                <span>⚡ Get App</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Guide Hero Header -->
+    <header class="guide-hero">
+        <div class="container">
+            <!-- English Title -->
+            <div class="lang-en">
+                <div class="section-tag">📖 Complete App Documentation</div>
+                <h1 style="font-size: 2.8rem; font-weight: 800; margin-bottom: 0.8rem;">How to Use <span class="gradient-text">BrickTrack App</span></h1>
+                <p style="color: var(--text-secondary); max-width: 680px; margin: 0 auto; font-size: 1.1rem;">A step-by-step beginner-to-pro guide to managing site budgets, material expenses, contractor payouts, and PDF reports.</p>
+            </div>
+
+            <!-- Hindi Title -->
+            <div class="lang-hi">
+                <div class="section-tag">📖 संपूर्ण ऐप मार्गदर्शिका</div>
+                <h1 style="font-size: 2.8rem; font-weight: 800; margin-bottom: 0.8rem;">ब्रिकट्रैक ऐप का <span class="gradient-text">उपयोग कैसे करें</span></h1>
+                <p style="color: var(--text-secondary); max-width: 680px; margin: 0 auto; font-size: 1.1rem;">मकान निर्माण बजट, सामग्री खर्च, ठेकेदार भुगतान और पीडीएफ रिपोर्ट आसानी से प्रबंधित करने की चरण-दर-चरण गाइड।</p>
+            </div>
+
+            <!-- Language Switcher Toggle Buttons -->
+            <div class="lang-switch-wrapper">
+                <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">🇬🇧 English</button>
+                <button class="lang-btn" id="btn-hi" onclick="setLanguage('hi')">🇮🇳 हिंदी</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Step 1: Budget Setup -->
+    <section class="guide-section">
+        <div class="container">
+            <div class="guide-step-card">
+                <div class="guide-step-info">
+                    <div class="step-number-badge">01</div>
+                    
+                    <!-- English -->
+                    <div class="lang-en">
+                        <h2>Step 1: Set Up Construction Budget</h2>
+                        <p>Before logging expenses, establish your total estimated construction budget to activate real-time overspend alerts.</p>
+                        <ul class="instruction-list">
+                            <li>Open the BrickTrack app and tap <strong>Set Project Budget</strong> on the Home Dashboard.</li>
+                            <li>Enter your estimated house building cost (e.g. ₹25,000,00 to ₹50,000,00).</li>
+                            <li>The circular progress ring automatically calculates your remaining balance and sets color status (<span style="color: var(--secondary-emerald); font-weight: 700;">GREEN</span> = Safe, <span style="color: var(--accent-gold); font-weight: 700;">YELLOW</span> = Warning 80%, <span style="color: #ef4444; font-weight: 700;">RED</span> = Exceeded).</li>
+                        </ul>
+                        <div class="pro-tip-box">
+                            💡 <strong>Pro Tip:</strong> You can update your estimated budget anytime as project phases expand (e.g. adding modular kitchen or exterior elevation).
+                        </div>
+                    </div>
+
+                    <!-- Hindi -->
+                    <div class="lang-hi">
+                        <h2>चरण 1: मकान निर्माण बजट सेट करें</h2>
+                        <p>खर्च दर्ज करने से पहले, ओवरस्पेंड अलर्ट सक्रिय करने के लिए अपना कुल अनुमानित निर्माण बजट सेट करें।</p>
+                        <ul class="instruction-list">
+                            <li>ब्रिकट्रैक ऐप खोलें और होम डैशबोर्ड पर <strong>Set Project Budget</strong> पर टैप करें।</li>
+                            <li>अपनी अनुमानित मकान निर्माण लागत दर्ज करें (जैसे ₹25,00,000)।</li>
+                            <li>सर्कुलर प्रोग्रेस रिंग स्वचालित रूप से बची हुई राशि की गणना करती है और रंग स्थिति सेट करती है (<span style="color: var(--secondary-emerald); font-weight: 700;">हरा</span> = सुरक्षित, <span style="color: var(--accent-gold); font-weight: 700;">पीला</span> = चेतावनी 80%, <span style="color: #ef4444; font-weight: 700;">लाल</span> = बजट पार)।</li>
+                        </ul>
+                        <div class="pro-tip-box">
+                            💡 <strong>सलाह:</strong> निर्माण के किसी भी चरण में आप अपना बजट कभी भी संशोधित कर सकते हैं।
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phone-mockup-frame">
+                    <img src="assets/Home.jpeg" alt="BrickTrack Dashboard Screen" class="phone-screen-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 2: Logging Expenses -->
+    <section class="guide-section" style="background: var(--bg-dark);">
+        <div class="container">
+            <div class="guide-step-card">
+                <div class="guide-step-info">
+                    <div class="step-number-badge">02</div>
+                    
+                    <!-- English -->
+                    <div class="lang-en">
+                        <h2>Step 2: Log Material Purchases &amp; SKUs</h2>
+                        <p>Keep a detailed record of every material delivery (Cement, Steel/Sariya, Sand/Morang, Aggregate/Gitti, Bricks).</p>
+                        <ul class="instruction-list">
+                            <li>Tap the green <strong>+ Add Expense</strong> button on the dashboard or Expenses tab.</li>
+                            <li>Select the Material Category (e.g. <strong>Cement &amp; Concrete</strong> or <strong>Steel / Sariya</strong>).</li>
+                            <li>Enter the Quantity (e.g., 100 Bags), Unit Rate (e.g., ₹380/bag), and Store / Supplier name.</li>
+                            <li>Tap <strong>Save Log</strong>. The app instantly updates your total spent and category breakdown.</li>
+                        </ul>
+                        <div class="pro-tip-box">
+                            💡 <strong>Pro Tip:</strong> Use vendor tags so you can filter expenses by specific hardware stores or cement dealers at the end of the month.
+                        </div>
+                    </div>
+
+                    <!-- Hindi -->
+                    <div class="lang-hi">
+                        <h2>चरण 2: सामग्री खरीद दर्ज करें (सीमेंट, सरिया, बालू)</h2>
+                        <p>साइट पर आने वाली हर सामग्री (सीमेंट, सरिया, मोरांग/बालू, गिट्टी, ईंट) का विस्तृत हिसाब रखें।</p>
+                        <ul class="instruction-list">
+                            <li>डैशबोर्ड पर <strong>+ Add Expense</strong> बटन पर टैप करें।</li>
+                            <li>सामग्री श्रेणी चुनें (जैसे <strong>सीमेंट</strong> या <strong>सरिया</strong>)।</li>
+                            <li>मात्रा (उदा. 100 बोरी), दर प्रति बोरी (उदा. ₹380) और दुकानदार का नाम दर्ज करें।</li>
+                            <li><strong>Save Log</strong> पर टैप करें। ऐप तुरंत कुल खर्च और श्रेणी विवरण अपडेट कर देता है।</li>
+                        </ul>
+                        <div class="pro-tip-box">
+                            💡 <strong>सलाह:</strong> दुकानदारों के नाम दर्ज करें ताकि महीने के अंत में किसी भी हार्डवेयर स्टोर का कुल बिल देखा जा सके।
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phone-mockup-frame">
+                    <img src="assets/Expenses.jpeg" alt="BrickTrack Expenses Log Screen" class="phone-screen-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 3: AI OCR Scanner -->
+    <section class="guide-section">
+        <div class="container">
+            <div class="guide-step-card">
+                <div class="guide-step-info">
+                    <div class="step-number-badge">03</div>
+                    
+                    <!-- English -->
+                    <div class="lang-en">
+                        <h2>Step 3: Scan Handwritten Bills with AI OCR</h2>
+                        <p>No need to manually type paper store bills or handwritten site notes. Let Gemini AI parse them automatically.</p>
+                        <ul class="instruction-list">
+                            <li>Tap <strong>⚡ AI Receipt Scan</strong> inside the Expenses tab.</li>
+                            <li>Snap a clear camera photo of your paper store receipt or site diary page.</li>
+                            <li>Gemini AI detects material names, amounts, and handwritten addition math (e.g., <code>30000 + 5000 + 5000</code>).</li>
+                            <li>Review the auto-filled amount and tap <strong>Confirm &amp; Log</strong>.</li>
+                        </ul>
+                        <div class="pro-tip-box">
+                            💡 <strong>Pro Tip:</strong> Works natively with Hindi/Hinglish terms like Sariya, Cement, Chaukath, Morang, Gitti, and Labour.
+                        </div>
+                    </div>
+
+                    <!-- Hindi -->
+                    <div class="lang-hi">
+                        <h2>चरण 3: AI स्कैन से हाथ से लिखे बिल स्कैन करें</h2>
+                        <p>कागज के स्टोर बिल या हाथ से लिखी साइट डायरी टाइप करने की आवश्यकता नहीं है। AI इन्हें तुरंत पढ़ लेता है।</p>
+                        <ul class="instruction-list">
+                            <li>खर्च टैब में <strong>⚡ AI Receipt Scan</strong> पर टैप करें।</li>
+                            <li>अपने बिल या पर्ची की फोटो खींचें।</li>
+                            <li>गूगल जेमिनी AI सामग्री का नाम, दर और जोड़ (जैसे <code>30000 + 5000</code>) स्वतः पहचान लेता है।</li>
+                            <li>राशि की समीक्षा करें और <strong>Confirm &amp; Log</strong> दबाएं।</li>
+                        </ul>
+                        <div class="pro-tip-box">
+                            💡 <strong>सलाह:</strong> यह हिंदी और हिंग्लिश शब्दों (सरिया, सीमेंट, चौखट, मोरांग, गिट्टी, लेबर) को आसानी से समझता है।
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phone-mockup-frame">
+                    <img src="assets/OCR.jpeg" alt="BrickTrack AI Receipt Scan Screen" class="phone-screen-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 4: Contractor Milestone Payouts -->
+    <section class="guide-section" style="background: var(--bg-dark);">
+        <div class="container">
+            <div class="guide-step-card">
+                <div class="guide-step-info">
+                    <div class="step-number-badge">04</div>
+                    
+                    <!-- English -->
+                    <div class="lang-en">
+                        <h2>Step 4: Track Contractor &amp; Worker Advances</h2>
+                        <p>Avoid payment disputes with trade contractors (Masons, Plumbers, Electricians, Painters).</p>
+                        <ul class="instruction-list">
+                            <li>Go to the <strong>Contractors</strong> tab and tap <strong>+ Add Contractor</strong>.</li>
+                            <li>Enter Trade Specialty (e.g. Masonry / Raj Mistri) and the Total Agreed Contract Rate (e.g. ₹1,50,000).</li>
+                            <li>Every time you issue a partial advance or weekly wage payment, tap <strong>Log Payment</strong>.</li>
+                            <li>BrickTrack automatically subtracts paid installments and shows the exact <strong>Remaining Due Balance</strong>.</li>
+                        </ul>
+                        <div class="pro-tip-box">
+                            💡 <strong>Pro Tip:</strong> Digital vouchers prevent double-payment confusion when multiple family members manage site cash payouts.
+                        </div>
+                    </div>
+
+                    <!-- Hindi -->
+                    <div class="lang-hi">
+                        <h2>चरण 4: ठेकेदार और राजमिस्त्री का हिसाब रखें</h2>
+                        <p>ठेकेदारों (राजमिस्त्री, प्लंबर, इलेक्ट्रिशियन, पेंटर) के साथ भुगतान विवाद से बचें।</p>
+                        <ul class="instruction-list">
+                            <li><strong>Contractors</strong> टैब पर जाएं और <strong>+ Add Contractor</strong> पर टैप करें।</li>
+                            <li>काम का प्रकार (जैसे राजमिस्त्री) और कुल तय ठेका राशि (उदा. ₹1,50,000) दर्ज करें।</li>
+                            <li>जब भी आप एडवांस या साप्ताहिक भुगतान दें, <strong>Log Payment</strong> पर टैप करें।</li>
+                            <li>ब्रिकट्रैक दिए गए एडवांस को घटाकर बची हुई <strong>शेष राशि (Remaining Due)</strong> तुरंत दिखाता है।</li>
+                        </ul>
+                        <div class="pro-tip-box">
+                            💡 <strong>सलाह:</strong> डिजिटल वाउचर से दोहरे भुगतान का भ्रम खत्म हो जाता है।
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phone-mockup-frame">
+                    <img src="assets/Contractor Payment.jpeg" alt="BrickTrack Contractor Payments Screen" class="phone-screen-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 5: PDF Reports -->
+    <section class="guide-section">
+        <div class="container">
+            <div class="guide-step-card">
+                <div class="guide-step-info">
+                    <div class="step-number-badge">05</div>
+                    
+                    <!-- English -->
+                    <div class="lang-en">
+                        <h2>Step 5: Export Executive A4 PDF Statements</h2>
+                        <p>Generate styled PDF reports ready to present to bank loan officers, architects, or family co-owners.</p>
+                        <ul class="instruction-list">
+                            <li>Navigate to the <strong>Reports</strong> tab.</li>
+                            <li>Select your desired Date Filter (Current Month, Full Construction Period, or Specific Material).</li>
+                            <li>Tap <strong>Export A4 PDF</strong>.</li>
+                            <li>Tap <strong>Share via WhatsApp</strong> to instantly send the formatted PDF report to any mobile contact.</li>
+                        </ul>
+                        <div class="pro-tip-box">
+                            💡 <strong>Pro Tip:</strong> PDF statements include full itemized tables, contractor ledgers, and budget variance summaries.
+                        </div>
+                    </div>
+
+                    <!-- Hindi -->
+                    <div class="lang-hi">
+                        <h2>चरण 5: A4 PDF रिपोर्ट बनाएं और व्हाट्सएप पर शेयर करें</h2>
+                        <p>बैंक होम लोन, आर्किटेक्ट या परिवार के सदस्यों के लिए पेशेवर पीडीएफ रिपोर्ट तैयार करें।</p>
+                        <ul class="instruction-list">
+                            <li><strong>Reports</strong> टैब पर जाएं।</li>
+                            <li>समय अवधि या सामग्री फ़िल्टर चुनें।</li>
+                            <li><strong>Export A4 PDF</strong> पर टैप करें।</li>
+                            <li>रिपोर्ट को व्हाट्सएप, ईमेल या टेलीग्राम पर तुरंत भेजने के लिए <strong>Share via WhatsApp</strong> दबाएं।</li>
+                        </ul>
+                        <div class="pro-tip-box">
+                            💡 <strong>सलाह:</strong> पीडीएफ रिपोर्ट में सामग्री वार खर्च और ठेकेदारों का पूरा लेजर शामिल होता है।
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phone-mockup-frame">
+                    <img src="assets/PDF.jpeg" alt="BrickTrack A4 PDF Document Screen" class="phone-screen-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 6: Cloud Sync & Preferences -->
+    <section class="guide-section" style="background: var(--bg-dark);">
+        <div class="container">
+            <div class="guide-step-card">
+                <div class="guide-step-info">
+                    <div class="step-number-badge">06</div>
+                    
+                    <!-- English -->
+                    <div class="lang-en">
+                        <h2>Step 6: App Preferences, Cloud Sync &amp; Language</h2>
+                        <p>Protect your construction financial database across device upgrades and switch languages effortlessly.</p>
+                        <ul class="instruction-list">
+                            <li>Go to <strong>Settings / Preferences</strong> inside the app.</li>
+                            <li>Sign in with your personal Google account to enable auto-sync to your Google Drive.</li>
+                            <li>To switch app language, tap <strong>Language Selection → English / हिंदी</strong> for instant localized app UI.</li>
+                        </ul>
+                        <div class="pro-tip-box">
+                            💡 <strong>Pro Tip:</strong> Backups are saved to your personal Google Drive account only — BrickTrack servers never store your financial data.
+                        </div>
+                    </div>
+
+                    <!-- Hindi -->
+                    <div class="lang-hi">
+                        <h2>चरण 6: ऐप प्राथमिकताएं, क्लाउड बैकअप और भाषा</h2>
+                        <p>नया फोन बदलने पर भी अपना डेटा सुरक्षित रखें और अपनी सुविधानुसार भाषा बदलें।</p>
+                        <ul class="instruction-list">
+                            <li>ऐप के अंदर <strong>Settings / Preferences</strong> पर जाएं।</li>
+                            <li>अपने गूगल खाते से साइन इन करें ताकि बैकअप सीधे आपके गूगल ड्राइव में सुरक्षित रहे।</li>
+                            <li>भाषा बदलने के लिए <strong>Language Selection → English / हिंदी</strong> चुनें।</li>
+                        </ul>
+                        <div class="pro-tip-box">
+                            💡 <strong>सलाह:</strong> बैकअप केवल आपके निजी गूगल ड्राइव में सहेजा जाता है, हम आपका डेटा किसी सर्वर पर नहीं रखते।
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phone-mockup-frame">
+                    <img src="assets/Preferences.jpeg" alt="BrickTrack Preferences Screen" class="phone-screen-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 <a href="https://hastradar.com" target="_blank" style="color: var(--text-muted); font-weight: 600;">HastRadar</a>. BrickTrack is a registered product of HastRadar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Dual Language Toggle Script -->
+    <script>
+        function setLanguage(lang) {
+            const enBlocks = document.querySelectorAll('.lang-en');
+            const hiBlocks = document.querySelectorAll('.lang-hi');
+            const btnEn = document.getElementById('btn-en');
+            const btnHi = document.getElementById('btn-hi');
+
+            if (lang === 'hi') {
+                enBlocks.forEach(el => el.style.display = 'none');
+                hiBlocks.forEach(el => el.style.display = 'block');
+                btnEn.classList.remove('active');
+                btnHi.classList.add('active');
+                localStorage.setItem('bricktrack_guide_lang', 'hi');
+            } else {
+                hiBlocks.forEach(el => el.style.display = 'none');
+                enBlocks.forEach(el => el.style.display = 'block');
+                btnHi.classList.remove('active');
+                btnEn.classList.add('active');
+                localStorage.setItem('bricktrack_guide_lang', 'en');
+            }
+        }
+
+        // Restore user language preference on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('bricktrack_guide_lang') || 'en';
+            setLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>

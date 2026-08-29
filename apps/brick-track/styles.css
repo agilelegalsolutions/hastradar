@@ -132,59 +132,22 @@ a:hover {
     justify-content: space-between;
 }
 
-.logo-brand-wrap {
-    display: flex;
+.brand-logo-link {
+    display: inline-flex;
     align-items: center;
-    gap: 0.75rem;
     text-decoration: none;
-}
-
-.app-logo-svg {
-    width: 44px;
-    height: 44px;
-    flex-shrink: 0;
-    filter: drop-shadow(0 4px 12px rgba(249, 115, 22, 0.35));
     transition: transform var(--transition-fast);
 }
 
-.logo-brand-wrap:hover .app-logo-svg {
-    transform: scale(1.06);
-}
-
-.brand-text-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 1.15;
-}
-
-.brand-name {
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: #ffffff;
-    letter-spacing: -0.3px;
+.brand-logo-img {
+    height: 48px;
+    width: auto;
     display: block;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
 }
 
-.brand-company {
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: var(--accent-gold);
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    display: block;
-    margin-top: 2px;
-    opacity: 0.95;
-}
-
-.brand-company a {
-    color: var(--accent-gold);
-    text-decoration: none;
-}
-
-.brand-company a:hover {
-    color: var(--primary-teal);
-    text-decoration: underline;
+.brand-logo-link:hover {
+    transform: scale(1.03);
 }
 
 .nav-links {
@@ -423,14 +386,14 @@ a:hover {
 }
 
 .showcase-display {
-    max-width: 900px;
+    max-width: 1050px;
     margin: 0 auto;
     background: var(--bg-dark);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
-    padding: 2.5rem;
+    padding: 3rem;
     text-align: left;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
 }
 
 .tab-content {
@@ -440,6 +403,155 @@ a:hover {
 
 .tab-content.active {
     display: block;
+}
+
+.showcase-tab-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (max-width: 850px) {
+    .showcase-tab-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.showcase-tab-info h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.showcase-tab-info p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.feature-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.feature-bullets li {
+    padding: 0.6rem 0;
+    color: var(--text-primary);
+    font-size: 0.98rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.feature-bullets li:last-child {
+    border-bottom: none;
+}
+
+/* Phone Mockup Frame */
+.phone-mockup-frame {
+    position: relative;
+    width: 100%;
+    max-width: 290px;
+    margin: 0 auto;
+    border-radius: 34px;
+    padding: 9px;
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75), 0 0 30px rgba(0, 168, 150, 0.25);
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.phone-mockup-frame:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.85), 0 0 35px rgba(249, 115, 22, 0.35);
+}
+
+.phone-screen-img {
+    width: 100%;
+    height: auto;
+    border-radius: 26px;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Hero Phone Composition */
+.hero-phone-composition {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 480px;
+}
+
+.hero-phone-primary {
+    position: relative;
+    z-index: 2;
+    width: 270px;
+}
+
+.hero-phone-secondary {
+    position: absolute;
+    right: 15px;
+    top: 30px;
+    z-index: 1;
+    width: 240px;
+    opacity: 0.85;
+    transform: rotate(6deg) scale(0.92);
+    filter: blur(0.5px);
+    transition: all var(--transition-medium);
+}
+
+.hero-phone-composition:hover .hero-phone-secondary {
+    transform: rotate(8deg) translateX(15px) scale(0.95);
+    opacity: 0.95;
+}
+
+/* App Gallery Grid Section */
+.gallery-section {
+    padding: 6rem 0;
+    background: var(--bg-dark);
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.gallery-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    text-align: center;
+    transition: all var(--transition-medium);
+}
+
+.gallery-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-teal);
+    box-shadow: 0 20px 40px rgba(0, 168, 150, 0.2);
+}
+
+.gallery-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 1.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.gallery-card p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
 }
 
 /* Pricing Section */
