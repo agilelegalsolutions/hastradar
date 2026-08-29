@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrickTrack — House Construction & Expense Manager by HastRadar</title>
+    <meta name="description" content="Production-ready Android app by HastRadar to track house building budgets, material purchases, contractor payments, AI receipt OCR, and export A4 PDF reports.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header & Glass Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-brand-wrap">
+                <!-- Exact App Icon SVG matching ic_launcher_foreground.xml -->
+                <svg class="app-logo-svg" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="54" cy="54" r="30" fill="#162032" stroke="#F97316" stroke-width="2.5"/>
+                    <rect x="38" y="40" width="13" height="7" rx="1" fill="#FB923C"/>
+                    <rect x="54" y="40" width="16" height="7" rx="1" fill="#EA580C"/>
+                    <rect x="38" y="49" width="7" height="7" rx="1" fill="#F97316"/>
+                    <rect x="48" y="49" width="13" height="7" rx="1" fill="#FB923C"/>
+                    <rect x="64" y="49" width="6" height="7" rx="1" fill="#F97316"/>
+                    <rect x="38" y="58" width="15" height="7" rx="1" fill="#EA580C"/>
+                    <rect x="56" y="58" width="14" height="7" rx="1" fill="#FB923C"/>
+                    <path d="M 36,68 Q 54,76 72,66" stroke="#10B981" stroke-width="3" stroke-linecap="round" fill="none"/>
+                    <path d="M 72,28 Q 72,34 78,34 Q 72,34 72,40 Q 72,34 66,34 Q 72,34 72,28 Z" fill="#FBBF24"/>
+                    <path d="M 36,32 Q 36,35 39,35 Q 36,35 36,38 Q 36,35 33,35 Q 36,35 36,32 Z" fill="#38BDF8"/>
+                </svg>
+                <div class="brand-text-block">
+                    <span class="brand-name">BrickTrack</span>
+                    <span class="brand-company">by <a href="https://hastradar.com" target="_blank" rel="noopener">HastRadar</a></span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#showcase">Interactive Demo</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="privacy-policy.html">Privacy</a></li>
+            </ul>
+            <button class="btn btn-primary trigger-download-modal">
+                <span>⚡ Get App</span>
+            </button>
+            <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="section-tag">⚡ AI Construction Financials by <a href="https://hastradar.com" target="_blank" style="color: var(--primary-teal); font-weight: 700; text-decoration: underline; margin-left: 4px;">HastRadar</a></div>
+                <h1>Master Your House Building Costs <span class="gradient-text">&amp; Contractor Payouts</span></h1>
+                <p>Track site materials (Steel, Cement, Sand), manage contractor milestone payments, scan handwritten bills with AI OCR, and generate executive A4 PDF reports effortlessly.</p>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary trigger-download-modal">
+                        <span>📱 Download on Google Play</span>
+                    </button>
+                    <a href="#showcase" class="btn btn-secondary">
+                        <span>▶ Explore Live Demo</span>
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h4>100%</h4>
+                        <p>Privacy First (Local DB)</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>10x</h4>
+                        <p>Faster AI Bill OCR</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>₹0</h4>
+                        <p>Hidden Commissions</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-mockup-container">
+                <img src="assets/hero-mockup.jpg" alt="BrickTrack Android Dashboard App Mockup by HastRadar" class="hero-mockup-img">
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-tag">🌟 Core Capabilities</div>
+            <h2 class="section-title">Built for Homeowners, Engineers <span class="gradient-text">&amp; Site Supervisors</span></h2>
+            <p class="section-desc">Developed by HastRadar to empower site owners and contractors with complete financial transparency.</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Real-Time Budget Ring</h3>
+                    <p>Visual progress ring tracking total spent against estimated budget. Instant status alerts (`SAFE`, `WARNING`, `EXCEEDED`).</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>AI Receipt &amp; Ledger OCR</h3>
+                    <p>Scans paper store bills, site diaries, and handwritten notes in English, Hindi, and Hinglish terminology (Sariya, Cement, Morang, Gitti, Labour).</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👷</div>
+                    <h3>Contractor Milestone Tracker</h3>
+                    <p>Manage trade contractors (Masonry, Electrical, Plumbing, Painting) and track agreed project rates vs paid installments.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h3>Executive A4 PDF Reports</h3>
+                    <p>Generate styled PDF expense summaries and share them instantly via WhatsApp, Telegram, or Email with workers and architects.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3>Google Drive Cloud Backup</h3>
+                    <p>Sign in with your personal Google account to backup local Room SQLite database files securely across devices.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Native Bilingual Support</h3>
+                    <p>Switch seamlessly between English and हिंदी (मकान निर्माण का खर्चा हिसाब-किताब) with dynamic runtime localization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Showcase Section -->
+    <section class="showcase-section" id="showcase">
+        <div class="container">
+            <div class="section-tag">📱 App Experience</div>
+            <h2 class="section-title">Explore BrickTrack <span class="gradient-text">In Action</span></h2>
+            <p class="section-desc">Click through the interactive tabs to preview key screens and features.</p>
+
+            <div class="showcase-tabs">
+                <button class="tab-btn active" data-tab="dashboard">Dashboard Overview</button>
+                <button class="tab-btn" data-tab="ocr">AI OCR Scanner</button>
+                <button class="tab-btn" data-tab="contractors">Contractor Manager</button>
+                <button class="tab-btn" data-tab="reports">PDF Reports</button>
+            </div>
+
+            <div class="showcase-display">
+                <!-- Tab 1: Dashboard -->
+                <div class="tab-content active" id="tab-dashboard">
+                    <h3>📊 Real-Time Project Dashboard</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Aggregates material purchases and labour payments into one unified financial progress bar.</p>
+                    <div style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-weight: 700;">
+                            <span>Project Spent: ₹4,50,000</span>
+                            <span style="color: var(--primary-teal);">Total Estimate: ₹6,00,000</span>
+                        </div>
+                        <div style="width: 100%; height: 12px; background: rgba(255,255,255,0.1); border-radius: 6px; overflow: hidden;">
+                            <div style="width: 75%; height: 100%; background: linear-gradient(90deg, var(--primary-teal), var(--secondary-emerald));"></div>
+                        </div>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--accent-gold);">⭐ SAFE TIER: 75% of budget allocated. Remaining balance: ₹1,50,000.</p>
+                    </div>
+                </div>
+
+                <!-- Tab 2: OCR -->
+                <div class="tab-content" id="tab-ocr">
+                    <h3>⚡ AI Receipt &amp; Site Note Scanner</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Uses Google Gemini AI to parse handwritten site notes and convert addition terms (e.g., `5000 + 3500`) into clean double totals.</p>
+                    <div style="background: rgba(0,168,150,0.08); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--primary-teal);">
+                        <p style="font-family: monospace; color: var(--secondary-emerald);">[OCR MATCH DETECTED]</p>
+                        <p style="font-weight: 600;">Scanned Text: "Chaukath - 30000 + Plumber 5000 5feb + 5000 13 feb"</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Auto-Evaluated Amount: ₹40,000.00 • Confidence Score: 96%</p>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Contractors -->
+                <div class="tab-content" id="tab-contractors">
+                    <h3>👷 Contractor Milestone Manager</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Log installment payments for Masons, Electricians, Plumbers, and Painters with digital vouchers.</p>
+                    <div style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <h4 style="font-size: 1.1rem;">Rajesh Mistri (Masonry Trade)</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">Agreed Contract: ₹1,20,000 • Paid: ₹80,000</p>
+                            </div>
+                            <span style="background: var(--primary-teal); color: #fff; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; font-weight: 700;">Remaining: ₹40,000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Reports -->
+                <div class="tab-content" id="tab-reports">
+                    <h3>📄 Executive A4 PDF Report Exporter</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Generates clean executive PDF reports with itemized tables and budget breakdowns ready to share via WhatsApp.</p>
+                    <div style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color); text-align: center;">
+                        <p style="font-weight: 700; color: var(--text-primary);">📁 Executive_Financial_Report_2026.pdf</p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Generated via Android Native PdfDocument Engine</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-tag">💳 Pro Subscriptions</div>
+            <h2 class="section-title">Transparent &amp; Flexible <span class="gradient-text">Pricing Plans</span></h2>
+            <p class="section-desc">Processed securely via Google Play Billing API with instant purchase restoration.</p>
+
+            <div class="pricing-toggle">
+                <div class="toggle-option active" data-plan="annual">Annual Plan (Save 58%)</div>
+                <div class="toggle-option" data-plan="monthly">Monthly Plan</div>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Free Starter -->
+                <div class="pricing-card">
+                    <div>
+                        <h3 class="price-title">Free Starter</h3>
+                        <div class="price-amount">₹0 <span style="font-size: 1rem; color: var(--text-muted);">/ forever</span></div>
+                        <ul class="price-features">
+                            <li>✓ Up to 20 Expense Logs</li>
+                            <li>✓ Real-Time Budget Dashboard</li>
+                            <li>✓ Material SKU Catalog</li>
+                            <li>✓ Contractor Payment Tracking</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-secondary trigger-download-modal">Get Started Free</button>
+                </div>
+
+                <!-- Annual Pro (Featured) -->
+                <div class="pricing-card featured">
+                    <div>
+                        <div class="pricing-badge">BEST VALUE — SAVE 58%</div>
+                        <h3 class="price-title">Annual Pro Plan</h3>
+                        <div class="price-amount">
+                            <span class="price-annual">₹999 <span style="font-size: 1rem; color: var(--text-muted);">/ year (~₹83/mo)</span></span>
+                            <span class="price-monthly" style="display: none;">₹199 <span style="font-size: 1rem; color: var(--text-muted);">/ month</span></span>
+                        </div>
+                        <ul class="price-features">
+                            <li>✓ ⚡ Unlimited Construction Expense Logs</li>
+                            <li>✓ 👷 Unlimited Contractor Roster &amp; Trades</li>
+                            <li>✓ 📄 Executive PDF Financial Report Exports</li>
+                            <li>✓ ☁️ Google Drive Personal Cloud Auto-Backup</li>
+                            <li>✓ 🔒 Google Play Billing Purchase Security</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary trigger-download-modal">Upgrade via Google Play</button>
+                </div>
+
+                <!-- Lifetime Pass -->
+                <div class="pricing-card">
+                    <div>
+                        <div class="pricing-badge" style="background: var(--primary-teal); color: #fff;">ONE-TIME</div>
+                        <h3 class="price-title">Single Project Lifetime</h3>
+                        <div class="price-amount">₹1,499 <span style="font-size: 1rem; color: var(--text-muted);">one-time</span></div>
+                        <ul class="price-features">
+                            <li>✓ Unlimited Access for 1 Building Project</li>
+                            <li>✓ Lifetime AI Receipt OCR Parsing</li>
+                            <li>✓ PDF Exporting &amp; Cloud Sync</li>
+                            <li>✓ Zero Recurring Subscription Fees</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-secondary trigger-download-modal">Buy Lifetime Pass</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container faq-container">
+            <div class="section-tag" style="display: block; text-align: center;">❓ Help &amp; Answers</div>
+            <h2 class="section-title" style="text-align: center;">Frequently Asked <span class="gradient-text">Questions</span></h2>
+            <p class="section-desc" style="text-align: center;">Everything you need to know about BrickTrack by HastRadar.</p>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is my financial data kept private?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! BrickTrack stores all your budget records, expenses, and contractor payments locally in your device's private SQLite database. If you enable Cloud Sync, backups go directly to your personal Google Drive account.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How does the AI Receipt OCR work?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Snap a photo of your paper store bill or handwritten site diary note. BrickTrack sends the image over an encrypted HTTPS connection to Google Gemini AI to extract material names, quantities, and prices automatically.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How are purchases processed?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    All Pro subscriptions and lifetime passes are handled securely by official Google Play Billing API. You can restore your purchases at any time on new Android devices logged into your Google Play account.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download QR Code Modal -->
+    <div class="modal-overlay" id="downloadModal">
+        <div class="download-modal-card">
+            <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+            <h3 style="font-size: 1.5rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem;">Download BrickTrack Android App</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">Scan the QR Code with your Android phone camera or tap the Google Play button below to open directly.</p>
+            
+            <div class="qr-code-box">
+                <!-- Inline Clean Generated QR Code SVG pointing to Play Store app link -->
+                <svg class="qr-code-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100" height="100" fill="#ffffff"/>
+                    <!-- Corner Finder Patterns -->
+                    <rect x="10" y="10" width="25" height="25" fill="#000000"/>
+                    <rect x="14" y="14" width="17" height="17" fill="#ffffff"/>
+                    <rect x="18" y="18" width="9" height="9" fill="#00a896"/>
+
+                    <rect x="65" y="10" width="25" height="25" fill="#000000"/>
+                    <rect x="69" y="14" width="17" height="17" fill="#ffffff"/>
+                    <rect x="73" y="18" width="9" height="9" fill="#00a896"/>
+
+                    <rect x="10" y="65" width="25" height="25" fill="#000000"/>
+                    <rect x="14" y="69" width="17" height="17" fill="#ffffff"/>
+                    <rect x="18" y="73" width="9" height="9" fill="#00a896"/>
+
+                    <!-- Data Modules pattern simulation -->
+                    <rect x="40" y="10" width="5" height="5" fill="#000"/>
+                    <rect x="50" y="15" width="5" height="5" fill="#000"/>
+                    <rect x="45" y="25" width="5" height="5" fill="#00a896"/>
+                    <rect x="10" y="40" width="5" height="5" fill="#000"/>
+                    <rect x="20" y="45" width="5" height="5" fill="#000"/>
+                    <rect x="30" y="40" width="5" height="5" fill="#000"/>
+                    <rect x="40" y="40" width="10" height="10" fill="#00a896"/>
+                    <rect x="55" y="40" width="5" height="5" fill="#000"/>
+                    <rect x="65" y="40" width="10" height="5" fill="#000"/>
+                    <rect x="80" y="40" width="5" height="5" fill="#00a896"/>
+                    <rect x="40" y="55" width="5" height="5" fill="#000"/>
+                    <rect x="50" y="50" width="5" height="5" fill="#000"/>
+                    <rect x="60" y="55" width="5" height="5" fill="#000"/>
+                    <rect x="40" y="65" width="5" height="5" fill="#00a896"/>
+                    <rect x="50" y="70" width="10" height="5" fill="#000"/>
+                    <rect x="65" y="65" width="10" height="10" fill="#000"/>
+                    <rect x="80" y="75" width="10" height="10" fill="#00a896"/>
+                    <rect x="45" y="80" width="5" height="5" fill="#000"/>
+                    <rect x="55" y="85" width="5" height="5" fill="#000"/>
+                </svg>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                <a href="https://play.google.com/store/apps/details?id=com.sitespand.tracker" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%;">
+                    <span>▶ Open in Google Play Store</span>
+                </a>
+                <a href="https://hastradar.com" target="_blank" rel="noopener" class="btn btn-secondary" style="width: 100%;">
+                    <span>🌐 Visit HastRadar Official Website (hastradar.com)</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo-brand-wrap">
+                    <svg class="app-logo-svg" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="54" cy="54" r="30" fill="#162032" stroke="#F97316" stroke-width="2.5"/>
+                        <rect x="38" y="40" width="13" height="7" rx="1" fill="#FB923C"/>
+                        <rect x="54" y="40" width="16" height="7" rx="1" fill="#EA580C"/>
+                        <rect x="38" y="49" width="7" height="7" rx="1" fill="#F97316"/>
+                        <rect x="48" y="49" width="13" height="7" rx="1" fill="#FB923C"/>
+                        <rect x="64" y="49" width="6" height="7" rx="1" fill="#F97316"/>
+                        <rect x="38" y="58" width="15" height="7" rx="1" fill="#EA580C"/>
+                        <rect x="56" y="58" width="14" height="7" rx="1" fill="#FB923C"/>
+                        <path d="M 36,68 Q 54,76 72,66" stroke="#10B981" stroke-width="3" stroke-linecap="round" fill="none"/>
+                        <path d="M 72,28 Q 72,34 78,34 Q 72,34 72,40 Q 72,34 66,34 Q 72,34 72,28 Z" fill="#FBBF24"/>
+                        <path d="M 36,32 Q 36,35 39,35 Q 36,35 36,38 Q 36,35 33,35 Q 36,35 36,32 Z" fill="#38BDF8"/>
+                    </svg>
+                    <div class="brand-text-block">
+                        <span class="brand-name">BrickTrack</span>
+                        <span class="brand-company">by <a href="https://hastradar.com" target="_blank" rel="noopener">HastRadar</a></span>
+                    </div>
+                </a>
+                <p>Mobile-first Android application developed by <a href="https://hastradar.com" target="_blank" style="color: var(--primary-teal); font-weight: 600;">HastRadar</a> for homeowners, civil engineers, contractors, and site supervisors.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#showcase">Interactive Demo</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Legal &amp; Policy</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="delete-account.html">Account &amp; Data Deletion</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="https://hastradar.com" target="_blank" rel="noopener">HastRadar Website</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="mailto:support@hastradar.com">Email Support</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 <a href="https://hastradar.com" target="_blank" style="color: var(--text-muted); font-weight: 600;">HastRadar</a>. BrickTrack is a registered product of HastRadar. All rights reserved. Google Play is a trademark of Google LLC.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
