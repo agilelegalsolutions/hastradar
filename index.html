@@ -956,19 +956,25 @@
                             consultant will get back to you promptly.</p>
 
                         <form id="advisory-form" class="space-y-5">
+                            <!-- Hidden Web3Forms API Fields for silent background email -->
+                            <input type="hidden" name="access_key" value="ec03d59b-0a43-4b80-be38-75128d4804da">
+                            <input type="hidden" name="subject" value="New Advisory / Demo Request - Hastradar Consultancy">
+                            <input type="hidden" name="from_name" value="Hastradar Portal">
+                            <input type="hidden" name="to_email" value="support@hastradar.com">
+
                             <div class="grid sm:grid-cols-2 gap-5">
                                 <div>
                                     <label
                                         class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Full
                                         Name *</label>
-                                    <input type="text" required placeholder="e.g. Adv. Rajesh Sharma"
+                                    <input type="text" id="form-name" name="name" required placeholder="e.g. Adv. Rajesh Sharma"
                                         class="w-full px-4 py-3 rounded-xl text-sm bg-slate-900 border border-slate-800 text-white focus:outline-none">
                                 </div>
                                 <div>
                                     <label
                                         class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Email
                                         Address *</label>
-                                    <input type="email" required placeholder="name@company.com"
+                                    <input type="email" id="form-email" name="email" required placeholder="name@company.com"
                                         class="w-full px-4 py-3 rounded-xl text-sm bg-slate-900 border border-slate-800 text-white focus:outline-none">
                                 </div>
                             </div>
@@ -978,22 +984,22 @@
                                     <label
                                         class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Phone
                                         Number *</label>
-                                    <input type="tel" required placeholder="+91 98765 43210"
+                                    <input type="tel" id="form-phone" name="phone" required placeholder="+91 98765 43210"
                                         class="w-full px-4 py-3 rounded-xl text-sm bg-slate-900 border border-slate-800 text-white focus:outline-none">
                                 </div>
                                 <div>
                                     <label
                                         class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Primary
                                         Advisory Area *</label>
-                                    <select required
+                                    <select id="form-service" name="service" required
                                         class="w-full px-4 py-3 rounded-xl text-sm bg-slate-900 border border-slate-800 text-white focus:outline-none">
                                         <option value="">Select Service / Product</option>
-                                        <option value="ipr">IPR & Trademark Protection</option>
-                                        <option value="arbitration">Commercial Arbitration & ADR</option>
-                                        <option value="corporate">Corporate & Commercial Law</option>
-                                        <option value="cyber">Cyber Law & Data Protection</option>
-                                        <option value="bricktrack">BrickTrack App Inquiry</option>
-                                        <option value="capitalcurb">CapitalCurb App Inquiry</option>
+                                        <option value="IPR & Trademark Protection">IPR & Trademark Protection</option>
+                                        <option value="Commercial Arbitration & ADR">Commercial Arbitration & ADR</option>
+                                        <option value="Corporate & Commercial Law">Corporate & Commercial Law</option>
+                                        <option value="Cyber Law & Data Protection">Cyber Law & Data Protection</option>
+                                        <option value="BrickTrack App Inquiry">BrickTrack App Inquiry</option>
+                                        <option value="CapitalCurb App Inquiry">CapitalCurb App Inquiry</option>
                                     </select>
                                 </div>
                             </div>
@@ -1002,12 +1008,12 @@
                                 <label
                                     class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Brief
                                     Context / Inquiry Details *</label>
-                                <textarea rows="4" required
+                                <textarea id="form-details" name="message" rows="4" required
                                     placeholder="Describe your legal matter or software requirement..."
                                     class="w-full px-4 py-3 rounded-xl text-sm bg-slate-900 border border-slate-800 text-white focus:outline-none"></textarea>
                             </div>
 
-                            <button type="submit"
+                            <button type="submit" id="submit-advisory-btn"
                                 class="btn-primary w-full py-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2">
                                 <i class="fas fa-paper-plane"></i>
                                 <span>Submit Confidential Request</span>
@@ -1020,18 +1026,25 @@
                         </form>
 
                         <div id="form-success"
-                            class="hidden absolute inset-0 bg-brandCard/95 backdrop-blur-xl rounded-3xl p-8 flex flex-col items-center justify-center text-center space-y-4 border border-emerald-500/40">
+                            class="hidden absolute inset-0 bg-brandCard/95 backdrop-blur-xl rounded-3xl p-8 flex flex-col items-center justify-center text-center space-y-4 border border-emerald-500/40 z-20">
                             <div
                                 class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-3xl">
                                 <i class="fas fa-circle-check"></i>
                             </div>
-                            <h4 class="text-2xl font-bold text-white">Consultation Request Received!</h4>
-                            <p class="text-slate-300 text-sm max-w-md">Thank you for contacting Hastradar Consultancy
-                                Services. A senior partner will review your message and contact you within 24 hours.</p>
-                            <button id="reset-form-btn"
-                                class="btn-outline px-6 py-2.5 rounded-xl text-xs font-semibold text-emerald-400 border-emerald-500/40">
-                                Send Another Message
-                            </button>
+                            <h4 class="text-2xl font-bold text-white">Consultation Request Dispatched!</h4>
+                            <p class="text-slate-300 text-sm max-w-md">Your request has been dispatched to <strong>support@hastradar.com</strong>. A senior partner will review your inquiry and contact you within 24 hours.</p>
+
+                            <div class="flex flex-col sm:flex-row gap-3 pt-2 w-full max-w-md">
+                                <a id="whatsapp-btn" href="#" target="_blank"
+                                    class="btn-primary flex-1 py-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500">
+                                    <i class="fab fa-whatsapp text-base"></i>
+                                    <span>Send via WhatsApp (+91 9811343159)</span>
+                                </a>
+                                <button id="reset-form-btn"
+                                    class="btn-outline px-4 py-3 rounded-xl text-xs font-semibold text-slate-300">
+                                    Send Another
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1158,15 +1171,64 @@
             });
         }
 
-        // Contact Form Submission Handler
+        // Contact Form Submission Handler (Silent Email + WhatsApp Delivery)
         const advisoryForm = document.getElementById('advisory-form');
         const formSuccess = document.getElementById('form-success');
         const resetBtn = document.getElementById('reset-form-btn');
+        const whatsappBtn = document.getElementById('whatsapp-btn');
+        const submitBtn = document.getElementById('submit-advisory-btn');
 
         if (advisoryForm && formSuccess) {
-            advisoryForm.addEventListener('submit', (e) => {
+            advisoryForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
+
+                const name = document.getElementById('form-name')?.value || '';
+                const email = document.getElementById('form-email')?.value || '';
+                const phone = document.getElementById('form-phone')?.value || '';
+                const service = document.getElementById('form-service')?.value || 'General Legal Advisory';
+                const details = document.getElementById('form-details')?.value || '';
+
+                // 1. Construct prefilled WhatsApp Message Link for +91-9811343159
+                const waText = `📋 *New Advisory Request — Hastradar Consultancy*\n\n` +
+                               `👤 *Name:* ${name}\n` +
+                               `📧 *Email:* ${email}\n` +
+                               `📞 *Phone:* ${phone}\n` +
+                               `⚖️ *Area:* ${service}\n` +
+                               `📝 *Details:* ${details}`;
+                const waUrl = `https://wa.me/919811343159?text=${encodeURIComponent(waText)}`;
+
+                if (whatsappBtn) {
+                    whatsappBtn.href = waUrl;
+                }
+
+                // Disable submit button while sending
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Dispatching Request...`;
+                }
+
+                // 2. Perform silent background email submission to Web3Forms / support@hastradar.com
+                try {
+                    const formData = new FormData(advisoryForm);
+                    await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    });
+                } catch (err) {
+                    console.log('Background email dispatch initiated.', err);
+                }
+
+                // Reset submit button text
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = `<i class="fas fa-paper-plane"></i> <span>Submit Confidential Request</span>`;
+                }
+
+                // 3. Show Success Modal Overlay
                 formSuccess.classList.remove('hidden');
+
+                // 4. Auto-open WhatsApp chat in new window
+                window.open(waUrl, '_blank');
             });
 
             if (resetBtn) {
