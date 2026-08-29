@@ -1,0 +1,23 @@
+{
+  "theme": "Material 3 SiteSpand System",
+  "primaryAccents": [
+    { "name": "Construction Safety Orange (Default)", "hex": "#FF6D00" },
+    { "name": "Teal Accent", "hex": "#00BFA5" },
+    { "name": "Deep Blue Accent", "hex": "#2979FF" },
+    { "name": "Vibrant Purple Accent", "hex": "#AA00FF" },
+    { "name": "Emerald Green Accent", "hex": "#00E676" }
+  ],
+  "statusTokens": {
+    "safeGreen": "#2E7D32",
+    "warningYellow": "#F57F17",
+    "exceededRed": "#D32F2F"
+  },
+  "backgrounds": {
+    "darkBackground": "#121212",
+    "darkSurface": "#1E1E1E",
+    "lightBackground": "#F8F9FA",
+    "lightSurface": "#FFFFFF",
+    "highContrastBackground": "#000000",
+    "highContrastPrimary": "#FFFF00"
+  }
+}
