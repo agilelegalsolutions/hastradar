@@ -41,16 +41,31 @@
             <a href="index.html" class="brand-logo-link">
                 <img src="assets/brand-logo.svg" alt="BrickTrack by HastRadar" class="brand-logo-img">
             </a>
-            <ul class="nav-links">
-                <li><a href="index.html#features">Features</a></li>
-                <li><a href="index.html#showcase">Live Showcase</a></li>
+            <ul class="nav-links desktop-top-links">
+                <li><a href="../../index.html" style="color: var(--primary-teal); font-weight: 700;">← Company Home</a></li>
+                <li><a href="index.html">App Home</a></li>
                 <li><a href="guide.html" class="active">User Guide</a></li>
-                <li><a href="index.html#pricing">Pricing</a></li>
-                <li><a href="contact.html">Support</a></li>
             </ul>
-            <a href="index.html#download" class="btn btn-primary">
-                <span>⚡ Get App</span>
-            </a>
+            <div class="nav-actions-wrapper" style="display: flex; align-items: center; gap: 0.8rem;">
+                <a href="index.html#download" class="btn btn-primary">
+                    <span>⚡ Get App</span>
+                </a>
+                <button class="mobile-toggle" id="guideMenuToggleBtn" aria-label="Toggle navigation" style="display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; background: rgba(255,255,255,0.08); border: 1px solid var(--border-color); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 1.2rem; cursor: pointer;">
+                    ☰
+                </button>
+            </div>
+        </div>
+
+        <div id="guideHamburgerDropdown" class="hamburger-menu-dropdown" style="display: none; background: rgba(9, 13, 20, 0.96); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-color); padding: 1.2rem 0; width: 100%;">
+            <div class="container" style="display: flex; flex-direction: column; gap: 0.6rem;">
+                <a href="../../index.html" style="color: var(--primary-teal); font-weight: 700; padding: 0.6rem 1rem; background: rgba(0, 168, 150, 0.1); border-radius: 8px;">← Hastradar Consultancy Home</a>
+                <a href="index.html" style="color: #fff; padding: 0.5rem 1rem;">App Home</a>
+                <a href="index.html#features" style="color: #fff; padding: 0.5rem 1rem;">Features</a>
+                <a href="index.html#showcase" style="color: #fff; padding: 0.5rem 1rem;">Live Showcase</a>
+                <a href="guide.html" style="color: var(--primary-teal); font-weight: 700; padding: 0.5rem 1rem;">User Guide</a>
+                <a href="index.html#pricing" style="color: #fff; padding: 0.5rem 1rem;">Pricing</a>
+                <a href="privacy-policy.html" style="color: #fff; padding: 0.5rem 1rem;">Privacy Policy</a>
+            </div>
         </div>
     </nav>
 
@@ -379,6 +394,21 @@
         document.addEventListener('DOMContentLoaded', () => {
             const savedLang = localStorage.getItem('bricktrack_guide_lang') || 'en';
             setLanguage(savedLang);
+
+            const guideToggleBtn = document.getElementById('guideMenuToggleBtn');
+            const guideDropdown = document.getElementById('guideHamburgerDropdown');
+            if (guideToggleBtn && guideDropdown) {
+                guideToggleBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isOpen = guideDropdown.style.display === 'block';
+                    guideDropdown.style.display = isOpen ? 'none' : 'block';
+                });
+                document.addEventListener('click', (e) => {
+                    if (guideDropdown && !guideDropdown.contains(e.target) && !guideToggleBtn.contains(e.target)) {
+                        guideDropdown.style.display = 'none';
+                    }
+                });
+            }
         });
     </script>
 </body>

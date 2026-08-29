@@ -1,348 +1,322 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - Hastradar Consultancy</title>
-    <meta name="description" content="Comprehensive legal services including arbitration, intellectual property rights, corporate law, cyber law, legal outsourcing, and brand management.">
+    <meta name="keywords" content="Hastradar legal services, IPR consultant Delhi, trademark registration India, patent filing, commercial arbitration lawyers India, corporate law advisory, cyber law consultant, DPDP privacy audit, MSME legal counsel, Hastradar Consultancy">
+    <link rel="canonical" href="https://www.hastradar.com/services.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.hastradar.com/services.html">
+    <meta property="og:title" content="Practice Areas & Consultancy Services — Hastradar Consultancy">
+    <meta property="og:description" content="Explore Hastradar Consultancy's legal practice domains: IPR, Trademarks, Commercial Arbitration, Corporate Governance, Cyber Law, and AI LegalTech apps.">
+    <meta property="og:image" content="https://www.hastradar.com/static/images/Logo.jpeg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Practice Areas & Legal Services | Hastradar Consultancy">
+    <meta name="twitter:description" content="Legal advisory in IPR, Arbitration, Corporate Law, and AI-enabled software solutions.">
+    <meta name="twitter:image" content="https://www.hastradar.com/static/images/Logo.jpeg">
+
+    <!-- Structured Data: Service & Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Corporate Legal Advisory & Practice Areas",
+      "provider": {
+        "@type": "LegalService",
+        "name": "Hastradar Consultancy Services",
+        "url": "https://www.hastradar.com"
+      },
+      "areaServed": ["India", "Global"],
+      "description": "Comprehensive corporate legal consultancy in IPR, Trademark prosecution, Commercial Arbitration, Cyber Law, DPDP compliance, and AI LegalTech applications."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.hastradar.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://www.hastradar.com/services.html"
+        }
+      ]
+    }
+    </script>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#08090d',
+                        brandCard: '#11141e',
+                        brandCardHover: '#171c2a',
+                        brandEmerald: '#10b981',
+                        brandBlue: '#3b82f6',
+                        brandGold: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
     
-    <!-- Font Awesome Icons -->
+    <!-- Font Awesome & Custom CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .hero-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #1e40af 100%); }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-50">
+<body class="bg-brandDark text-slate-100 antialiased selection:bg-emerald-500 selection:text-black">
+
+    <!-- Ambient Glow -->
+    <div class="ambient-glow-1 top-0 left-1/3"></div>
+    <div class="ambient-glow-2 top-[600px] right-10"></div>
+
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+    <nav class="glass-nav fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center">
-                        <i class="fas fa-balance-scale text-blue-800 text-2xl mr-3"></i>
-                        <span class="font-bold text-xl text-gray-800">Hastradar Consultancy</span>
+            <div class="flex justify-between items-center h-20">
+                
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="relative flex items-center justify-center w-11 h-11 rounded-xl bg-slate-900 border border-emerald-500/30 p-1 group-hover:border-emerald-400 transition-colors shadow-lg shadow-emerald-500/10">
+                        <img src="static/images/Logo.jpeg" alt="HCS Logo" class="w-full h-full object-contain rounded-lg">
                     </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-lg tracking-tight text-white group-hover:text-emerald-400 transition-colors">Hastradar Consultancy</span>
+                        <span class="text-[10px] tracking-widest text-emerald-400 uppercase font-semibold">Legal & Technology Advisory</span>
+                    </div>
+                </a>
+                
+                <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                    <a href="index.html" class="text-slate-300 hover:text-emerald-400 transition-colors py-2">Home</a>
+                    <a href="index.html#products" class="text-slate-300 hover:text-emerald-400 transition-colors py-2">AI Apps</a>
+                    <a href="services.html" class="text-white hover:text-emerald-400 transition-colors py-2 font-bold border-b-2 border-emerald-400">Practice Areas</a>
+                    <a href="index.html#about" class="text-slate-300 hover:text-emerald-400 transition-colors py-2">About HCS</a>
+                    <a href="blog/index.html" class="text-slate-300 hover:text-emerald-400 transition-colors py-2">Insights</a>
+                    <a href="team.html" class="text-slate-300 hover:text-emerald-400 transition-colors py-2">Leadership</a>
+                    <a href="index.html#contact" class="text-slate-300 hover:text-emerald-400 transition-colors py-2">Contact</a>
                 </div>
                 
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-blue-800 px-3 py-2 font-medium">Home</a>
-                    <a href="index.html#about" class="text-gray-700 hover:text-blue-800 px-3 py-2 font-medium">About</a>
-                    <a href="services.html" class="text-blue-800 px-3 py-2 font-medium">Services</a>
-                    <a href="team.html" class="text-gray-700 hover:text-blue-800 px-3 py-2 font-medium">Team</a>
-                    <a href="index.html#contact" class="text-gray-700 hover:text-blue-800 px-3 py-2 font-medium">Contact</a>
+                <div class="hidden lg:flex items-center">
+                    <a href="index.html#contact" class="btn-primary px-5 py-2.5 rounded-xl text-sm font-semibold flex items-center gap-2">
+                        <i class="fas fa-gavel text-xs"></i>
+                        <span>Get Advisory</span>
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-gradient text-white pt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Comprehensive Legal Services</h1>
-                <p class="text-xl text-blue-100 max-w-3xl mx-auto">
-                    Expert legal solutions tailored to meet the complex needs of modern businesses, 
-                    startups, and established corporations across various industry sectors.
-                </p>
+    <!-- Header Hero -->
+    <section class="pt-36 pb-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-6">
+                <i class="fas fa-scale-balanced"></i>
+                <span>Practice Areas & Expertise</span>
             </div>
-        </div>
-    </section>
-
-    <!-- Services Detail Section -->
-    <section class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Arbitration & IPR -->
-            <div class="mb-20">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div class="flex items-center mb-6">
-                            <div class="w-16 h-16 bg-blue-100 text-blue-800 rounded-lg flex items-center justify-center mr-4">
-                                <i class="fas fa-copyright text-2xl"></i>
-                            </div>
-                            <h2 class="text-3xl font-bold text-gray-800">Arbitration & Intellectual Property Rights</h2>
-                        </div>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            Our specialized team provides comprehensive intellectual property services and arbitration 
-                            expertise to protect and enforce your valuable intangible assets. We handle complex IP 
-                            portfolios and dispute resolution with precision and strategic insight.
-                        </p>
-                        <div class="grid sm:grid-cols-2 gap-4">
-                            <div class="bg-blue-50 p-4 rounded-lg">
-                                <h4 class="font-semibold text-gray-800 mb-2">Trademark Services</h4>
-                                <ul class="text-sm text-gray-600 space-y-1">
-                                    <li>• Trademark search & clearance</li>
-                                    <li>• Registration & prosecution</li>
-                                    <li>• Opposition & cancellation</li>
-                                    <li>• Enforcement & litigation</li>
-                                </ul>
-                            </div>
-                            <div class="bg-blue-50 p-4 rounded-lg">
-                                <h4 class="font-semibold text-gray-800 mb-2">Patent Services</h4>
-                                <ul class="text-sm text-gray-600 space-y-1">
-                                    <li>• Patent drafting & filing</li>
-                                    <li>• Prior art searches</li>
-                                    <li>• Patent prosecution</li>
-                                    <li>• Freedom to operate analysis</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Key Benefits</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-start">
-                                <i class="fas fa-shield-alt text-blue-800 text-lg mt-1 mr-3"></i>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">Asset Protection</h4>
-                                    <p class="text-gray-600 text-sm">Comprehensive protection strategy for all IP assets</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-gavel text-blue-800 text-lg mt-1 mr-3"></i>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">Dispute Resolution</h4>
-                                    <p class="text-gray-600 text-sm">Expert arbitration and litigation services</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-globe text-blue-800 text-lg mt-1 mr-3"></i>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">Global Coverage</h4>
-                                    <p class="text-gray-600 text-sm">International IP portfolio management</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- LPO Services -->
-            <div class="mb-20 bg-gray-50 rounded-2xl p-8">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Service Models</h3>
-                        <div class="space-y-4">
-                            <div class="border-l-4 border-green-500 pl-4">
-                                <h4 class="font-medium text-gray-800">Dedicated Teams</h4>
-                                <p class="text-gray-600 text-sm">Exclusive legal teams for long-term projects</p>
-                            </div>
-                            <div class="border-l-4 border-green-500 pl-4">
-                                <h4 class="font-medium text-gray-800">Project-Based</h4>
-                                <p class="text-gray-600 text-sm">Specific deliverable-focused engagements</p>
-                            </div>
-                            <div class="border-l-4 border-green-500 pl-4">
-                                <h4 class="font-medium text-gray-800">Hybrid Model</h4>
-                                <p class="text-gray-600 text-sm">Combination of onshore and offshore resources</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex items-center mb-6">
-                            <div class="w-16 h-16 bg-green-100 text-green-800 rounded-lg flex items-center justify-center mr-4">
-                                <i class="fas fa-cogs text-2xl"></i>
-                            </div>
-                            <h2 class="text-3xl font-bold text-gray-800">Legal Process Outsourcing</h2>
-                        </div>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            Streamline your legal operations with our comprehensive LPO and KPO services. 
-                            We provide cost-effective solutions for document review, legal research, 
-                            contract management, and compliance monitoring.
-                        </p>
-                        <div class="grid sm:grid-cols-2 gap-4">
-                            <div>
-                                <h4 class="font-semibold text-gray-800 mb-2">Core Services</h4>
-                                <ul class="text-sm text-gray-600 space-y-1">
-                                    <li>• Document review & analysis</li>
-                                    <li>• Legal research & writing</li>
-                                    <li>• Contract lifecycle management</li>
-                                    <li>• Compliance monitoring</li>
-                                    <li>• Litigation support</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-800 mb-2">Target Clients</h4>
-                                <ul class="text-sm text-gray-600 space-y-1">
-                                    <li>• Large corporations</li>
-                                    <li>• Law firms</li>
-                                    <li>• Startups & MSMEs</li>
-                                    <li>• Government agencies</li>
-                                    <li>• Insurance companies</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Cyber & Corporate Law -->
-            <div class="mb-20">
-                <div class="text-center mb-12">
-                    <div class="w-20 h-20 bg-red-100 text-red-800 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-shield-alt text-3xl"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Cyber Law & Corporate Legal Advisory</h2>
-                    <p class="text-gray-600 max-w-3xl mx-auto">
-                        Navigate the complex landscape of digital regulations, corporate governance, 
-                        and financial compliance with our expert advisory services.
-                    </p>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Cyber Law</h3>
-                        <ul class="text-gray-600 space-y-2 text-sm">
-                            <li>• Data protection & privacy</li>
-                            <li>• Cybersecurity compliance</li>
-                            <li>• Digital transaction laws</li>
-                            <li>• E-commerce regulations</li>
-                            <li>• Cyber crime consultation</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Corporate Law</h3>
-                        <ul class="text-gray-600 space-y-2 text-sm">
-                            <li>• Corporate governance</li>
-                            <li>• M&A transactions</li>
-                            <li>• Securities law compliance</li>
-                            <li>• Board advisory services</li>
-                            <li>• Corporate restructuring</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Financial Law</h3>
-                        <ul class="text-gray-600 space-y-2 text-sm">
-                            <li>• Banking regulations</li>
-                            <li>• Fintech compliance</li>
-                            <li>• Insurance law</li>
-                            <li>• Capital market regulations</li>
-                            <li>• Anti-money laundering</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Other Services Grid -->
-            <div class="grid lg:grid-cols-3 gap-8">
-                <!-- Legal Education -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-purple-100 text-purple-800 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-graduation-cap text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Legal Education & Training</h3>
-                    <p class="text-gray-600 mb-4 text-sm">
-                        Professional development programs to enhance legal knowledge and compliance awareness.
-                    </p>
-                    <ul class="text-gray-600 space-y-2 text-sm">
-                        <li>• Corporate training workshops</li>
-                        <li>• Legal awareness seminars</li>
-                        <li>• Compliance certification programs</li>
-                        <li>• Professional skill development</li>
-                    </ul>
-                </div>
-
-                <!-- Brand Management -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-yellow-100 text-yellow-800 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-bullhorn text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Brand Management & Valuation</h3>
-                    <p class="text-gray-600 mb-4 text-sm">
-                        Strategic brand protection and comprehensive intangible asset valuation services.
-                    </p>
-                    <ul class="text-gray-600 space-y-2 text-sm">
-                        <li>• Brand strategy development</li>
-                        <li>• Trademark portfolio management</li>
-                        <li>• Intangible asset valuation</li>
-                        <li>• Brand enforcement programs</li>
-                    </ul>
-                </div>
-
-                <!-- Social Welfare -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-indigo-100 text-indigo-800 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-hands-helping text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Social & Legal Welfare</h3>
-                    <p class="text-gray-600 mb-4 text-sm">
-                        Community-focused initiatives providing access to justice and rehabilitation support.
-                    </p>
-                    <ul class="text-gray-600 space-y-2 text-sm">
-                        <li>• Access to justice programs</li>
-                        <li>• Pro bono legal services</li>
-                        <li>• Community legal aid</li>
-                        <li>• Rehabilitation support</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-20 bg-blue-800 text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-6">Ready to Get Started?</h2>
-            <p class="text-xl text-blue-100 mb-8">
-                Contact us today to discuss your legal requirements and discover how our expert team 
-                can help your business achieve its objectives.
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6">
+                Comprehensive Legal & <span class="text-gradient-emerald">AI Consultancy</span>
+            </h1>
+            <p class="text-slate-300 text-lg max-w-3xl mx-auto leading-relaxed">
+                Navigating complex regulatory environments, intellectual property filings, international arbitration, and technology governance for modern enterprises.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="bg-yellow-400 text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
-                    Schedule Consultation
-                </button>
-                <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-800 transition-colors">
-                    Request Quote
-                </button>
-            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-4 gap-8">
-                <div class="lg:col-span-2">
-                    <div class="flex items-center mb-6">
-                        <i class="fas fa-balance-scale text-2xl mr-3"></i>
-                        <span class="font-bold text-xl">Hastradar Consultancy</span>
+    <!-- Detailed Practice Areas Grid -->
+    <section class="py-12 pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+            
+            <!-- Category 1: IPR & Trademark -->
+            <div class="glass-card rounded-3xl p-8 sm:p-12 border border-slate-800 relative overflow-hidden">
+                <div class="grid lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-2xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 text-2xl font-bold">
+                                <i class="fas fa-copyright"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Intellectual Property & Trademark Practice</h2>
+                                <span class="text-xs text-amber-400 font-semibold uppercase tracking-wider">Brand Safeguarding & Patent Protection</span>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Our IPR practice represents corporations, brand owners, and tech innovators in securing, enforcing, and monetizing trademark rights, patent disclosures, copyright works, and industrial designs across Indian and international jurisdictions.
+                        </p>
+
+                        <div class="grid sm:grid-cols-2 gap-4 text-xs">
+                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                                <h4 class="font-bold text-white flex items-center gap-2"><i class="fas fa-trademark text-amber-400"></i> Trademark Registration</h4>
+                                <p class="text-slate-400">Search clearance, international Madrid protocol filings, opposition advocacy, and renewal management.</p>
+                            </div>
+                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                                <h4 class="font-bold text-white flex items-center gap-2"><i class="fas fa-lightbulb text-amber-400"></i> Patent Prosecution</h4>
+                                <p class="text-slate-400">Prior art evaluation, provisional & complete drafting, FREEDOM TO OPERATE (FTO) opinions.</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 flex flex-wrap gap-4">
+                            <a href="services/trademark-registration-protection.html" class="btn-gold px-6 py-3 rounded-xl text-xs font-bold flex items-center gap-2">
+                                <span>Detailed Trademark Guide & Services</span>
+                                <i class="fas fa-arrow-right text-[10px]"></i>
+                            </a>
+                            <a href="index.html#contact" class="btn-outline px-6 py-3 rounded-xl text-xs font-semibold text-slate-300">
+                                Request IP Audit
+                            </a>
+                        </div>
                     </div>
-                    <p class="text-gray-300 mb-6">
-                        Leading the way in legal excellence with comprehensive advisory services for modern businesses.
-                    </p>
-                </div>
-                
-                <div>
-                    <h3 class="font-semibold text-lg mb-4">Services</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="text-gray-300 hover:text-white">Arbitration & IPR</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white">Legal Outsourcing</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white">Corporate Law</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white">Cyber Law</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="font-semibold text-lg mb-4">Contact</h3>
-                    <p class="text-gray-300 text-sm">
-                        New Delhi, India<br>
-                        +91 9811343159<br>
-                        info@hastradar.com
-                    </p>
+
+                    <div class="lg:col-span-5">
+                        <div class="bg-slate-950/80 rounded-2xl p-6 border border-slate-800 space-y-4">
+                            <h3 class="text-base font-bold text-white flex items-center gap-2">
+                                <i class="fas fa-shield-halved text-amber-400"></i>
+                                <span>Why Protect Your IP With HCS?</span>
+                            </h3>
+                            <ul class="space-y-3 text-xs text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Over 98.6% Trademark Registration Success Rate</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>AI-Powered Automated Brand Monitoring & Infringement Tracking</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Experienced Advocates in Delhi High Court & IPAB</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-6 text-center">
-                <p class="text-gray-400 text-sm">© 2024 Hastradar Consultancy. All rights reserved.</p>
+
+            <!-- Category 2: Arbitration & ADR -->
+            <div class="glass-card rounded-3xl p-8 sm:p-12 border border-slate-800 relative overflow-hidden">
+                <div class="grid lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-2xl font-bold">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Commercial Arbitration & Dispute Resolution</h2>
+                                <span class="text-xs text-emerald-400 font-semibold uppercase tracking-wider">Fast-Track Tribunals & High Court Advocacy</span>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            We offer strategic counsel and tribunal representation in complex commercial arbitrations under the Arbitration and Conciliation Act 1996. Our partners handle construction disputes, infrastructure claims, breach of shareholder agreements, and cross-border commercial conflicts.
+                        </p>
+
+                        <div class="grid sm:grid-cols-2 gap-4 text-xs">
+                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                                <h4 class="font-bold text-white flex items-center gap-2"><i class="fas fa-gavel text-emerald-400"></i> Arbitral Proceedings</h4>
+                                <p class="text-slate-400">Claim drafting, expert witness examination, interim relief applications under Section 9.</p>
+                            </div>
+                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                                <h4 class="font-bold text-white flex items-center gap-2"><i class="fas fa-file-signature text-emerald-400"></i> Award Execution</h4>
+                                <p class="text-slate-400">Challenging arbitral awards under Section 34 & enforcing commercial decrees globally.</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 flex flex-wrap gap-4">
+                            <a href="index.html#contact" class="btn-primary px-6 py-3 rounded-xl text-xs font-bold flex items-center gap-2">
+                                <span>Consult Arbitral Counsel</span>
+                                <i class="fas fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5">
+                        <div class="bg-slate-950/80 rounded-2xl p-6 border border-slate-800 space-y-4">
+                            <h3 class="text-base font-bold text-white flex items-center gap-2">
+                                <i class="fas fa-award text-emerald-400"></i>
+                                <span>Arbitration Highlights</span>
+                            </h3>
+                            <ul class="space-y-3 text-xs text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Specialized in Infrastructure & Construction Dispute Arbitrations</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Swift Emergency Injunctions & Section 17 Interim Orders</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3: AI & Technology Software Products -->
+            <div class="glass-card glass-card-blue rounded-3xl p-8 sm:p-12 border border-slate-800 relative overflow-hidden">
+                <div class="grid lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-2xl bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-400 text-2xl font-bold">
+                                <i class="fas fa-mobile-screen"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl sm:text-3xl font-extrabold text-white">AI LegalTech & Expense Android Products</h2>
+                                <span class="text-xs text-cyan-400 font-semibold uppercase tracking-wider">BrickTrack & CapitalCurb Android Apps</span>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Hastradar Consultancy's software engineering unit develops AI-driven expense management tools that seamlessly bridge corporate accounting with audit readiness and tax compliance.
+                        </p>
+
+                        <div class="grid sm:grid-cols-2 gap-4 text-xs">
+                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                                <h4 class="font-bold text-white flex items-center gap-2"><i class="fas fa-building text-emerald-400"></i> BrickTrack AI</h4>
+                                <p class="text-slate-400">Construction cost tracking, vendor OCR receipt scans, material ledger audit logs.</p>
+                                <a href="apps/brick-track/index.html" class="text-emerald-400 font-bold block pt-1 hover:underline">View BrickTrack Page &rarr;</a>
+                            </div>
+                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-2">
+                                <h4 class="font-bold text-white flex items-center gap-2"><i class="fas fa-chart-pie text-cyan-400"></i> CapitalCurb AI</h4>
+                                <p class="text-slate-400">Financial budget analytics, automated spending control, tax readiness for Android.</p>
+                                <a href="apps/capital-curb/index.html" class="text-cyan-400 font-bold block pt-1 hover:underline">View CapitalCurb Page &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5">
+                        <div class="bg-slate-950/80 rounded-2xl p-6 border border-slate-800 text-center space-y-4">
+                            <h3 class="text-base font-bold text-white">Download HCS Apps</h3>
+                            <p class="text-xs text-slate-400">Built natively for Android with offline data security and enterprise CSV/PDF export capability.</p>
+                            <div class="flex flex-col gap-3">
+                                <a href="apps/brick-track/index.html" class="btn-primary py-3 rounded-xl text-xs font-semibold">Open BrickTrack Portal</a>
+                                <a href="apps/capital-curb/index.html" class="btn-blue py-3 rounded-xl text-xs font-semibold">Open CapitalCurb Portal</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <img src="static/images/Logo.jpeg" alt="HCS Logo" class="w-8 h-8 object-contain rounded-lg border border-emerald-500/40 p-0.5 bg-slate-900">
+                <span class="font-bold text-sm text-white">Hastradar Consultancy Services</span>
+            </div>
+            <div class="text-xs">
+                &copy; 2026 Hastradar Consultancy. All Rights Reserved.
             </div>
         </div>
     </footer>

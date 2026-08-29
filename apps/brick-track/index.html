@@ -4,11 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrickTrack — House Construction & Expense Manager by HastRadar</title>
-    <meta name="description" content="Production-ready Android app by HastRadar to track house building budgets, material purchases, contractor payments, AI receipt OCR, and export A4 PDF reports.">
+    <meta name="keywords" content="BrickTrack, BrickTrack AI, construction expense tracker Android, house building budget manager app, civil contractor payout manager, AI bill OCR scanner India, Hastradar Consultancy, Hastradar apps">
+    <link rel="canonical" href="https://www.hastradar.com/apps/brick-track/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.hastradar.com/apps/brick-track/">
+    <meta property="og:title" content="BrickTrack AI — House Construction & Expense Manager App by Hastradar">
+    <meta property="og:description" content="Production-ready Android app by Hastradar Consultancy to track house building budgets, material purchases, contractor payments, AI receipt OCR, and export A4 PDF reports.">
+    <meta property="og:image" content="https://www.hastradar.com/apps/brick-track/assets/Home.jpeg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BrickTrack AI — Construction Expense Tracker App">
+    <meta name="twitter:description" content="Track site materials, contractor payments, and scan handwritten bills with AI OCR on Android. Developed by Hastradar Consultancy.">
+    <meta name="twitter:image" content="https://www.hastradar.com/apps/brick-track/assets/Home.jpeg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured Data: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "BrickTrack AI",
+      "operatingSystem": "Android",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Hastradar Consultancy Services",
+        "url": "https://www.hastradar.com"
+      },
+      "description": "Android application to track construction material expenses, contractor payments, and AI receipt OCR.",
+      "url": "https://www.hastradar.com/apps/brick-track/"
+    }
+    </script>
 </head>
 <body>
 
@@ -18,19 +56,35 @@
             <a href="index.html" class="brand-logo-link">
                 <img src="assets/brand-logo.svg" alt="BrickTrack by HastRadar" class="brand-logo-img">
             </a>
-            <ul class="nav-links">
+            <!-- Top Essential Links (Uncrowded) -->
+            <ul class="nav-links desktop-top-links">
+                <li><a href="../../index.html" style="color: var(--primary-teal); font-weight: 700;">← Company Home</a></li>
                 <li><a href="#features">Features</a></li>
-                <li><a href="#showcase">Live Showcase</a></li>
                 <li><a href="guide.html">User Guide</a></li>
-                <li><a href="#gallery">App Gallery</a></li>
                 <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="privacy-policy.html">Privacy</a></li>
             </ul>
-            <button class="btn btn-primary trigger-download-modal">
-                <span>⚡ Get App</span>
-            </button>
-            <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+            <div class="nav-actions-wrapper" style="display: flex; align-items: center; gap: 0.8rem;">
+                <button class="btn btn-primary trigger-download-modal">
+                    <span>⚡ Get App</span>
+                </button>
+                <button class="mobile-toggle" id="menuToggleBtn" aria-label="Toggle navigation" style="display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; background: rgba(255,255,255,0.08); border: 1px solid var(--border-color); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 1.2rem; cursor: pointer;">
+                    ☰
+                </button>
+            </div>
+        </div>
+
+        <!-- Full Navigation Dropdown (Hamburger Menu) -->
+        <div id="hamburgerDropdown" class="hamburger-menu-dropdown" style="display: none; background: rgba(9, 13, 20, 0.96); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-color); padding: 1.2rem 0; width: 100%;">
+            <div class="container" style="display: flex; flex-direction: column; gap: 0.6rem;">
+                <a href="../../index.html" style="color: var(--primary-teal); font-weight: 700; padding: 0.6rem 1rem; background: rgba(0, 168, 150, 0.1); border-radius: 8px;">← Hastradar Consultancy Home</a>
+                <a href="#features" class="dropdown-item-link" style="color: #fff; padding: 0.5rem 1rem;">Features</a>
+                <a href="#showcase" class="dropdown-item-link" style="color: #fff; padding: 0.5rem 1rem;">Live Showcase</a>
+                <a href="guide.html" class="dropdown-item-link" style="color: #fff; padding: 0.5rem 1rem;">User Guide</a>
+                <a href="#gallery" class="dropdown-item-link" style="color: #fff; padding: 0.5rem 1rem;">App Gallery</a>
+                <a href="#pricing" class="dropdown-item-link" style="color: #fff; padding: 0.5rem 1rem;">Pricing</a>
+                <a href="#faq" class="dropdown-item-link" style="color: #fff; padding: 0.5rem 1rem;">FAQ</a>
+                <a href="privacy-policy.html" class="dropdown-item-link" style="color: #fff; padding: 0.5rem 1rem;">Privacy Policy</a>
+            </div>
         </div>
     </nav>
 
@@ -39,7 +93,7 @@
         <div class="hero-bg-glow"></div>
         <div class="container hero-grid">
             <div class="hero-content">
-                <div class="section-tag">⚡ AI Construction Financials by <a href="https://hastradar.com" target="_blank" style="color: var(--primary-teal); font-weight: 700; text-decoration: underline; margin-left: 4px;">HastRadar</a></div>
+                <div class="section-tag">⚡ Startup India Recognized &amp; MSME Enterprise | AI Financials by <a href="../../index.html" style="color: var(--primary-teal); font-weight: 700; text-decoration: underline; margin-left: 4px;">Hastradar Consultancy</a></div>
                 <h1>Master Your House Building Costs <span class="gradient-text">&amp; Contractor Payouts</span></h1>
                 <p>Track site materials (Steel, Cement, Sand), manage contractor milestone payments, scan handwritten bills with AI OCR, and generate executive A4 PDF reports effortlessly.</p>
                 
