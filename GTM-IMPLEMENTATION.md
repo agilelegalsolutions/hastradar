@@ -348,7 +348,7 @@ Parameters:
 // Email Click
 Event: email_click
 Parameters:
-  - email_address: "info@hastradar.com"
+  - email_address: "support@hastradar.com"
   - page_location: URL
 
 // CTA Button Click

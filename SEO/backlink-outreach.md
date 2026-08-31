@@ -194,7 +194,7 @@ Best regards,
 [Title]
 Hastradar Consultancy
 +91 11 2345 6789
-info@hastradar.com
+support@hastradar.com
 www.hastradar.com
 ```
 

@@ -203,7 +203,7 @@ Structured in Organization schema:
 - Name: Hastradar Consultancy
 - Address: House No - 224, Second Floor, Block - A, Pocket - 7, Sector - 17, Rohini, New Delhi 110089
 - Phone: +91 11 2345 6789, +91 9811343159
-- Email: info@hastradar.com
+- Email: support@hastradar.com
 
 ### ✅ 8. Image SEO
 
