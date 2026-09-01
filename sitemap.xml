@@ -52,9 +52,16 @@
     
     <url>
         <loc>https://www.hastradar.com/privacy-policy.html</loc>
-        <lastmod>2026-08-31</lastmod>
+        <lastmod>2026-09-01</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.hastradar.com/terms-of-service.html</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
     </url>
     
     <!-- Blog Pages -->

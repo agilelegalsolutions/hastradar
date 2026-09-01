@@ -6,21 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary SEO Tags -->
-    <title>Hastradar Consultancy Services — Integrated Legal-Tech & Professional Advisory</title>
+    <title>Hastradar Consultancy — Integrated Legal-Tech & Advisory</title>
     <meta name="description"
-        content="Hastradar Consultancy Services Pvt. Ltd. is a DPIIT Recognized Startup & MSME enterprise providing integrated legal, regulatory, compliance, taxation, audit, Legal-Tech AI platforms, and training solutions for Startups, MSMEs & Corporates in India & abroad.">
+        content="Hastradar Consultancy is a DPIIT recognized Legal-Tech enterprise delivering legal advisory, commercial arbitration, IPR, compliance, and AI software.">
     <meta name="keywords"
         content="Hastradar Consultancy Services, HCS, Hastradar, what hastradar does, legaltech platform India, legal consultancy India, IPR consultant Delhi, trademark registration India, commercial arbitration lawyers Delhi, cyber fraud legal support, corporate compliance, taxation audit consultancy, AI legal drafting, BrickTrack AI, CapitalCurb AI">
     <meta name="author" content="Hastradar Consultancy Services Pvt. Ltd.">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- Resource Preconnect & DNS-Prefetch -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
     <!-- Favicon Icons -->
     <link rel="icon" type="image/jpeg" href="static/images/Logo.jpeg">
     <link rel="shortcut icon" type="image/jpeg" href="static/images/Logo.jpeg">
     <link rel="apple-touch-icon" href="static/images/Logo.jpeg">
 
-    <!-- Canonical URL -->
+    <!-- Canonical & Hreflang Tags -->
     <link rel="canonical" href="https://www.hastradar.com/">
+    <link rel="alternate" hreflang="en-in" href="https://www.hastradar.com/">
+    <link rel="alternate" hreflang="en" href="https://www.hastradar.com/">
+    <link rel="alternate" hreflang="x-default" href="https://www.hastradar.com/">
+
+    <!-- Security & Revision Meta Tags -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="revised" content="2026-09-01">
 
     <!-- Geo & Local SEO Meta Tags -->
     <meta name="geo.region" content="IN-DL">
@@ -98,6 +112,8 @@
         "longitude": "77.1025"
       },
       "priceRange": "$$$",
+      "datePublished": "2025-01-01",
+      "dateModified": "2026-09-01",
       "areaServed": ["India", "Global"],
       "knowsAbout": [
         "Commercial Arbitration and Litigation",
@@ -231,6 +247,10 @@
 </head>
 
 <body class="bg-brandDark text-slate-100 antialiased selection:bg-emerald-500 selection:text-black">
+    <!-- Accessibility Skip Link -->
+    <a href="#home" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:p-3 focus:bg-emerald-500 focus:text-black focus:font-bold focus:rounded-lg">
+        Skip to main content
+    </a>
 
     <!-- Ambient Glow FX -->
     <div class="ambient-glow-1 top-0 left-1/4"></div>
@@ -408,6 +428,7 @@
                     <div
                         class="relative rounded-2xl overflow-hidden border border-slate-700/60 shadow-2xl bg-slate-900 group">
                         <img src="static/images/hero-boardroom.jpg" alt="Hastradar Boardroom & Legal Advisory"
+                            loading="eager" decoding="async" width="600" height="420"
                             class="w-full h-[420px] object-cover group-hover:scale-105 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-brandDark/40 to-transparent">
                         </div>
@@ -1140,18 +1161,26 @@
                         <li><a href="team.html" class="hover:text-emerald-400 transition-colors">Executive Leadership</a></li>
                         <li><a href="blog/index.html" class="hover:text-emerald-400 transition-colors">Legal Insights Blog</a></li>
                         <li><a href="privacy-policy.html" class="hover:text-emerald-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="hover:text-emerald-400 transition-colors font-medium text-emerald-400/90">Terms of Service</a></li>
                     </ul>
                 </div>
 
             </div>
 
+            <!-- Legal Disclaimer Notice -->
+            <div class="mt-8 pt-6 border-t border-slate-800/60 text-[11px] text-slate-400 leading-relaxed">
+                <strong class="text-slate-300">Professional Legal Disclaimer:</strong> Hastradar Consultancy Services Pvt. Ltd. is an integrated Legal-Tech & professional advisory enterprise. Content on this website is provided for general informational and educational guidance. Attorney-Client privilege applies to inquiries submitted through our secure channels. Formal representation is subject to an executed retainer agreement under Indian law.
+            </div>
+
             <div
-                class="mt-12 pt-8 border-t border-slate-800/80 text-xs text-slate-400 flex flex-col sm:flex-row justify-between items-center gap-4">
+                class="mt-6 pt-6 border-t border-slate-800/80 text-xs text-slate-400 flex flex-col sm:flex-row justify-between items-center gap-4">
                 <div>
                     &copy; 2026 Hastradar Consultancy Services Pvt. Ltd. All Rights Reserved.
                 </div>
                 <div class="flex space-x-6 text-[11px]">
                     <a href="privacy-policy.html" class="hover:text-white">Privacy Policy</a>
+                    <span>·</span>
+                    <a href="terms-of-service.html" class="hover:text-white">Terms of Service</a>
                     <span>·</span>
                     <a href="sitemap.xml" class="hover:text-white">Sitemap</a>
                 </div>
@@ -1159,8 +1188,50 @@
         </div>
     </footer>
 
+    <!-- Cookie Consent & Privacy Compliance Banner -->
+    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md bg-brandCard/95 backdrop-blur-xl border border-emerald-500/30 p-5 rounded-2xl shadow-2xl z-[100] transition-all transform duration-300 flex flex-col space-y-3 text-xs">
+        <div class="flex items-start justify-between gap-3">
+            <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm">
+                <i class="fas fa-cookie-bite"></i>
+                <span>Privacy & Data Protection</span>
+            </div>
+            <button id="close-cookie-banner" class="text-slate-400 hover:text-white text-base">
+                <i class="fas fa-xmark"></i>
+            </button>
+        </div>
+        <p class="text-slate-300 leading-relaxed">
+            We use essential cookies and DPDP-compliant telemetry to ensure secure performance and enterprise service delivery. Learn more in our <a href="privacy-policy.html" class="text-emerald-400 underline">Privacy Policy</a> and <a href="terms-of-service.html" class="text-emerald-400 underline">Terms of Service</a>.
+        </p>
+        <div class="flex gap-2 pt-1">
+            <button id="accept-cookies-btn" class="btn-primary py-2 px-4 rounded-xl font-bold text-xs flex-1">
+                Accept & Proceed
+            </button>
+        </div>
+    </div>
+
     <!-- Interactive JavaScript -->
     <script>
+        // Cookie Consent Banner Handler
+        const cookieBanner = document.getElementById('cookie-banner');
+        const acceptCookiesBtn = document.getElementById('accept-cookies-btn');
+        const closeCookieBanner = document.getElementById('close-cookie-banner');
+
+        if (localStorage.getItem('hcs_cookies_accepted') === 'true') {
+            if (cookieBanner) cookieBanner.classList.add('hidden');
+        }
+
+        if (acceptCookiesBtn && cookieBanner) {
+            acceptCookiesBtn.addEventListener('click', () => {
+                localStorage.setItem('hcs_cookies_accepted', 'true');
+                cookieBanner.classList.add('hidden');
+            });
+        }
+        if (closeCookieBanner && cookieBanner) {
+            closeCookieBanner.addEventListener('click', () => {
+                cookieBanner.classList.add('hidden');
+            });
+        }
+
         // Mobile Navigation Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -1204,7 +1275,6 @@
                 const service = document.getElementById('form-service')?.value || 'General Legal Advisory';
                 const details = document.getElementById('form-details')?.value || '';
 
-                // Construct prefilled WhatsApp Message Link for +91-9811343159
                 const waText = `📋 *New Advisory Request — Hastradar Consultancy*\n\n` +
                                `👤 *Name:* ${name}\n` +
                                `📧 *Email:* ${email}\n` +
