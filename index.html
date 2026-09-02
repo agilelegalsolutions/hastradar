@@ -21,9 +21,11 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
     <!-- Favicon Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" href="static/images/Logo.png">
     <link rel="icon" type="image/jpeg" href="static/images/Logo.jpeg">
-    <link rel="shortcut icon" type="image/jpeg" href="static/images/Logo.jpeg">
-    <link rel="apple-touch-icon" href="static/images/Logo.jpeg">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png">
 
     <!-- Canonical & Hreflang Tags -->
     <link rel="canonical" href="https://www.hastradar.com/">
@@ -35,8 +37,7 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="revised" content="2026-09-01">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https:;">
-    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: file:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com file:; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: file:; connect-src 'self' https: file:;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
     <!-- Preload Critical LCP Assets -->
@@ -66,7 +67,7 @@
     <meta name="twitter:image" content="https://www.hastradar.com/static/images/Logo.webp">
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -1205,50 +1206,8 @@
             </div>
         </div>
     </footer>
-
-    <!-- Cookie Consent & Privacy Compliance Banner -->
-    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md bg-brandCard/95 backdrop-blur-xl border border-emerald-500/30 p-5 rounded-2xl shadow-2xl z-[100] transition-all transform duration-300 flex flex-col space-y-3 text-xs">
-        <div class="flex items-start justify-between gap-3">
-            <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm">
-                <i class="fas fa-cookie-bite"></i>
-                <span>Privacy & Data Protection</span>
-            </div>
-            <button id="close-cookie-banner" class="text-slate-400 hover:text-white text-base">
-                <i class="fas fa-xmark"></i>
-            </button>
-        </div>
-        <p class="text-slate-300 leading-relaxed">
-            We use essential cookies and DPDP-compliant telemetry to ensure secure performance and enterprise service delivery. Learn more in our <a href="privacy-policy.html" class="text-emerald-400 underline">Privacy Policy</a> and <a href="terms-of-service.html" class="text-emerald-400 underline">Terms of Service</a>.
-        </p>
-        <div class="flex gap-2 pt-1">
-            <button id="accept-cookies-btn" class="btn-primary py-2 px-4 rounded-xl font-bold text-xs flex-1">
-                Accept & Proceed
-            </button>
-        </div>
-    </div>
-
     <!-- Interactive JavaScript -->
     <script>
-        // Cookie Consent Banner Handler
-        const cookieBanner = document.getElementById('cookie-banner');
-        const acceptCookiesBtn = document.getElementById('accept-cookies-btn');
-        const closeCookieBanner = document.getElementById('close-cookie-banner');
-
-        if (localStorage.getItem('hcs_cookies_accepted') === 'true') {
-            if (cookieBanner) cookieBanner.classList.add('hidden');
-        }
-
-        if (acceptCookiesBtn && cookieBanner) {
-            acceptCookiesBtn.addEventListener('click', () => {
-                localStorage.setItem('hcs_cookies_accepted', 'true');
-                cookieBanner.classList.add('hidden');
-            });
-        }
-        if (closeCookieBanner && cookieBanner) {
-            closeCookieBanner.addEventListener('click', () => {
-                cookieBanner.classList.add('hidden');
-            });
-        }
 
         // Mobile Navigation Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
