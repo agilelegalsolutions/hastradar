@@ -7,6 +7,14 @@
     <meta name="keywords" content="BrickTrack, BrickTrack AI, construction expense tracker Android, house building budget manager app, civil contractor payout manager, AI bill OCR scanner India, Hastradar Consultancy, Hastradar apps">
     <link rel="canonical" href="https://www.hastradar.com/apps/brick-track/">
     
+    <!-- Security & Revision Meta Tags -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="revised" content="2026-09-01">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https:;">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
     <!-- Favicon Icons -->
     <link rel="icon" type="image/jpeg" href="../../static/images/Logo.jpeg">
     <link rel="shortcut icon" type="image/jpeg" href="../../static/images/Logo.jpeg">
@@ -17,18 +25,48 @@
     <meta property="og:url" content="https://www.hastradar.com/apps/brick-track/">
     <meta property="og:title" content="BrickTrack AI — House Construction & Expense Manager App by Hastradar">
     <meta property="og:description" content="Production-ready Android app by Hastradar Consultancy to track house building budgets, material purchases, contractor payments, AI receipt OCR, and export A4 PDF reports.">
-    <meta property="og:image" content="https://www.hastradar.com/apps/brick-track/assets/Home.jpeg">
+    <meta property="og:image" content="https://www.hastradar.com/apps/brick-track/assets/Home.webp">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="BrickTrack AI — Construction Expense Tracker App">
     <meta name="twitter:description" content="Track site materials, contractor payments, and scan handwritten bills with AI OCR on Android. Developed by Hastradar Consultancy.">
-    <meta name="twitter:image" content="https://www.hastradar.com/apps/brick-track/assets/Home.jpeg">
+    <meta name="twitter:image" content="https://www.hastradar.com/apps/brick-track/assets/Home.webp">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../styles.css">
+
+    <!-- Breadcrumb JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.hastradar.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Apps",
+          "item": "https://www.hastradar.com/#products"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "BrickTrack AI",
+          "item": "https://www.hastradar.com/apps/brick-track/"
+        }
+      ]
+    }
+    </script>
 
     <!-- Structured Data: SoftwareApplication -->
     <script type="application/ld+json">
@@ -93,6 +131,31 @@
         </div>
     </nav>
 
+    <!-- Visual Breadcrumb Navigation -->
+    <nav class="breadcrumb-container py-3 pt-24" aria-label="Breadcrumb">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="inline-flex items-center space-x-2 text-xs">
+                <li class="inline-flex items-center">
+                    <a href="../../index.html" class="breadcrumb-link flex items-center gap-1">
+                        <i class="fas fa-home text-[11px]"></i> Home
+                    </a>
+                </li>
+                <li>
+                    <div class="flex items-center space-x-2 text-slate-400">
+                        <i class="fas fa-chevron-right text-[9px]"></i>
+                        <a href="../../index.html#products" class="breadcrumb-link">Apps</a>
+                    </div>
+                </li>
+                <li aria-current="page">
+                    <div class="flex items-center space-x-2 text-slate-500">
+                        <i class="fas fa-chevron-right text-[9px]"></i>
+                        <span class="text-emerald-400 font-semibold">BrickTrack AI</span>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-bg-glow"></div>
@@ -130,11 +193,17 @@
             <div class="hero-phone-composition">
                 <!-- Primary Front Phone Mockup -->
                 <div class="phone-mockup-frame hero-phone-primary">
-                    <img src="assets/Home.jpeg" alt="BrickTrack Home Dashboard Screen" class="phone-screen-img">
+                    <picture>
+                        <source srcset="assets/Home.webp" type="image/webp">
+                        <img src="assets/Home.jpeg" alt="BrickTrack Home Dashboard Screen" loading="lazy" decoding="async" width="300" height="600" class="phone-screen-img">
+                    </picture>
                 </div>
                 <!-- Secondary Angled Back Phone Mockup -->
                 <div class="phone-mockup-frame hero-phone-secondary">
-                    <img src="assets/Contractor Payment.jpeg" alt="BrickTrack Contractor Payments Screen" class="phone-screen-img">
+                    <picture>
+                        <source srcset="assets/Contractor Payment.webp" type="image/webp">
+                        <img src="assets/Contractor Payment.jpeg" alt="BrickTrack Contractor Payments Screen" loading="lazy" decoding="async" width="300" height="600" class="phone-screen-img">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -219,7 +288,10 @@
                         </div>
                         <div class="showcase-tab-visual">
                             <div class="phone-mockup-frame">
-                                <img src="assets/Home.jpeg" alt="BrickTrack Dashboard Screen" class="phone-screen-img">
+                                <picture>
+                                    <source srcset="assets/Home.webp" type="image/webp">
+                                    <img src="assets/Home.jpeg" alt="BrickTrack Dashboard Screen" loading="lazy" decoding="async" width="300" height="600" class="phone-screen-img">
+                                </picture>
                             </div>
                         </div>
                     </div>
@@ -240,7 +312,10 @@
                         </div>
                         <div class="showcase-tab-visual">
                             <div class="phone-mockup-frame">
-                                <img src="assets/Expenses.jpeg" alt="BrickTrack Expenses Log Screen" class="phone-screen-img">
+                                <picture>
+                                    <source srcset="assets/Expenses.webp" type="image/webp">
+                                    <img src="assets/Expenses.jpeg" alt="BrickTrack Expenses Log Screen" loading="lazy" decoding="async" width="300" height="600" class="phone-screen-img">
+                                </picture>
                             </div>
                         </div>
                     </div>
@@ -261,7 +336,10 @@
                         </div>
                         <div class="showcase-tab-visual">
                             <div class="phone-mockup-frame">
-                                <img src="assets/Contractor Payment.jpeg" alt="BrickTrack Contractor Payments Screen" class="phone-screen-img">
+                                <picture>
+                                    <source srcset="assets/Contractor Payment.webp" type="image/webp">
+                                    <img src="assets/Contractor Payment.jpeg" alt="BrickTrack Contractor Payments Screen" loading="lazy" decoding="async" width="300" height="600" class="phone-screen-img">
+                                </picture>
                             </div>
                         </div>
                     </div>
@@ -282,7 +360,10 @@
                         </div>
                         <div class="showcase-tab-visual">
                             <div class="phone-mockup-frame">
-                                <img src="assets/Reports.jpeg" alt="BrickTrack PDF Reports Screen" class="phone-screen-img">
+                                <picture>
+                                    <source srcset="assets/Reports.webp" type="image/webp">
+                                    <img src="assets/Reports.jpeg" alt="BrickTrack PDF Reports Screen" loading="lazy" decoding="async" width="300" height="600" class="phone-screen-img">
+                                </picture>
                             </div>
                         </div>
                     </div>
@@ -303,7 +384,10 @@
                         </div>
                         <div class="showcase-tab-visual">
                             <div class="phone-mockup-frame">
-                                <img src="assets/Categories.jpeg" alt="BrickTrack Categories Screen" class="phone-screen-img">
+                                <picture>
+                                    <source srcset="assets/Categories.webp" type="image/webp">
+                                    <img src="assets/Categories.jpeg" alt="BrickTrack Categories Screen" loading="lazy" decoding="async" width="300" height="600" class="phone-screen-img">
+                                </picture>
                             </div>
                         </div>
                     </div>
@@ -324,7 +408,10 @@
                         </div>
                         <div class="showcase-tab-visual">
                             <div class="phone-mockup-frame">
-                                <img src="assets/Settings.jpeg" alt="BrickTrack Settings Screen" class="phone-screen-img">
+                                <picture>
+                                    <source srcset="assets/Settings.webp" type="image/webp">
+                                    <img src="assets/Settings.jpeg" alt="BrickTrack Settings Screen" loading="lazy" decoding="async" width="300" height="600" class="phone-screen-img">
+                                </picture>
                             </div>
                         </div>
                     </div>
@@ -343,7 +430,10 @@
             <div class="gallery-grid">
                 <div class="gallery-card">
                     <div class="phone-mockup-frame">
-                        <img src="assets/Home.jpeg" alt="BrickTrack Home Dashboard" class="phone-screen-img">
+                        <picture>
+                            <source srcset="assets/Home.webp" type="image/webp">
+                            <img src="assets/Home.jpeg" alt="BrickTrack Home Dashboard" loading="lazy" decoding="async" width="300" height="600" class="phone-screen-img">
+                        </picture>
                     </div>
                     <h4>Project Dashboard</h4>
                     <p>Real-Time Budget Ring &amp; Spend Variance</p>
@@ -351,7 +441,10 @@
 
                 <div class="gallery-card">
                     <div class="phone-mockup-frame">
-                        <img src="assets/Expenses.jpeg" alt="BrickTrack Expenses Log" class="phone-screen-img">
+                        <picture>
+                            <source srcset="assets/Expenses.webp" type="image/webp">
+                            <img src="assets/Expenses.jpeg" alt="BrickTrack Expenses Log" loading="lazy" decoding="async" width="300" height="600" class="phone-screen-img">
+                        </picture>
                     </div>
                     <h4>Site Expense Logs</h4>
                     <p>Material SKUs, Quantities &amp; Store Tags</p>
@@ -359,7 +452,10 @@
 
                 <div class="gallery-card">
                     <div class="phone-mockup-frame">
-                        <img src="assets/Contractor Payment.jpeg" alt="BrickTrack Contractor Payments" class="phone-screen-img">
+                        <picture>
+                            <source srcset="assets/Contractor Payment.webp" type="image/webp">
+                            <img src="assets/Contractor Payment.jpeg" alt="BrickTrack Contractor Payments" loading="lazy" decoding="async" width="300" height="600" class="phone-screen-img">
+                        </picture>
                     </div>
                     <h4>Contractor Payments</h4>
                     <p>Trade Workers, Advances &amp; Balance Due</p>
@@ -367,7 +463,10 @@
 
                 <div class="gallery-card">
                     <div class="phone-mockup-frame">
-                        <img src="assets/Reports.jpeg" alt="BrickTrack PDF Reports" class="phone-screen-img">
+                        <picture>
+                            <source srcset="assets/Reports.webp" type="image/webp">
+                            <img src="assets/Reports.jpeg" alt="BrickTrack PDF Reports" loading="lazy" decoding="async" width="300" height="600" class="phone-screen-img">
+                        </picture>
                     </div>
                     <h4>PDF Report Generator</h4>
                     <p>Executive A4 Statements for WhatsApp</p>
@@ -375,7 +474,10 @@
 
                 <div class="gallery-card">
                     <div class="phone-mockup-frame">
-                        <img src="assets/Categories.jpeg" alt="BrickTrack Categories" class="phone-screen-img">
+                        <picture>
+                            <source srcset="assets/Categories.webp" type="image/webp">
+                            <img src="assets/Categories.jpeg" alt="BrickTrack Categories" loading="lazy" decoding="async" width="300" height="600" class="phone-screen-img">
+                        </picture>
                     </div>
                     <h4>Material Categories</h4>
                     <p>Cement, Steel, Sand &amp; Labor Catalogs</p>
@@ -383,7 +485,10 @@
 
                 <div class="gallery-card">
                     <div class="phone-mockup-frame">
-                        <img src="assets/Settings.jpeg" alt="BrickTrack Settings" class="phone-screen-img">
+                        <picture>
+                            <source srcset="assets/Settings.webp" type="image/webp">
+                            <img src="assets/Settings.jpeg" alt="BrickTrack Settings" loading="lazy" decoding="async" width="300" height="600" class="phone-screen-img">
+                        </picture>
                     </div>
                     <h4>Cloud Backup &amp; Settings</h4>
                     <p>Google Drive Backup &amp; Hindi Localization</p>
@@ -602,5 +707,44 @@
     </footer>
 
     <script src="main.js"></script>
+
+    <!-- GDPR Cookie & Privacy Compliance Banner -->
+    <div id="gdpr-cookie-banner" class="gdpr-banner hidden" role="region" aria-label="Cookie and Privacy Consent">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div class="text-xs text-slate-300 space-y-1">
+                <div class="flex items-center gap-2 font-bold text-white">
+                    <i class="fas fa-shield-halved text-emerald-400"></i> Privacy &amp; Cookie Compliance Notice
+                </div>
+                <p>We use essential cookies and analytics to ensure secure services, legal compliance, and optimal site experience under DPDP Act &amp; GDPR. View our <a href="../../privacy-policy.html" class="text-emerald-400 underline hover:text-emerald-300">Privacy Policy</a> &amp; <a href="../../terms-of-service.html" class="text-emerald-400 underline hover:text-emerald-300">Terms of Service</a>.</p>
+            </div>
+            <div class="flex items-center gap-2 shrink-0 w-full sm:w-auto">
+                <button id="gdpr-accept-btn" class="px-4 py-2 text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-500 rounded-lg transition-colors w-full sm:w-auto text-center">Accept All</button>
+                <button id="gdpr-decline-btn" class="px-3 py-2 text-xs text-slate-400 hover:text-slate-200 border border-slate-700 hover:border-slate-500 rounded-lg transition-colors w-full sm:w-auto text-center">Essential Only</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var banner = document.getElementById('gdpr-cookie-banner');
+            if (!banner) return;
+            if (!localStorage.getItem('hcs_gdpr_consent')) {
+                banner.classList.remove('hidden');
+            }
+            var acceptBtn = document.getElementById('gdpr-accept-btn');
+            var declineBtn = document.getElementById('gdpr-decline-btn');
+            if (acceptBtn) {
+                acceptBtn.addEventListener('click', function() {
+                    localStorage.setItem('hcs_gdpr_consent', 'accepted');
+                    banner.classList.add('hidden');
+                });
+            }
+            if (declineBtn) {
+                declineBtn.addEventListener('click', function() {
+                    localStorage.setItem('hcs_gdpr_consent', 'essential');
+                    banner.classList.add('hidden');
+                });
+            }
+        });
+    </script>
 </body>
 </html>

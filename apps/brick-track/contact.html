@@ -4,10 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us — BrickTrack Support by HastRadar</title>
+    <!-- Security & Revision Meta Tags -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="revised" content="2026-09-01">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https:;">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <link rel="canonical" href="https://www.hastradar.com/apps/brick-track/contact.html">
+
+    <!-- Breadcrumb JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.hastradar.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "BrickTrack AI",
+          "item": "https://www.hastradar.com/apps/brick-track/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Contact Support",
+          "item": "https://www.hastradar.com/apps/brick-track/contact.html"
+        }
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../styles.css">
     <style>
         .page-content { padding: 8rem 0 4rem 0; }
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
@@ -68,25 +107,27 @@
 
             <div class="contact-form-card">
                 <h2 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1.5rem;">💬 Send Us a Message</h2>
-                <form id="contact-form">
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="BrickTrack App Support Contact Form">
                     <div class="form-group">
                         <label for="name">Your Name</label>
-                        <input type="text" id="name" class="form-control" placeholder="e.g. Ramesh Kumar" required>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="e.g. Ramesh Kumar" required>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Your Email Address</label>
-                        <input type="email" id="email" class="form-control" placeholder="name@domain.com" required>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="name@domain.com" required>
                     </div>
 
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject" class="form-control" placeholder="Inquiry / Feature Request" required>
+                        <input type="text" id="subject" name="custom_subject" class="form-control" placeholder="Inquiry / Feature Request" required>
                     </div>
 
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" class="form-control" placeholder="Describe your question or issue in detail..." required></textarea>
+                        <textarea id="message" name="message" class="form-control" placeholder="Describe your question or issue in detail..." required></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary" style="width: 100%;">
@@ -105,6 +146,44 @@
         </div>
     </footer>
 
+    <!-- GDPR Cookie & Privacy Compliance Banner -->
+    <div id="gdpr-cookie-banner" class="gdpr-banner hidden" role="region" aria-label="Cookie and Privacy Consent">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div class="text-xs text-slate-300 space-y-1">
+                <div class="flex items-center gap-2 font-bold text-white">
+                    <i class="fas fa-shield-halved text-emerald-400"></i> Privacy &amp; Cookie Compliance Notice
+                </div>
+                <p>We use essential cookies and analytics to ensure secure services, legal compliance, and optimal site experience under DPDP Act &amp; GDPR. View our <a href="../../privacy-policy.html" class="text-emerald-400 underline hover:text-emerald-300">Privacy Policy</a> &amp; <a href="../../terms-of-service.html" class="text-emerald-400 underline hover:text-emerald-300">Terms of Service</a>.</p>
+            </div>
+            <div class="flex items-center gap-2 shrink-0 w-full sm:w-auto">
+                <button id="gdpr-accept-btn" class="px-4 py-2 text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-500 rounded-lg transition-colors w-full sm:w-auto text-center">Accept All</button>
+                <button id="gdpr-decline-btn" class="px-3 py-2 text-xs text-slate-400 hover:text-slate-200 border border-slate-700 hover:border-slate-500 rounded-lg transition-colors w-full sm:w-auto text-center">Essential Only</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var banner = document.getElementById('gdpr-cookie-banner');
+            if (!banner) return;
+            if (!localStorage.getItem('hcs_gdpr_consent')) {
+                banner.classList.remove('hidden');
+            }
+            var acceptBtn = document.getElementById('gdpr-accept-btn');
+            var declineBtn = document.getElementById('gdpr-decline-btn');
+            if (acceptBtn) {
+                acceptBtn.addEventListener('click', function() {
+                    localStorage.setItem('hcs_gdpr_consent', 'accepted');
+                    banner.classList.add('hidden');
+                });
+            }
+            if (declineBtn) {
+                declineBtn.addEventListener('click', function() {
+                    localStorage.setItem('hcs_gdpr_consent', 'essential');
+                    banner.classList.add('hidden');
+                });
+            }
+        });
+    </script>
     <script src="main.js"></script>
 </body>
 </html>
