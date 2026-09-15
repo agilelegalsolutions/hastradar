@@ -53,6 +53,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 downloadModal.classList.remove('active');
             }
         });
+
+        const handleDownloadHash = () => {
+            if (window.location.hash === '#download' || window.location.hash === '#downloadModal') {
+                downloadModal.classList.add('active');
+            }
+        };
+        handleDownloadHash();
+        window.addEventListener('hashchange', handleDownloadHash);
     }
 
     // 3. Showcase Interactive Tabs
