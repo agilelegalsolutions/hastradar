@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 54" fill="none">
+  <defs>
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="50%" stop-color="#FB923C" />
+      <stop offset="100%" stop-color="#EA580C" />
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon Emblem -->
+  <g transform="translate(4, 5)">
+    <!-- Rounded Background Icon Base -->
+    <rect width="44" height="44" rx="12" fill="#181f2f" stroke="rgba(245, 158, 11, 0.4)" stroke-width="1.5"/>
+    
+    <!-- Sunrise Sun Ray Elements -->
+    <circle cx="22" cy="23" r="9" fill="url(#sunGrad)" />
+    <!-- Clock Hands / Rays -->
+    <path d="M22 8V11" stroke="#FDE68A" stroke-width="2" stroke-linecap="round"/>
+    <path d="M22 35V38" stroke="#FDE68A" stroke-width="2" stroke-linecap="round"/>
+    <path d="M7 23H10" stroke="#FDE68A" stroke-width="2" stroke-linecap="round"/>
+    <path d="M34 23H37" stroke="#FDE68A" stroke-width="2" stroke-linecap="round"/>
+    <path d="M12 13L14.5 15.5" stroke="#FDE68A" stroke-width="2" stroke-linecap="round"/>
+    <path d="M29.5 30.5L32 33" stroke="#FDE68A" stroke-width="2" stroke-linecap="round"/>
+    <path d="M12 33L14.5 30.5" stroke="#FDE68A" stroke-width="2" stroke-linecap="round"/>
+    <path d="M29.5 15.5L32 13" stroke="#FDE68A" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- Minimalist Camera / Clock center dot -->
+    <circle cx="22" cy="23" r="3" fill="#090D16" />
+    <circle cx="22" cy="23" r="1.5" fill="#FFF" />
+  </g>
+
+  <!-- Typography -->
+  <text x="58" y="28" font-family="'Inter', -apple-system, sans-serif" font-weight="800" font-size="22" fill="#FFFFFF" letter-spacing="-0.5">Wakeo</text>
+  <circle cx="132" cy="18" r="3" fill="#F59E0B" />
+  <text x="59" y="42" font-family="'Inter', -apple-system, sans-serif" font-weight="600" font-size="9" fill="#94A3B8" letter-spacing="1.2">BY HASTRADAR</text>
+</svg>
