@@ -25,13 +25,13 @@
     <meta property="og:url" content="https://www.hastradar.com/apps/wakeo/">
     <meta property="og:title" content="Wakeo — Remote Parental Alarm Clock with Mandatory Selfie Proof">
     <meta property="og:description" content="Eliminate morning wake-up battles. Parents schedule alarms remotely directly onto child devices with un-snoozeable selfie verification and morning wake challenges.">
-    <meta property="og:image" content="https://www.hastradar.com/apps/wakeo/assets/02_parent_dashboard.png">
+    <meta property="og:image" content="https://www.hastradar.com/apps/wakeo/assets/01_parent_dashboard.png">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Wakeo — Child Alarm with Live Selfie Proof">
     <meta name="twitter:description" content="Set remote alarms on your child's phone that cannot be silenced without a live morning selfie proof. Built by HastRadar Consultancy Services.">
-    <meta name="twitter:image" content="https://www.hastradar.com/apps/wakeo/assets/02_parent_dashboard.png">
+    <meta name="twitter:image" content="https://www.hastradar.com/apps/wakeo/assets/01_parent_dashboard.png">
 
     <!-- Fonts & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -91,11 +91,14 @@
       "description": "Remote parental alarm clock mobile application requiring mandatory selfie verification and morning wake challenges before audio can be silenced.",
       "url": "https://www.hastradar.com/apps/wakeo/",
       "screenshot": [
-        "https://www.hastradar.com/apps/wakeo/assets/01_welcome_role_selection.png",
-        "https://www.hastradar.com/apps/wakeo/assets/02_parent_dashboard.png",
+        "https://www.hastradar.com/apps/wakeo/assets/01_parent_dashboard.png",
+        "https://www.hastradar.com/apps/wakeo/assets/02_child_dashboard.png",
         "https://www.hastradar.com/apps/wakeo/assets/03_create_edit_alarm.png",
         "https://www.hastradar.com/apps/wakeo/assets/04_child_ringing_alarm.png",
-        "https://www.hastradar.com/apps/wakeo/assets/05_verified_selfie_proof.png"
+        "https://www.hastradar.com/apps/wakeo/assets/05_selfie_capture_screen.png",
+        "https://www.hastradar.com/apps/wakeo/assets/06_wake_up_success.png",
+        "https://www.hastradar.com/apps/wakeo/assets/07_selfie_proof_modal.png",
+        "https://www.hastradar.com/apps/wakeo/assets/08_multi_child_support.png"
       ]
     }
     </script>
@@ -270,7 +273,7 @@
                             <i class="fas fa-user-shield text-amber-400"></i>
                             <span>Parent Controller</span>
                         </div>
-                        <img src="assets/02_parent_dashboard.png" alt="Wakeo Parent Dashboard Screen" class="phone-screen" loading="eager" width="260" height="560">
+                        <img src="assets/01_parent_dashboard.png" alt="Wakeo Parent Dashboard Screen" class="phone-screen" loading="eager" width="260" height="560">
                     </div>
 
                     <!-- Child Ringing Screen Mockup -->
@@ -383,61 +386,115 @@
 
             <!-- Tab Buttons -->
             <div class="showcase-tabs-nav">
-                <button class="showcase-tab-btn active" data-tab="tab-alarm-creator">
-                    <i class="fas fa-clock"></i> 1. Alarm Creator
+                <button class="showcase-tab-btn active" data-tab="tab-parent-dashboard">
+                    <i class="fas fa-sliders"></i> 1. Parent Dashboard
+                </button>
+                <button class="showcase-tab-btn" data-tab="tab-child-dashboard">
+                    <i class="fas fa-child"></i> 2. Child Dashboard
+                </button>
+                <button class="showcase-tab-btn" data-tab="tab-set-alarm">
+                    <i class="fas fa-clock"></i> 3. Set New Alarm
                 </button>
                 <button class="showcase-tab-btn" data-tab="tab-child-ringing">
-                    <i class="fas fa-bell"></i> 2. Ringing &amp; Challenge
+                    <i class="fas fa-bell"></i> 4. Alarm Ringing
+                </button>
+                <button class="showcase-tab-btn" data-tab="tab-selfie-capture">
+                    <i class="fas fa-camera"></i> 5. Selfie Capture
+                </button>
+                <button class="showcase-tab-btn" data-tab="tab-wake-success">
+                    <i class="fas fa-check-circle"></i> 6. Wake-Up Success
                 </button>
                 <button class="showcase-tab-btn" data-tab="tab-selfie-proof">
-                    <i class="fas fa-camera"></i> 3. Selfie Proof Modal
+                    <i class="fas fa-id-badge"></i> 7. Selfie Proof
                 </button>
-                <button class="showcase-tab-btn" data-tab="tab-parent-dashboard">
-                    <i class="fas fa-sliders"></i> 4. Parent Dashboard
-                </button>
-                <button class="showcase-tab-btn" data-tab="tab-child-home">
-                    <i class="fas fa-child"></i> 5. Child Home
-                </button>
-                <button class="showcase-tab-btn" data-tab="tab-role-pairing">
-                    <i class="fas fa-qrcode"></i> 6. Role &amp; Pairing
+                <button class="showcase-tab-btn" data-tab="tab-multi-child">
+                    <i class="fas fa-users"></i> 8. Multi-Child
                 </button>
             </div>
 
-            <!-- Tab 1: Alarm Creator -->
-            <div class="tab-pane active" id="tab-alarm-creator">
+            <!-- Tab 1: Dashboard - Parent -->
+            <div class="tab-pane active" id="tab-parent-dashboard">
                 <div class="showcase-tab-grid">
                     <div class="showcase-tab-info">
-                        <span class="section-tag" style="margin-bottom: 0.8rem;">Parental Remote Control</span>
-                        <h3>Smart Schedule &amp; Personalized Notes</h3>
-                        <p>Parents set wake-up times remotely with customizable recurring days (Once, Weekdays, Daily, or Custom Days) and add motivating notes to inspire their kids every morning.</p>
+                        <span class="section-tag" style="margin-bottom: 0.8rem;">Parental Command Center</span>
+                        <h3>Central Dashboard &amp; Quick Controls</h3>
+                        <p>Monitor upcoming wake-up schedules, check real-time child device synchronization, and review wake verification activity at a single glance. Captured directly from the live Android emulator.</p>
                         <ul class="feature-checklist">
-                            <li><i class="fas fa-check-circle"></i> 12-Hour AM/PM Time Picker with local auto-detection</li>
-                            <li><i class="fas fa-check-circle"></i> Custom motivational notes: "Math exam today &mdash; shine bright!"</li>
-                            <li><i class="fas fa-check-circle"></i> High-priority Firebase data payload triggers child phone immediately</li>
+                            <li><i class="fas fa-check-circle"></i> Instant glance at today's active schedule: 10:35 AM Weekdays</li>
+                            <li><i class="fas fa-check-circle"></i> Real-time child profile selector &amp; child name customization</li>
+                            <li><i class="fas fa-check-circle"></i> Live recent activity feed with verified photo proof cards</li>
                         </ul>
                         <button class="btn btn-secondary trigger-download-modal">
-                            <span>Explore Alarm Features</span>
+                            <span>Explore Parent Dashboard</span>
                         </button>
                     </div>
                     <div class="showcase-tab-visual">
                         <div class="phone-mockup-frame">
-                            <img src="assets/03_create_edit_alarm.png" alt="Wakeo Create and Edit Alarm Screen" loading="lazy" width="290" height="600">
+                            <img src="assets/01_parent_dashboard.png" alt="Wakeo Parent Dashboard Screen" loading="lazy" width="290" height="600">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab 2: Child Ringing -->
+            <!-- Tab 2: Dashboard - Child -->
+            <div class="tab-pane" id="tab-child-dashboard">
+                <div class="showcase-tab-grid">
+                    <div class="showcase-tab-info">
+                        <span class="section-tag" style="margin-bottom: 0.8rem;">Child Companion</span>
+                        <h3>Next Alarm Countdown &amp; Wake Streaks</h3>
+                        <p>Children enjoy a clean, reassuring dark-mode interface displaying their next scheduled wake-up time, parent motivational notes, and gamified wake streaks that celebrate morning punctuality.</p>
+                        <ul class="feature-checklist">
+                            <li><i class="fas fa-check-circle"></i> High-contrast countdown &amp; active parent sync badge</li>
+                            <li><i class="fas fa-check-circle"></i> Motivating 5-day wake streak badge with weekly rewards</li>
+                            <li><i class="fas fa-check-circle"></i> Transparent alarm history logging every verified wake-up</li>
+                        </ul>
+                        <button class="btn btn-secondary trigger-download-modal">
+                            <span>Explore Child Dashboard</span>
+                        </button>
+                    </div>
+                    <div class="showcase-tab-visual">
+                        <div class="phone-mockup-frame">
+                            <img src="assets/02_child_dashboard.png" alt="Wakeo Child Dashboard Screen" loading="lazy" width="290" height="600">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3: Set New Alarm screen -->
+            <div class="tab-pane" id="tab-set-alarm">
+                <div class="showcase-tab-grid">
+                    <div class="showcase-tab-info">
+                        <span class="section-tag" style="margin-bottom: 0.8rem;">Remote Scheduling</span>
+                        <h3>Smart Time Picker &amp; Motivational Messages</h3>
+                        <p>Parents set alarms remotely with precision. Select specific children, pick AM/PM wake times with relative countdown chips, choose recurring weekdays, and attach personal notes.</p>
+                        <ul class="feature-checklist">
+                            <li><i class="fas fa-check-circle"></i> 12-Hour AM/PM native stepper with "Rings Today in X minutes" preview</li>
+                            <li><i class="fas fa-check-circle"></i> Flexible recurrence: Once, Weekdays (Mon-Fri), Daily, or Custom</li>
+                            <li><i class="fas fa-check-circle"></i> Personalized parent note: "Wake up! Time to study!"</li>
+                        </ul>
+                        <button class="btn btn-secondary trigger-download-modal">
+                            <span>Explore Alarm Creator</span>
+                        </button>
+                    </div>
+                    <div class="showcase-tab-visual">
+                        <div class="phone-mockup-frame">
+                            <img src="assets/03_create_edit_alarm.png" alt="Wakeo Set New Alarm Screen" loading="lazy" width="290" height="600">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 4: Alarm Ringing in Child Screen -->
             <div class="tab-pane" id="tab-child-ringing">
                 <div class="showcase-tab-grid">
                     <div class="showcase-tab-info">
-                        <span class="section-tag" style="margin-bottom: 0.8rem; background: rgba(234, 88, 12, 0.15); border-color: rgba(234, 88, 12, 0.4); color: #fb923c;">Unshakeable Wake Engine</span>
-                        <h3>Full-Screen Lockscreen Takeover &amp; Wake Challenge</h3>
-                        <p>When alarm time strikes, Wakeo launches full-screen even over locked screens. Looping audio plays through the alarm stream and won't cease until wake verification begins.</p>
+                        <span class="section-tag" style="margin-bottom: 0.8rem; background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.4); color: #f87171;">Unshakeable Wake Engine</span>
+                        <h3>Lockscreen Takeover &amp; Wake Challenge</h3>
+                        <p>When the alarm strikes, Wakeo launches full-screen even over locked devices. Looping audio plays at full alarm stream volume and will not stop until the child initiates wake verification.</p>
                         <ul class="feature-checklist">
-                            <li><i class="fas fa-check-circle"></i> Prominent "Take Wake-Up Selfie" primary call to action</li>
-                            <li><i class="fas fa-check-circle"></i> "☀️ Silence with Wake Challenge" (tap 3 morning suns) for instant hardware fallback</li>
-                            <li><i class="fas fa-check-circle"></i> Emergency stop button &amp; 10-minute native auto-silence safety timer</li>
+                            <li><i class="fas fa-check-circle"></i> Clean, high-urgency ringing banner with prominent "Stop Alarm (Take Selfie)" action</li>
+                            <li><i class="fas fa-check-circle"></i> Built with Android Exact Alarm (API 36) &amp; Foreground Media Service</li>
+                            <li><i class="fas fa-check-circle"></i> Failsafe "Silence with Wake Challenge" (tap 3 suns) if camera is restricted</li>
                         </ul>
                         <button class="btn btn-secondary trigger-download-modal">
                             <span>See How Ringing Works</span>
@@ -451,97 +508,97 @@
                 </div>
             </div>
 
-            <!-- Tab 3: Selfie Proof -->
+            <!-- Tab 5: Selfie screen - Child is capturing that -->
+            <div class="tab-pane" id="tab-selfie-capture">
+                <div class="showcase-tab-grid">
+                    <div class="showcase-tab-info">
+                        <span class="section-tag" style="margin-bottom: 0.8rem;">Live Verification</span>
+                        <h3>Front Camera Viewfinder &amp; Face Reticle</h3>
+                        <p>To silence the alarm, the child snaps a morning selfie. The interactive viewfinder guides the child with corner alignment reticles and real-time face detection confirmation.</p>
+                        <ul class="feature-checklist">
+                            <li><i class="fas fa-check-circle"></i> On-screen guidance: "Hold steady and smile to verify you are awake"</li>
+                            <li><i class="fas fa-check-circle"></i> Real-time green "✓ Face Detected" status indicator</li>
+                            <li><i class="fas fa-check-circle"></i> Shutter capture immediately halts alarm audio so children never suffer ringing</li>
+                        </ul>
+                        <button class="btn btn-secondary trigger-download-modal">
+                            <span>Explore Selfie Capture</span>
+                        </button>
+                    </div>
+                    <div class="showcase-tab-visual">
+                        <div class="phone-mockup-frame">
+                            <img src="assets/05_selfie_capture_screen.png" alt="Wakeo Child Capturing Selfie Screen" loading="lazy" width="290" height="600">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 6: Selfie taken and completed screen -->
+            <div class="tab-pane" id="tab-wake-success">
+                <div class="showcase-tab-grid">
+                    <div class="showcase-tab-info">
+                        <span class="section-tag" style="margin-bottom: 0.8rem; background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: #34d399;">Mission Accomplished</span>
+                        <h3>Wake Up Success &amp; Secure Cloud Upload</h3>
+                        <p>Once captured, audio is completely silenced, and the child receives positive reinforcement. The verified selfie is encrypted and securely uploaded to private cloud storage for parental review.</p>
+                        <ul class="feature-checklist">
+                            <li><i class="fas fa-check-circle"></i> Instant audio silence with "Selfie verified &amp; alarm dismissed" confirmation</li>
+                            <li><i class="fas fa-check-circle"></i> Extended morning streak banner (+1 Day bonus logged)</li>
+                            <li><i class="fas fa-check-circle"></i> Encrypted upload to Google Firebase Cloud Storage with strict RBAC rules</li>
+                        </ul>
+                        <button class="btn btn-secondary trigger-download-modal">
+                            <span>Check Cloud Security</span>
+                        </button>
+                    </div>
+                    <div class="showcase-tab-visual">
+                        <div class="phone-mockup-frame">
+                            <img src="assets/06_wake_up_success.png" alt="Wakeo Wake Up Success Screen" loading="lazy" width="290" height="600">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 7: Selfie proof in Parent mobile -->
             <div class="tab-pane" id="tab-selfie-proof">
                 <div class="showcase-tab-grid">
                     <div class="showcase-tab-info">
                         <span class="section-tag" style="margin-bottom: 0.8rem;">Proof of Wakefulness</span>
                         <h3>Verified Photo Proof with Timestamp Logs</h3>
-                        <p>Audio is silenced the millisecond verification triggers. Parents can review captured selfie photos, exact wake-up timestamps, and maintain accountability streaks.</p>
+                        <p>Parents receive instant photographic proof on their device. Inspect the child's smiling morning selfie with exact verification time, scheduled target, and Wakeo Verified authenticity badge.</p>
                         <ul class="feature-checklist">
-                            <li><i class="fas fa-check-circle"></i> Decoupled audio silencing &mdash; child never suffers ringing if network lags</li>
-                            <li><i class="fas fa-check-circle"></i> High-resolution modal with time-stamped photo verification</li>
-                            <li><i class="fas fa-check-circle"></i> Encrypted upload directly to private Firebase Cloud Storage</li>
+                            <li><i class="fas fa-check-circle"></i> High-resolution modal with AI-verified smiling child morning photo</li>
+                            <li><i class="fas fa-check-circle"></i> Side-by-side comparison: Verification Time (7:36 AM) vs Scheduled Target (7:35 AM)</li>
+                            <li><i class="fas fa-check-circle"></i> Cryptographically signed timestamp preventing pre-recorded photo spoofing</li>
                         </ul>
                         <button class="btn btn-secondary trigger-download-modal">
-                            <span>Check Proof Security</span>
+                            <span>Review Proof Features</span>
                         </button>
                     </div>
                     <div class="showcase-tab-visual">
                         <div class="phone-mockup-frame">
-                            <img src="assets/05_verified_selfie_proof.png" alt="Wakeo Verified Selfie Proof Modal" loading="lazy" width="290" height="600">
+                            <img src="assets/07_selfie_proof_modal.png" alt="Wakeo Selfie Proof in Parent Mobile" loading="lazy" width="290" height="600">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab 4: Parent Dashboard -->
-            <div class="tab-pane" id="tab-parent-dashboard">
+            <!-- Tab 8: Multi child support -->
+            <div class="tab-pane" id="tab-multi-child">
                 <div class="showcase-tab-grid">
                     <div class="showcase-tab-info">
-                        <span class="section-tag" style="margin-bottom: 0.8rem;">Command Center</span>
-                        <h3>Central Parent Dashboard &amp; Child Switcher</h3>
-                        <p>Monitor wake streaks, check upcoming alarms for each child, review device health before bedtime, and pair new child phones in seconds.</p>
+                        <span class="section-tag" style="margin-bottom: 0.8rem;">Family Management</span>
+                        <h3>Multi-Child Profiles &amp; Device Health</h3>
+                        <p>Manage routines for all your children in one place. Switch seamlessly between siblings, check individual alarm times, monitor battery levels, and view combined family wake history.</p>
                         <ul class="feature-checklist">
-                            <li><i class="fas fa-check-circle"></i> Multi-child switcher: toggle effortlessly between siblings</li>
-                            <li><i class="fas fa-check-circle"></i> Live device health chips: battery percentage &amp; alarm permissions</li>
-                            <li><i class="fas fa-check-circle"></i> One-tap alarm enable/disable toggles with instant push dispatch</li>
+                            <li><i class="fas fa-check-circle"></i> Multi-child switcher pills (e.g. Ramesh &amp; Priya) with one-tap switching</li>
+                            <li><i class="fas fa-check-circle"></i> Live Child Devices Health bar: battery percentage &amp; Exact Alarm status</li>
+                            <li><i class="fas fa-check-circle"></i> Consolidated Recent Family Wake-ups log showing streaks for each child</li>
                         </ul>
                         <button class="btn btn-secondary trigger-download-modal">
-                            <span>View Parent Features</span>
+                            <span>Explore Multi-Child Setup</span>
                         </button>
                     </div>
                     <div class="showcase-tab-visual">
                         <div class="phone-mockup-frame">
-                            <img src="assets/02_parent_dashboard.png" alt="Wakeo Parent Dashboard" loading="lazy" width="290" height="600">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tab 5: Child Home -->
-            <div class="tab-pane" id="tab-child-home">
-                <div class="showcase-tab-grid">
-                    <div class="showcase-tab-info">
-                        <span class="section-tag" style="margin-bottom: 0.8rem;">Child Companion</span>
-                        <h3>Friendly Child Experience &amp; Wake Streaks</h3>
-                        <p>Children enjoy a clean, non-intrusive interface displaying their next scheduled wake-up time, their personal wake streak, and parent pairing status.</p>
-                        <ul class="feature-checklist">
-                            <li><i class="fas fa-check-circle"></i> Big countdown card showing time until next alarm</li>
-                            <li><i class="fas fa-check-circle"></i> Gamified morning wake-up streaks encouraging healthy routines</li>
-                            <li><i class="fas fa-check-circle"></i> Connected parent status badge ensuring active sync</li>
-                        </ul>
-                        <button class="btn btn-secondary trigger-download-modal">
-                            <span>Explore Child Mode</span>
-                        </button>
-                    </div>
-                    <div class="showcase-tab-visual">
-                        <div class="phone-mockup-frame">
-                            <img src="assets/03_child_home_dark.png" alt="Wakeo Child Home Screen" loading="lazy" width="290" height="600">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tab 6: Role & Pairing -->
-            <div class="tab-pane" id="tab-role-pairing">
-                <div class="showcase-tab-grid">
-                    <div class="showcase-tab-info">
-                        <span class="section-tag" style="margin-bottom: 0.8rem;">Simple Setup</span>
-                        <h3>Seamless Role Selection &amp; 6-Digit Pairing</h3>
-                        <p>Zero friction onboarding. Choose between Parent or Child role on first launch, authenticate via phone number with automatic SIM detection, and link devices via a secure 6-digit code.</p>
-                        <ul class="feature-checklist">
-                            <li><i class="fas fa-check-circle"></i> Clean role selector: "I am a Parent" vs. "I am a Child"</li>
-                            <li><i class="fas fa-check-circle"></i> Play Services Dual-SIM auto hint detection for instant phone login</li>
-                            <li><i class="fas fa-check-circle"></i> Instant 6-digit ephemeral pairing code for secure family linking</li>
-                        </ul>
-                        <button class="btn btn-secondary trigger-download-modal">
-                            <span>Get Started Now</span>
-                        </button>
-                    </div>
-                    <div class="showcase-tab-visual">
-                        <div class="phone-mockup-frame">
-                            <img src="assets/01_welcome_role_selection.png" alt="Wakeo Role Selection Screen" loading="lazy" width="290" height="600">
+                            <img src="assets/08_multi_child_support.png" alt="Wakeo Multi Child Support Screen" loading="lazy" width="290" height="600">
                         </div>
                     </div>
                 </div>
@@ -559,76 +616,76 @@
             </div>
 
             <div class="gallery-grid">
-                <!-- Screen 1 -->
+                <!-- Screen 1: Dashboard - Parent -->
                 <div class="gallery-card">
                     <div class="phone-mockup-frame">
-                        <img src="assets/01_welcome_role_selection.png" alt="Wakeo Role Selection" loading="lazy" width="220" height="460">
+                        <img src="assets/01_parent_dashboard.png" alt="Dashboard - Parent" loading="lazy" width="220" height="460">
                     </div>
-                    <h4>1. Role Selection</h4>
-                    <p>Parent vs. Child Setup</p>
+                    <h4>1. Dashboard - Parent</h4>
+                    <p>Live Alarms &amp; Family Hub</p>
                 </div>
 
-                <!-- Screen 2 -->
+                <!-- Screen 2: Dashboard - Child -->
                 <div class="gallery-card">
                     <div class="phone-mockup-frame">
-                        <img src="assets/02_phone_signin_dark.png" alt="Wakeo Phone Sign-In" loading="lazy" width="220" height="460">
+                        <img src="assets/02_child_dashboard.png" alt="Dashboard - Child" loading="lazy" width="220" height="460">
                     </div>
-                    <h4>2. Auto-SIM Sign-In</h4>
-                    <p>Fast Phone OTP Login</p>
+                    <h4>2. Dashboard - Child</h4>
+                    <p>Next Alarm &amp; Wake Streaks</p>
                 </div>
 
-                <!-- Screen 3 -->
+                <!-- Screen 3: Set New Alarm screen -->
                 <div class="gallery-card">
                     <div class="phone-mockup-frame">
-                        <img src="assets/02_parent_dashboard.png" alt="Wakeo Parent Dashboard" loading="lazy" width="220" height="460">
+                        <img src="assets/03_create_edit_alarm.png" alt="Set New Alarm screen" loading="lazy" width="220" height="460">
                     </div>
-                    <h4>3. Parent Dashboard</h4>
-                    <p>Alarms &amp; Device Health</p>
+                    <h4>3. Set New Alarm</h4>
+                    <p>Time Stepper &amp; Notes</p>
                 </div>
 
-                <!-- Screen 4 -->
+                <!-- Screen 4: Alarm Ringing in Child Screen -->
                 <div class="gallery-card">
                     <div class="phone-mockup-frame">
-                        <img src="assets/03_create_edit_alarm.png" alt="Wakeo Create and Edit Alarm" loading="lazy" width="220" height="460">
+                        <img src="assets/04_child_ringing_alarm.png" alt="Alarm Ringing in Child Screen" loading="lazy" width="220" height="460">
                     </div>
-                    <h4>4. Alarm Creator</h4>
-                    <p>Schedules &amp; Notes</p>
+                    <h4>4. Alarm Ringing Screen</h4>
+                    <p>Lockscreen Takeover &amp; Challenge</p>
                 </div>
 
-                <!-- Screen 5 -->
+                <!-- Screen 5: Selfie screen - Child is capturing that -->
                 <div class="gallery-card">
                     <div class="phone-mockup-frame">
-                        <img src="assets/03_child_home_dark.png" alt="Wakeo Child Home Screen" loading="lazy" width="220" height="460">
+                        <img src="assets/05_selfie_capture_screen.png" alt="Selfie screen - Child is capturing that" loading="lazy" width="220" height="460">
                     </div>
-                    <h4>5. Child Companion</h4>
-                    <p>Next Alarm &amp; Streaks</p>
+                    <h4>5. Selfie Screen Capture</h4>
+                    <p>Face Detection Viewfinder</p>
                 </div>
 
-                <!-- Screen 6 -->
+                <!-- Screen 6: Selfie taken and completed screen -->
                 <div class="gallery-card">
                     <div class="phone-mockup-frame">
-                        <img src="assets/04_child_ringing_alarm.png" alt="Wakeo Child Alarm Ringing" loading="lazy" width="220" height="460">
+                        <img src="assets/06_wake_up_success.png" alt="Selfie taken and completed screen" loading="lazy" width="220" height="460">
                     </div>
-                    <h4>6. Alarm Ringing</h4>
-                    <p>Wake Challenge &amp; Selfie</p>
+                    <h4>6. Wake-Up Success</h4>
+                    <p>Audio Dismissed &amp; Cloud Saved</p>
                 </div>
 
-                <!-- Screen 7 -->
+                <!-- Screen 7: Selfie proof in Parent mobile -->
                 <div class="gallery-card">
                     <div class="phone-mockup-frame">
-                        <img src="assets/05_verified_selfie_proof.png" alt="Wakeo Verified Selfie Proof" loading="lazy" width="220" height="460">
+                        <img src="assets/07_selfie_proof_modal.png" alt="Selfie proof in Parent mobile" loading="lazy" width="220" height="460">
                     </div>
-                    <h4>7. Photo Verification</h4>
-                    <p>Timestamped Wake Proof</p>
+                    <h4>7. Selfie Proof (Parent)</h4>
+                    <p>Verified Photo &amp; Timestamp</p>
                 </div>
 
-                <!-- Screen 8 -->
+                <!-- Screen 8: Multi child support -->
                 <div class="gallery-card">
                     <div class="phone-mockup-frame">
-                        <img src="assets/06_phone_auth_signin.png" alt="Wakeo Phone Auth Screen" loading="lazy" width="220" height="460">
+                        <img src="assets/08_multi_child_support.png" alt="Multi child support" loading="lazy" width="220" height="460">
                     </div>
-                    <h4>8. Universal Auth</h4>
-                    <p>ITU E.164 Global SMS</p>
+                    <h4>8. Multi Child Support</h4>
+                    <p>Sibling Profiles &amp; Device Health</p>
                 </div>
             </div>
         </div>
@@ -813,7 +870,7 @@
     <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Screenshot Preview">
         <div class="lightbox-content">
             <button class="lightbox-close" id="lightboxClose" aria-label="Close screenshot preview">&times;</button>
-            <img src="assets/01_welcome_role_selection.png" alt="Screenshot" class="lightbox-img" id="lightboxImg">
+            <img src="assets/01_parent_dashboard.png" alt="Wakeo Android App Screenshot" class="lightbox-img" id="lightboxImg">
             <div class="lightbox-caption" id="lightboxCaption"></div>
         </div>
     </div>
