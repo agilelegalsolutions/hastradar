@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HastVault — 100% Offline Financial Asset & Family Nominee Vault for Android</title>
+    <meta name="description" content="HastVault is the private, zero-cloud personal financial asset and family nominee records vault for Android. Encrypted with SQLCipher AES-256 and backed by hardware Android KeyStore. Zero internet permissions.">
+    <meta name="keywords" content="HastVault, offline asset vault, financial asset tracker Android, nominee manager app, family wealth organizer, SQLCipher AES-256 vault, DPDP Act compliant finance app, private financial vault, Hastradar apps">
+    <link rel="canonical" href="https://www.hastradar.com/apps/hastvault/">
+
+    <!-- Security & Revision Meta Tags -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="revised" content="2026-09-22">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: file:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com file:; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: file:; connect-src 'self' https: file:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <!-- Favicon Icons -->
+    <link rel="icon" type="image/jpeg" href="assets/app_icon_512.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/app_icon_512.jpg">
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.hastradar.com/apps/hastvault/">
+    <meta property="og:title" content="HastVault — 100% Offline Financial Asset & Family Nominee Vault">
+    <meta property="og:description" content="Private, zero-cloud personal financial records vault. Encrypted with AES-256 SQLCipher. Track bank accounts, insurance, gold, real estate, and family nominees with zero internet permissions.">
+    <meta property="og:image" content="https://www.hastradar.com/apps/hastvault/assets/feature_graphic_1024x500.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HastVault — Private Offline Financial & Nominee Vault">
+    <meta name="twitter:description" content="Keep your financial legacy safe and organized for your family. Zero cloud, zero internet permission, hardware-backed AES-256 encryption.">
+    <meta name="twitter:image" content="https://www.hastradar.com/apps/hastvault/assets/feature_graphic_1024x500.jpg">
+
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../styles.css">
+
+    <!-- Breadcrumb JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.hastradar.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Apps",
+          "item": "https://www.hastradar.com/#products"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "HastVault",
+          "item": "https://www.hastradar.com/apps/hastvault/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "HastVault: Offline Asset Vault",
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "FinanceApplication",
+      "applicationSubCategory": "SecurityApplication",
+      "softwareVersion": "1.0.0",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "HastRadar Consultancy Services Pvt. Ltd.",
+        "url": "https://www.hastradar.com"
+      },
+      "description": "100% offline, encrypted personal financial asset and family nominee records vault for Android with SQLCipher AES-256 encryption and zero cloud footprint.",
+      "url": "https://www.hastradar.com/apps/hastvault/",
+      "image": "https://www.hastradar.com/apps/hastvault/assets/app_icon_512.jpg",
+      "screenshot": [
+        "https://www.hastradar.com/apps/hastvault/assets/screenshot_showcase.jpg",
+        "https://www.hastradar.com/apps/hastvault/assets/feature_graphic_1024x500.jpg"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is HastVault really 100% offline with zero cloud tracking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. HastVault does not declare the android.permission.INTERNET permission in its Android manifest. This means the app cannot communicate with any remote server, cloud API, or third-party analytics network. All financial records and nominee files stay strictly on your physical device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is my financial data protected inside the phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HastVault utilizes SQLCipher with military-grade AES-256 encryption for the SQLite database. Encryption keys are generated and protected by the hardware-backed Android KeyStore (TEE / Secure Enclave). Access is further protected by biometric fingerprint/face authentication, an optional PBKDF2-hashed PIN, and FLAG_SECURE window protection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does nominee mapping help my family in an emergency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HastVault allows you to link trusted family members to every bank account, insurance policy, fixed deposit, gold locker, and real estate property. You can store nominee phone numbers, relation notes, and allocation shares. The Nominee Audit dashboard also flags any critical asset that lacks an assigned nominee."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I transfer my data to a new phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. HastVault includes a local encrypted backup and restore engine (.hastvault format). You can export an encrypted backup file using Android's Storage Access Framework and transfer it securely to your new device."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Atmospheric Ambient Glows -->
+    <div class="bg-glow-container">
+        <div class="bg-glow-1"></div>
+        <div class="bg-glow-2"></div>
+        <div class="bg-glow-3"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/app_icon_512.jpg" alt="HastVault Logo" class="nav-logo-icon">
+                <div>
+                    <span class="nav-brand-text">HastVault</span>
+                    <span class="nav-brand-badge">Android</span>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#overview" class="nav-link">Overview</a></li>
+                <li><a href="#security" class="nav-link">Security Specs</a></li>
+                <li><a href="#categories" class="nav-link">Asset Categories</a></li>
+                <li><a href="#nominees" class="nav-link">Family Nominees</a></li>
+                <li><a href="#voice" class="nav-link">Smart Voice</a></li>
+                <li><a href="#faq" class="nav-link">FAQs</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#download" class="btn-primary">
+                    <i class="fab fa-google-play"></i>
+                    <span>Get HastVault</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-dropdown" id="mobileDropdown">
+            <ul>
+                <li><a href="#overview"><i class="fas fa-shield-halved text-amber-400"></i> Overview</a></li>
+                <li><a href="#security"><i class="fas fa-lock text-emerald-400"></i> Security Architecture</a></li>
+                <li><a href="#categories"><i class="fas fa-layer-group text-cyan-400"></i> 9 Asset Categories</a></li>
+                <li><a href="#nominees"><i class="fas fa-users text-purple-400"></i> Nominee Mapping</a></li>
+                <li><a href="#voice"><i class="fas fa-microphone text-amber-400"></i> Voice Input (EN/HI)</a></li>
+                <li><a href="#faq"><i class="fas fa-circle-question text-slate-400"></i> FAQs</a></li>
+                <li><a href="privacy-policy.html"><i class="fas fa-file-shield text-emerald-400"></i> Privacy Policy</a></li>
+                <li><a href="terms-of-service.html"><i class="fas fa-scale-balanced text-amber-400"></i> Terms of Service</a></li>
+                <li><a href="delete-account.html"><i class="fas fa-trash-can text-red-400"></i> Data Deletion Guide</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope text-blue-400"></i> Support Desk</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-section" id="overview">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="btn-badge">
+                    <i class="fas fa-shield-cat"></i>
+                    <span>Zero Cloud • 100% Offline Vault</span>
+                </div>
+
+                <h1 class="hero-title">
+                    Organize Your Wealth.<br>
+                    <span class="hero-title-highlight">Never Leave Family in the Dark.</span>
+                </h1>
+
+                <p class="hero-description">
+                    HastVault is your private, hardware-encrypted personal financial asset and family nominee records vault for Android. Built with <strong>SQLCipher AES-256</strong> and <strong>zero internet permissions</strong>, your sensitive wealth data stays 100% on your device.
+                </p>
+
+                <div class="hero-trust-badges">
+                    <div class="trust-badge-pill security-pill">
+                        <i class="fas fa-ban"></i>
+                        <span>Zero Internet Permission</span>
+                    </div>
+                    <div class="trust-badge-pill">
+                        <i class="fas fa-key"></i>
+                        <span>SQLCipher AES-256</span>
+                    </div>
+                    <div class="trust-badge-pill">
+                        <i class="fas fa-fingerprint"></i>
+                        <span>Biometric & PIN Lock</span>
+                    </div>
+                    <div class="trust-badge-pill">
+                        <i class="fas fa-file-contract"></i>
+                        <span>DPDP Act 2023 Compliant</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta-group">
+                    <a href="#download" class="btn-primary">
+                        <i class="fab fa-google-play"></i>
+                        <span>Download for Android</span>
+                    </a>
+                    <a href="https://github.com/hareramjha2007/HastVault-AndroidApp" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                        <i class="fab fa-github"></i>
+                        <span>View Source Code</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Phone Frame Showcase with Live Interactive Privacy Toggle -->
+            <div class="phone-mockup-wrapper">
+                <div class="phone-mockup-glow"></div>
+                <div class="phone-card">
+                    <div class="phone-screen">
+                        <img src="assets/screenshot_showcase.jpg" alt="HastVault Android App Showcase" id="showcaseImg">
+                        
+                        <!-- Interactive Privacy Blur Toggle Widget -->
+                        <div class="privacy-demo-floating-widget">
+                            <span class="privacy-toggle-label">
+                                <i class="fas fa-eye-slash text-amber-400"></i>
+                                <span id="privacyStatusText">Privacy Blur Simulation</span>
+                            </span>
+                            <label class="switch" aria-label="Toggle Privacy Shield Preview">
+                                <input type="checkbox" id="privacyToggle" title="Toggle privacy blur filter">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECURITY ARCHITECTURE & PRIVACY DEEP-DIVE -->
+    <section class="security-section" id="security">
+        <div class="section-header">
+            <div class="btn-badge">
+                <i class="fas fa-lock"></i>
+                <span>Hardened Threat Model</span>
+            </div>
+            <h2 class="section-title">Security Architecture Engineered for Absolute Privacy</h2>
+            <p class="section-subtitle">
+                Most finance applications transmit your sensitive bank and asset details to cloud servers. HastVault is architected to guarantee technical impossibility of data leakage.
+            </p>
+        </div>
+
+        <div class="security-grid">
+            <!-- Feature 1 -->
+            <div class="security-card">
+                <div class="security-card-icon">
+                    <i class="fas fa-network-wired-slash"></i>
+                </div>
+                <span class="security-pill-tag">No Network</span>
+                <h3 class="security-card-title">Zero Internet Permission</h3>
+                <p class="security-card-desc">
+                    HastVault does not declare <code>android.permission.INTERNET</code> in its manifest. The Android operating system physically forbids the app from sending any packets over Wi-Fi or cellular networks.
+                </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="security-card emerald">
+                <div class="security-card-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <span class="security-pill-tag" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">AES-256 DB</span>
+                <h3 class="security-card-title">SQLCipher Database Encryption</h3>
+                <p class="security-card-desc">
+                    Every record stored in the local SQLite database is encrypted on disk using SQLCipher AES-256. Even if a rooted device is examined, the raw database file remains an unreadable ciphertext.
+                </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="security-card cyan">
+                <div class="security-card-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <span class="security-pill-tag" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">Hardware TEE</span>
+                <h3 class="security-card-title">Android KeyStore Master Key</h3>
+                <p class="security-card-desc">
+                    Master cryptographic keys are generated and held inside your device's hardware-backed Secure Enclave or Trusted Execution Environment (TEE). The database passphrase never leaves secure memory.
+                </p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="security-card">
+                <div class="security-card-icon">
+                    <i class="fas fa-fingerprint"></i>
+                </div>
+                <span class="security-pill-tag">Biometrics</span>
+                <h3 class="security-card-title">Biometric Prompt & PIN Guard</h3>
+                <p class="security-card-desc">
+                    Instant app unlock via Android BiometricPrompt (fingerprint or face unlock) or fallback 4-digit PIN stored in encrypted preferences. Quick timeout locks the vault as soon as you switch apps.
+                </p>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="security-card emerald">
+                <div class="security-card-icon">
+                    <i class="fas fa-eye-slash"></i>
+                </div>
+                <span class="security-pill-tag" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">FLAG_SECURE</span>
+                <h3 class="security-card-title">Screen Shield & Snapshot Block</h3>
+                <p class="security-card-desc">
+                    Enforces Android <code>FLAG_SECURE</code> to prevent accidental screenshots and block the Android app switcher from showing sensitive balance snapshots in recent apps.
+                </p>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="security-card cyan">
+                <div class="security-card-icon">
+                    <i class="fas fa-scale-balanced"></i>
+                </div>
+                <span class="security-pill-tag" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">DPDP Act</span>
+                <h3 class="security-card-title">DPDP Act 2023 & GDPR Aligned</h3>
+                <p class="security-card-desc">
+                    Full privacy-by-design compliance. Enjoy true data sovereignty with 1-tap complete data deletion, no behavioral telemetry, no third-party trackers, and no advertising SDKs.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9 CORE ASSET CATEGORIES -->
+    <section class="categories-section" id="categories">
+        <div class="section-header">
+            <div class="btn-badge">
+                <i class="fas fa-vault"></i>
+                <span>Comprehensive Catalog</span>
+            </div>
+            <h2 class="section-title">9 Dedicated Asset Categories Built for Real-Life Wealth</h2>
+            <p class="section-subtitle">
+                Organize every asset in your portfolio with structured fields tailored to Indian and global financial systems.
+            </p>
+        </div>
+
+        <div class="categories-container">
+            <!-- Category Tabs Navigation -->
+            <div class="category-tabs-nav">
+                <button class="cat-tab-btn active" data-category="bank"><i class="fas fa-building-columns"></i> Bank Accounts</button>
+                <button class="cat-tab-btn" data-category="fd"><i class="fas fa-chart-line"></i> Fixed Deposits (FD)</button>
+                <button class="cat-tab-btn" data-category="insurance"><i class="fas fa-shield-heart"></i> Insurance Policies</button>
+                <button class="cat-tab-btn" data-category="gold"><i class="fas fa-coins"></i> Gold & Jewellery</button>
+                <button class="cat-tab-btn" data-category="property"><i class="fas fa-house-chimney"></i> Real Estate</button>
+                <button class="cat-tab-btn" data-category="stocks"><i class="fas fa-chart-pie"></i> Stocks & Demat</button>
+                <button class="cat-tab-btn" data-category="locker"><i class="fas fa-key"></i> Bank Lockers</button>
+                <button class="cat-tab-btn" data-category="docs"><i class="fas fa-file-signature"></i> Wills & Documents</button>
+                <button class="cat-tab-btn" data-category="custom"><i class="fas fa-box-archive"></i> Custom Assets</button>
+            </div>
+
+            <!-- Panels -->
+            <!-- Panel 1: Bank Accounts -->
+            <div class="cat-content-panel active" id="cat-bank">
+                <div class="cat-panel-card">
+                    <div class="cat-info">
+                        <h3><i class="fas fa-building-columns text-amber-400"></i> Bank Accounts & Deposits</h3>
+                        <p>Keep track of savings, current, joint, and salary accounts across multiple financial institutions without exposing net banking passwords.</p>
+                        <ul class="cat-features-list">
+                            <li><i class="fas fa-circle-check"></i> <span>Institution name, branch city, and IFSC code</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span>Account numbers and registered mobile phone links</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span>Joint holder details and dedicated nominee mapping</span></li>
+                        </ul>
+                    </div>
+                    <div class="cat-visual-card">
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Category</span>
+                            <span class="cat-visual-val text-amber-400">Liquid Assets / Banking</span>
+                        </div>
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Fields Tracked</span>
+                            <span class="cat-visual-val">Bank, Account No, IFSC, Branch, Balance</span>
+                        </div>
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Emergency Readiness</span>
+                            <span class="cat-visual-val text-emerald-400">Family Nominee Verified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 2: FD / RD -->
+            <div class="cat-content-panel" id="cat-fd">
+                <div class="cat-panel-card">
+                    <div class="cat-info">
+                        <h3><i class="fas fa-chart-line text-amber-400"></i> Fixed & Recurring Deposits</h3>
+                        <p>Track your term deposits across post offices and private banks to ensure timely renewal or payout upon maturity.</p>
+                        <ul class="cat-features-list">
+                            <li><i class="fas fa-circle-check"></i> <span>Principal amount, interest rate %, and maturity date</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span>FDR (Fixed Deposit Receipt) reference numbers</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span>Periodic review alerts via Android WorkManager</span></li>
+                        </ul>
+                    </div>
+                    <div class="cat-visual-card">
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Category</span>
+                            <span class="cat-visual-val text-amber-400">Fixed Income</span>
+                        </div>
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Key Reminder</span>
+                            <span class="cat-visual-val">Maturity Date Notification</span>
+                        </div>
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Encryption</span>
+                            <span class="cat-visual-val text-emerald-400">Hardware Keystore Protected</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 3: Insurance -->
+            <div class="cat-content-panel" id="cat-insurance">
+                <div class="cat-panel-card">
+                    <div class="cat-info">
+                        <h3><i class="fas fa-shield-heart text-amber-400"></i> Insurance Policies</h3>
+                        <p>Life insurance (term plans), health insurance (mediclaim), and vehicle insurance policies organized in one searchable vault.</p>
+                        <ul class="cat-features-list">
+                            <li><i class="fas fa-circle-check"></i> <span>Sum assured amount, policy numbers, and premium cycle</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span>Insurer emergency claim helpline and agent contacts</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span>Designated primary and secondary family beneficiaries</span></li>
+                        </ul>
+                    </div>
+                    <div class="cat-visual-card">
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Category</span>
+                            <span class="cat-visual-val text-amber-400">Protection & Life Coverage</span>
+                        </div>
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Emergency Utility</span>
+                            <span class="cat-visual-val">Immediate Claim Policy Lookup</span>
+                        </div>
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Nominee Status</span>
+                            <span class="cat-visual-val text-emerald-400">Crucial for Claims</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 4: Gold -->
+            <div class="cat-content-panel" id="cat-gold">
+                <div class="cat-panel-card">
+                    <div class="cat-info">
+                        <h3><i class="fas fa-coins text-amber-400"></i> Gold, Silver & Jewellery</h3>
+                        <p>Catalog physical gold ornaments, bullion bars, coins, and Sovereign Gold Bonds (SGB) with weight and custody records.</p>
+                        <ul class="cat-features-list">
+                            <li><i class="fas fa-circle-check"></i> <span>Net weight in grams and purity (24K / 22K)</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span>Purchase valuation, hallmarking details, and invoice storage</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span>Physical custody location (home safe vs bank locker)</span></li>
+                        </ul>
+                    </div>
+                    <div class="cat-visual-card">
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Category</span>
+                            <span class="cat-visual-val text-amber-400">Precious Commodities</span>
+                        </div>
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Unit Tracking</span>
+                            <span class="cat-visual-val">Grams / Sovereign Units</span>
+                        </div>
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Safekeeping</span>
+                            <span class="cat-visual-val text-emerald-400">Linked to Locker ID</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 5: Real Estate -->
+            <div class="cat-content-panel" id="cat-property">
+                <div class="cat-panel-card">
+                    <div class="cat-info">
+                        <h3><i class="fas fa-house-chimney text-amber-400"></i> Real Estate & Property</h3>
+                        <p>Keep your residential apartments, agricultural land, plots, and commercial properties systematically registered.</p>
+                        <ul class="cat-features-list">
+                            <li><i class="fas fa-circle-check"></i> <span>Registration deed numbers, sub-registrar office, and survey numbers</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span>Property tax assessment numbers and khata / patta IDs</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span>Ownership shares and inheritance nominee records</span></li>
+                        </ul>
+                    </div>
+                    <div class="cat-visual-card">
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Category</span>
+                            <span class="cat-visual-val text-amber-400">Immovable Property</span>
+                        </div>
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Paperwork Reference</span>
+                            <span class="cat-visual-val">Deed & Survey Identification</span>
+                        </div>
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Legacy Readiness</span>
+                            <span class="cat-visual-val text-emerald-400">Nominee & Will Alignment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 6: Stocks -->
+            <div class="cat-content-panel" id="cat-stocks">
+                <div class="cat-panel-card">
+                    <div class="cat-info">
+                        <h3><i class="fas fa-chart-pie text-amber-400"></i> Stocks, Mutual Funds & Demat</h3>
+                        <p>Consolidate Demat accounts across brokers (Zerodha, Groww, AngelOne) and mutual fund folio records in one place.</p>
+                        <ul class="cat-features-list">
+                            <li><i class="fas fa-circle-check"></i> <span>Depository Participant (DP ID) and client Demat numbers</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span>Mutual fund AMC folios and Registrar (CAMS/KFintech) accounts</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span>Emergency broker support contact information</span></li>
+                        </ul>
+                    </div>
+                    <div class="cat-visual-card">
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Category</span>
+                            <span class="cat-visual-val text-amber-400">Capital Markets</span>
+                        </div>
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Security Note</span>
+                            <span class="cat-visual-val">Zero Trading Passwords Needed</span>
+                        </div>
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Nominee Tracking</span>
+                            <span class="cat-visual-val text-emerald-400">SEBI / Demat Sync Ready</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 7: Lockers -->
+            <div class="cat-content-panel" id="cat-locker">
+                <div class="cat-panel-card">
+                    <div class="cat-info">
+                        <h3><i class="fas fa-key text-amber-400"></i> Physical Bank Lockers</h3>
+                        <p>Maintain precise records of safe deposit vaults, locker keys, authorized operators, and contents list.</p>
+                        <ul class="cat-features-list">
+                            <li><i class="fas fa-circle-check"></i> <span>Bank name, branch location, and locker number</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span>Key identification code and secure physical storage hints</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span>Joint operators and bank nominee mandate records</span></li>
+                        </ul>
+                    </div>
+                    <div class="cat-visual-card">
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Category</span>
+                            <span class="cat-visual-val text-amber-400">Physical Custody</span>
+                        </div>
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Access Details</span>
+                            <span class="cat-visual-val">Key Location & Branch Info</span>
+                        </div>
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Nomination</span>
+                            <span class="cat-visual-val text-emerald-400">Bank Nominee Record Verified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 8: Documents -->
+            <div class="cat-content-panel" id="cat-docs">
+                <div class="cat-panel-card">
+                    <div class="cat-info">
+                        <h3><i class="fas fa-file-signature text-amber-400"></i> Important Documents & Wills</h3>
+                        <p>Store safekeeping details for registered wills, powers of attorney, marriage certificates, and adoption deeds.</p>
+                        <ul class="cat-features-list">
+                            <li><i class="fas fa-circle-check"></i> <span>Will registration number, executor names, and advocate contacts</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span>Custody location of original signed and notarized deeds</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span>Critical instructions for trusted family members</span></li>
+                        </ul>
+                    </div>
+                    <div class="cat-visual-card">
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Category</span>
+                            <span class="cat-visual-val text-amber-400">Legal Testament & Deeds</span>
+                        </div>
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Executor Mapping</span>
+                            <span class="cat-visual-val">Designated Legal Representatives</span>
+                        </div>
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Data Privacy</span>
+                            <span class="cat-visual-val text-emerald-400">Local Disk Encrypted</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 9: Custom Assets -->
+            <div class="cat-content-panel" id="cat-custom">
+                <div class="cat-panel-card">
+                    <div class="cat-info">
+                        <h3><i class="fas fa-box-archive text-amber-400"></i> Other Custom Assets</h3>
+                        <p>Track private equity, business partnership shares, collectibles, vintage vehicles, and personal debt agreements.</p>
+                        <ul class="cat-features-list">
+                            <li><i class="fas fa-circle-check"></i> <span>Custom asset title, estimated valuation, and asset description</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span>Attached notes, contact persons, and legal identifiers</span></li>
+                            <li><i class="fas fa-circle-check"></i> <span>Full nominee mapping and allocation tracking</span></li>
+                        </ul>
+                    </div>
+                    <div class="cat-visual-card">
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Category</span>
+                            <span class="cat-visual-val text-amber-400">Alternative Investments</span>
+                        </div>
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Flexibility</span>
+                            <span class="cat-visual-val">User-Defined Custom Fields</span>
+                        </div>
+                        <div class="cat-visual-stat">
+                            <span class="cat-visual-label">Safety</span>
+                            <span class="cat-visual-val text-emerald-400">Zero Cloud Transmission</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAMILY NOMINEE & LEGACY MAPPING -->
+    <section class="nominee-section" id="nominees">
+        <div class="nominee-container">
+            <div>
+                <div class="btn-badge">
+                    <i class="fas fa-heart"></i>
+                    <span>Family Protection</span>
+                </div>
+                <h2 class="section-title" style="margin-top: 0.75rem; text-align: left;">
+                    Over 50,000 Crore Rupees Lie Unclaimed in Forgotten Bank Accounts
+                </h2>
+                <p class="section-subtitle" style="text-align: left; margin-top: 1rem;">
+                    Every year, families struggle to access deposits, insurance payouts, and property because nominees were never formally tracked or shared. HastVault solves this critical challenge with zero invasion of privacy.
+                </p>
+
+                <ul class="nominee-feature-list">
+                    <li class="nominee-feature-item">
+                        <div class="nominee-icon-wrap">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="nominee-text">
+                            <h4>One-Tap Nominee Linking</h4>
+                            <p>Assign trusted family members to individual assets with designated share percentages, phone numbers, and relation notes.</p>
+                        </div>
+                    </li>
+                    <li class="nominee-feature-item">
+                        <div class="nominee-icon-wrap" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.35); color: #10b981;">
+                            <i class="fas fa-triangle-exclamation"></i>
+                        </div>
+                        <div class="nominee-text">
+                            <h4>Unassigned Asset Risk Auditor</h4>
+                            <p>The built-in audit dashboard instantly identifies high-value assets that lack an assigned nominee, alerting you before it's too late.</p>
+                        </div>
+                    </li>
+                    <li class="nominee-feature-item">
+                        <div class="nominee-icon-wrap" style="background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.35); color: #38bdf8;">
+                            <i class="fas fa-clock-rotate-left"></i>
+                        </div>
+                        <div class="nominee-text">
+                            <h4>Periodic Review Reminders</h4>
+                            <p>WorkManager-powered periodic check-in reminders prompt you (quarterly or annually) to ensure your nominee allocations stay accurate.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="glass-panel" style="padding: 2.5rem;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <i class="fas fa-users text-amber-400 text-2xl"></i>
+                        <h3 style="font-size: 1.25rem; font-weight: 700;">Nominee Overview</h3>
+                    </div>
+                    <span class="btn-badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border-color: rgba(16, 185, 129, 0.3);">
+                        <i class="fas fa-shield-check"></i> Audit Active
+                    </span>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div style="background: rgba(6, 9, 19, 0.6); padding: 1.25rem; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <span style="font-weight: 700; color: #ffffff;">Spouse (Primary Nominee)</span>
+                            <span style="font-size: 0.8rem; background: rgba(229, 184, 105, 0.15); color: #e5b869; padding: 0.2rem 0.6rem; border-radius: 999px;">7 Assets Linked</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 0;">Assigned to Bank Accounts, Life Insurance, and Residential Property.</p>
+                    </div>
+
+                    <div style="background: rgba(6, 9, 19, 0.6); padding: 1.25rem; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <span style="font-weight: 700; color: #ffffff;">Child 1 (Secondary Nominee)</span>
+                            <span style="font-size: 0.8rem; background: rgba(56, 189, 248, 0.15); color: #38bdf8; padding: 0.2rem 0.6rem; border-radius: 999px;">4 Assets Linked</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 0;">Assigned to Fixed Deposits and Demat Portfolio.</p>
+                    </div>
+
+                    <div style="background: rgba(239, 68, 68, 0.08); padding: 1.25rem; border-radius: 12px; border: 1px solid rgba(239, 68, 68, 0.25);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <span style="font-weight: 700; color: #fca5a5;"><i class="fas fa-circle-exclamation text-red-400 mr-1.5"></i> Unassigned Asset Warning</span>
+                            <span style="font-size: 0.8rem; background: rgba(239, 68, 68, 0.2); color: #f87171; padding: 0.2rem 0.6rem; border-radius: 999px;">Action Required</span>
+                        </div>
+                        <p style="font-size: 0.85rem; color: #cbd5e1; margin-bottom: 0;">1 Fixed Deposit has no nominee registered. Tap to link a nominee in 5 seconds.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SMART BILINGUAL VOICE INPUT -->
+    <section class="voice-section" id="voice">
+        <div class="section-header">
+            <div class="btn-badge">
+                <i class="fas fa-microphone"></i>
+                <span>On-Device Natural Language</span>
+            </div>
+            <h2 class="section-title">Smart Voice Parser in English & Hindi</h2>
+            <p class="section-subtitle">
+                Speaking is 5x faster than typing. Use your voice to quickly log assets with automatic recognition of Indian numbering terms like Lakh and Crore.
+            </p>
+        </div>
+
+        <div class="voice-grid">
+            <div class="voice-card">
+                <div class="security-card-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h3 class="security-card-title">English & Hindi Parsing</h3>
+                <p class="security-card-desc">
+                    Intelligently recognizes terms like <em>Lakh, Crore, Thousand, हजार, लाख, करोड़, एफडी, बीमा, सोना</em> to populate valuations and categories automatically.
+                </p>
+                <div class="voice-quote-box">
+                    <i class="fas fa-quote-left text-amber-400"></i>
+                    <span>"SBI mein 5 lakh ki FD nominee Neha"</span>
+                </div>
+            </div>
+
+            <div class="voice-card">
+                <div class="security-card-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border-color: rgba(16, 185, 129, 0.3);">
+                    <i class="fas fa-shield-virus"></i>
+                </div>
+                <h3 class="security-card-title">100% On-Device Audio</h3>
+                <p class="security-card-desc">
+                    Processes voice input strictly using Android's on-device SpeechRecognizer. Audio samples are never recorded, never stored on disk, and never transmitted over the internet.
+                </p>
+                <div class="voice-quote-box">
+                    <i class="fas fa-quote-left text-amber-400"></i>
+                    <span>"LIC term policy 1 crore nominee wife"</span>
+                </div>
+            </div>
+
+            <div class="voice-card">
+                <div class="security-card-icon" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3 class="security-card-title">Instant Field Extraction</h3>
+                <p class="security-card-desc">
+                    Automatically fills in the Asset Category, Asset Name, Estimated Amount, and Nominee fields with a single voice command.
+                </p>
+                <div class="voice-quote-box">
+                    <i class="fas fa-quote-left text-amber-400"></i>
+                    <span>"HDFC bank account 2 lakh balance"</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS -->
+    <section class="faq-section" id="faq">
+        <div class="section-header">
+            <div class="btn-badge">
+                <i class="fas fa-circle-question"></i>
+                <span>Got Questions?</span>
+            </div>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">
+                Everything you need to know about HastVault security, data privacy, and offline architecture.
+            </p>
+        </div>
+
+        <div class="faq-container">
+            <div class="accordion-item active">
+                <div class="accordion-header">
+                    <h4><i class="fas fa-shield-halved text-amber-400"></i> How can I be certain HastVault doesn't upload my financial data?</h4>
+                    <i class="fas fa-chevron-down chevron-icon"></i>
+                </div>
+                <div class="accordion-body" style="max-height: 250px;">
+                    <div class="accordion-body-inner">
+                        HastVault does not declare the <code>android.permission.INTERNET</code> permission in its Android manifest. In Android's sandbox model, an application without this permission cannot open sockets, perform HTTP requests, or communicate over Wi-Fi or cellular networks. You can verify this yourself in your phone's App Info settings or inspect the open-source repository.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4><i class="fas fa-key text-amber-400"></i> What happens if someone steals my phone?</h4>
+                    <i class="fas fa-chevron-down chevron-icon"></i>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-body-inner">
+                        Your data is safe. The HastVault database is encrypted at-rest using SQLCipher AES-256. The master encryption key is locked inside the hardware Android KeyStore (TEE) and is inaccessible without your biometric fingerprint/face or secure 4-digit PIN. Furthermore, FLAG_SECURE prevents screenshots from being captured.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4><i class="fas fa-arrows-rotate text-amber-400"></i> How do I transfer my vault to a new Android phone?</h4>
+                    <i class="fas fa-chevron-down chevron-icon"></i>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-body-inner">
+                        You can export an encrypted <code>.hastvault</code> backup file via <strong>Settings &gt; Backup &amp; Restore</strong>. This file is encrypted with AES-GCM-256 using key derivation derived from your backup password. You can safely send this file to your new device via Bluetooth, USB, or Google Drive and restore it instantly.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4><i class="fas fa-microphone-slash text-amber-400"></i> Why does HastVault request the Microphone permission?</h4>
+                    <i class="fas fa-chevron-down chevron-icon"></i>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-body-inner">
+                        The microphone permission is solely used when you voluntarily tap the voice input button to dictate asset entries in Hindi or English. Speech recognition is handled on-device by Android SpeechRecognizer. Audio is never recorded to disk and never sent anywhere.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4><i class="fas fa-file-contract text-amber-400"></i> Is HastVault compliant with India's DPDP Act 2023?</h4>
+                    <i class="fas fa-chevron-down chevron-icon"></i>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-body-inner">
+                        Yes. Under the Digital Personal Data Protection (DPDP) Act, 2023, personal data sovereignty and minimization are paramount. Because HastVault operates entirely on-device with zero remote storage or cloud tracking, it complies with the highest standards of data minimization and privacy by design.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4><i class="fas fa-trash-can text-amber-400"></i> How do I completely delete my data?</h4>
+                    <i class="fas fa-chevron-down chevron-icon"></i>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-body-inner">
+                        You retain 100% control. You can delete individual records at any time, or permanently wipe the entire encrypted database, cryptographic keys, and user settings in one tap by going to <strong>Settings &gt; Delete All Data</strong>. Uninstalling the app also erases all local application data from your device.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION / DOWNLOAD -->
+    <section class="cta-section" id="download">
+        <div class="cta-banner">
+            <h2 class="cta-title">Take Full Control of Your Financial Legacy Today</h2>
+            <p class="cta-desc">
+                Download HastVault and organize bank accounts, policies, fixed deposits, and family nominees with military-grade offline encryption.
+            </p>
+            <div class="hero-cta-group" style="justify-content: center;">
+                <a href="https://github.com/hareramjha2007/HastVault-AndroidApp/releases" class="btn-primary" style="font-size: 1.05rem; padding: 0.9rem 2rem;">
+                    <i class="fab fa-google-play"></i>
+                    <span>Download on Google Play</span>
+                </a>
+                <a href="https://github.com/hareramjha2007/HastVault-AndroidApp" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="font-size: 1.05rem; padding: 0.9rem 2rem;">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub Repository</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-brand">
+                    <img src="assets/app_icon_512.jpg" alt="HastVault Logo" class="nav-logo-icon">
+                    <span class="nav-brand-text">HastVault</span>
+                </a>
+                <p class="footer-brand-desc">
+                    Private, zero-cloud personal financial asset and family nominee records vault for Android. Engineered with SQLCipher AES-256 encryption by HastRadar Consultancy Services.
+                </p>
+                <div style="display: flex; gap: 0.75rem; margin-top: 0.5rem;">
+                    <a href="https://github.com/hareramjha2007/HastVault-AndroidApp" class="btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.82rem;" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.hastradar.com" class="btn-secondary" style="padding: 0.4rem 0.9rem; font-size: 0.82rem;">
+                        <i class="fas fa-globe"></i> HastRadar
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h5>Product</h5>
+                <ul class="footer-links">
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#security">Security Specs</a></li>
+                    <li><a href="#categories">Asset Categories</a></li>
+                    <li><a href="#nominees">Nominee Mapping</a></li>
+                    <li><a href="#voice">Voice Input</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Legal & Privacy</h5>
+                <ul class="footer-links">
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="delete-account.html">Data Deletion Guide</a></li>
+                    <li><a href="contact.html">Support Desk</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>HastRadar Ecosystem</h5>
+                <ul class="footer-links">
+                    <li><a href="../../index.html">HastRadar Home</a></li>
+                    <li><a href="../wakeo/index.html">Wakeo Parental Alarm</a></li>
+                    <li><a href="../brick-track/index.html">BrickTrack AI</a></li>
+                    <li><a href="../capital-curb/index.html">CapitalCurb AI</a></li>
+                    <li><a href="../../services.html">Consultancy Domains</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                © 2026 HastRadar Consultancy Services Pvt. Ltd. All rights reserved.
+            </div>
+            <div class="footer-bottom-links">
+                <a href="privacy-policy.html">Privacy</a>
+                <a href="terms-of-service.html">Terms</a>
+                <a href="delete-account.html">Data Deletion</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+</body>
+</html>

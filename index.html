@@ -232,7 +232,29 @@
     }
     </script>
 
-    <!-- Structured Data 7: FAQPage Schema -->
+    <!-- Structured Data 7: SoftwareApplication (HastVault) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "HastVault: Offline Asset Vault",
+      "operatingSystem": "Android",
+      "applicationCategory": "FinanceApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hastradar Consultancy Services Pvt. Ltd."
+      },
+      "description": "100% offline, encrypted personal financial asset and family nominee records vault for Android with SQLCipher AES-256 and zero internet permissions.",
+      "url": "https://www.hastradar.com/apps/hastvault/"
+    }
+    </script>
+
+    <!-- Structured Data 8: FAQPage Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -367,6 +389,7 @@
                         <li><a href="apps/brick-track/index.html" class="mobile-nav-link hover:text-emerald-400 transition-colors block py-1 flex items-center gap-1.5"><i class="fas fa-building text-emerald-400"></i> BrickTrack AI Construction App</a></li>
                         <li><a href="apps/capital-curb/index.html" class="mobile-nav-link hover:text-cyan-400 transition-colors block py-1 flex items-center gap-1.5"><i class="fas fa-chart-pie text-cyan-400"></i> CapitalCurb AI Expense App</a></li>
                         <li><a href="apps/wakeo/index.html" class="mobile-nav-link hover:text-amber-400 transition-colors block py-1 flex items-center gap-1.5"><i class="fas fa-sun text-amber-400"></i> Wakeo Parental Alarm App</a></li>
+                        <li><a href="apps/hastvault/index.html" class="mobile-nav-link hover:text-amber-300 transition-colors block py-1 flex items-center gap-1.5"><i class="fas fa-shield-halved text-amber-300"></i> HastVault Offline Asset Vault</a></li>
                         <li><a href="services.html" class="mobile-nav-link hover:text-emerald-400 transition-colors block py-1">Training, Education & Awareness Modules</a></li>
                     </ul>
                 </div>
@@ -645,7 +668,7 @@
             </div>
 
             <!-- Products Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
 
                 <!-- Product 1: BrickTrack -->
                 <div id="bricktrack"
@@ -759,6 +782,45 @@
                         <a href="apps/wakeo/index.html"
                             class="text-amber-400 hover:text-amber-300 text-xs font-bold inline-flex items-center gap-1.5">
                             <span>Open Wakeo Portal</span>
+                            <i class="fas fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 4: HastVault -->
+                <div id="hastvault"
+                    class="glass-card glass-card-hover rounded-3xl p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl group-hover:bg-yellow-500/20 transition-all">
+                    </div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-yellow-500/20 border border-yellow-500/40 flex items-center justify-center text-yellow-400 text-xl font-bold">
+                                    <i class="fas fa-shield-halved text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3
+                                        class="text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors">
+                                        HastVault</h3>
+                                    <span class="text-xs text-slate-400 font-medium">Offline Financial Asset Vault</span>
+                                </div>
+                            </div>
+                            <span
+                                class="px-3 py-1 text-xs font-bold rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400">Android</span>
+                        </div>
+
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            100% offline, hardware-encrypted personal financial asset & family nominee records vault. Zero cloud servers, zero internet permissions, SQLCipher AES-256 encryption, and DPDP Act 2023 compliance.
+                        </p>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+                        <a href="apps/hastvault/index.html"
+                            class="text-yellow-400 hover:text-yellow-300 text-xs font-bold inline-flex items-center gap-1.5">
+                            <span>Open HastVault Portal</span>
                             <i class="fas fa-arrow-right text-[10px]"></i>
                         </a>
                     </div>
@@ -1233,6 +1295,7 @@
                         <li><a href="apps/brick-track/index.html" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5"><i class="fas fa-building text-[10px] text-emerald-400"></i> BrickTrack AI App</a></li>
                         <li><a href="apps/capital-curb/index.html" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5"><i class="fas fa-chart-pie text-[10px] text-cyan-400"></i> CapitalCurb AI App</a></li>
                         <li><a href="apps/wakeo/index.html" class="hover:text-amber-400 transition-colors flex items-center gap-1.5"><i class="fas fa-sun text-[10px] text-amber-400"></i> Wakeo Parental Alarm</a></li>
+                        <li><a href="apps/hastvault/index.html" class="hover:text-yellow-400 transition-colors flex items-center gap-1.5"><i class="fas fa-shield-halved text-[10px] text-yellow-400"></i> HastVault Asset Vault</a></li>
                     </ul>
                 </div>
 
