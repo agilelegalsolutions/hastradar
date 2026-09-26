@@ -254,6 +254,28 @@
     }
     </script>
 
+    <!-- Structured Data 8: SoftwareApplication (CondiScan AI) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "CondiScan AI: Clinical Food Label Scanner",
+      "operatingSystem": "Android",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hastradar Consultancy Services Pvt. Ltd."
+      },
+      "description": "Clinical-grade food and chemical label scanner evaluating packaged grocery ingredients against chronic conditions (Diabetes, Hypertension, Celiac) using on-device ML Kit OCR.",
+      "url": "https://www.hastradar.com/apps/condiscan/"
+    }
+    </script>
+
     <!-- Structured Data 8: FAQPage Schema -->
     <script type="application/ld+json">
     {
@@ -388,6 +410,7 @@
                         <li><a href="#legaltech" class="mobile-nav-link hover:text-cyan-400 transition-colors block py-1">AI Drafting & Workflow Automation</a></li>
                         <li><a href="apps/brick-track/index.html" class="mobile-nav-link hover:text-emerald-400 transition-colors block py-1 flex items-center gap-1.5"><i class="fas fa-building text-emerald-400"></i> BrickTrack AI Construction App</a></li>
                         <li><a href="apps/capital-curb/index.html" class="mobile-nav-link hover:text-cyan-400 transition-colors block py-1 flex items-center gap-1.5"><i class="fas fa-chart-pie text-cyan-400"></i> CapitalCurb AI Expense App</a></li>
+                        <li><a href="apps/condiscan/index.html" class="mobile-nav-link hover:text-emerald-400 transition-colors block py-1 flex items-center gap-1.5"><i class="fas fa-qrcode text-emerald-400"></i> CondiScan AI Clinical Scanner</a></li>
                         <li><a href="apps/wakeo/index.html" class="mobile-nav-link hover:text-amber-400 transition-colors block py-1 flex items-center gap-1.5"><i class="fas fa-sun text-amber-400"></i> Wakeo Parental Alarm App</a></li>
                         <li><a href="apps/hastvault/index.html" class="mobile-nav-link hover:text-amber-300 transition-colors block py-1 flex items-center gap-1.5"><i class="fas fa-shield-halved text-amber-300"></i> HastVault Offline Asset Vault</a></li>
                         <li><a href="services.html" class="mobile-nav-link hover:text-emerald-400 transition-colors block py-1">Training, Education & Awareness Modules</a></li>
@@ -667,32 +690,36 @@
                 </p>
             </div>
 
-            <!-- Products Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
+            <!-- Products Grid: 5 Flagship Apps with Full Logos & Un-truncated Android Chips -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 
-                <!-- Product 1: BrickTrack -->
+                <!-- Product 1: BrickTrack AI -->
                 <div id="bricktrack"
-                    class="glass-card glass-card-hover rounded-3xl p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden group">
+                    class="glass-card glass-card-hover rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden group border border-slate-800/80 hover:border-emerald-500/40">
                     <div
-                        class="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl group-hover:bg-emerald-500/20 transition-all">
+                        class="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl group-hover:bg-emerald-500/20 transition-all pointer-events-none">
                     </div>
 
                     <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="flex items-center gap-3">
-                                <div
-                                    class="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-xl font-bold">
-                                    <i class="fas fa-building text-xl"></i>
-                                </div>
-                                <div>
-                                    <h3
-                                        class="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors">
-                                        BrickTrack AI</h3>
-                                    <span class="text-xs text-slate-400 font-medium">Construction Expense Tracking App</span>
-                                </div>
+                        <!-- Header Row: Real App Icon (Squircle) + Android Chip -->
+                        <div class="flex items-center justify-between gap-3 mb-5">
+                            <div
+                                class="relative w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-700/80 p-0.5 bg-slate-900 group-hover:border-emerald-500/50 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.25)] transition-all shrink-0">
+                                <img src="apps/brick-track/assets/app_icon_512.png" alt="BrickTrack AI Logo" class="w-full h-full object-cover rounded-xl" loading="lazy">
                             </div>
                             <span
-                                class="px-3 py-1 text-xs font-bold rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">Android</span>
+                                class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 shrink-0">
+                                <i class="fab fa-android text-xs"></i>
+                                <span>Android</span>
+                            </span>
+                        </div>
+
+                        <!-- Title and Subtitle Block (Full Width) -->
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors">
+                                BrickTrack AI
+                            </h3>
+                            <span class="text-xs text-slate-400 font-medium block mt-1">Construction Expense Tracking App</span>
                         </div>
 
                         <p class="text-slate-300 text-sm leading-relaxed mb-6">
@@ -700,7 +727,7 @@
                         </p>
                     </div>
 
-                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between mt-auto">
                         <a href="apps/brick-track/index.html"
                             class="text-emerald-400 hover:text-emerald-300 text-xs font-bold inline-flex items-center gap-1.5">
                             <span>Open BrickTrack Portal</span>
@@ -709,37 +736,41 @@
                     </div>
                 </div>
 
-                <!-- Product 2: CapitalCurb -->
+                <!-- Product 2: CapitalCurb AI -->
                 <div id="capitalcurb"
-                    class="glass-card glass-card-hover glass-card-blue rounded-3xl p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden group">
+                    class="glass-card glass-card-hover glass-card-blue rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden group border border-slate-800/80 hover:border-cyan-500/40">
                     <div
-                        class="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl group-hover:bg-cyan-500/20 transition-all">
+                        class="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl group-hover:bg-cyan-500/20 transition-all pointer-events-none">
                     </div>
 
                     <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="flex items-center gap-3">
-                                <div
-                                    class="w-12 h-12 rounded-2xl bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-400 text-xl font-bold">
-                                    <i class="fas fa-chart-pie text-xl"></i>
-                                </div>
-                                <div>
-                                    <h3
-                                        class="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-                                        CapitalCurb AI</h3>
-                                    <span class="text-xs text-slate-400 font-medium">Financial Expense Manager</span>
-                                </div>
+                        <!-- Header Row: Real App Icon (Squircle) + Android Chip -->
+                        <div class="flex items-center justify-between gap-3 mb-5">
+                            <div
+                                class="relative w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-700/80 p-0.5 bg-slate-900 group-hover:border-cyan-500/50 group-hover:shadow-[0_0_20px_rgba(6,182,212,0.25)] transition-all shrink-0">
+                                <img src="apps/capital-curb/assets/app_icon.svg" alt="CapitalCurb AI Logo" class="w-full h-full object-cover rounded-xl" loading="lazy">
                             </div>
                             <span
-                                class="px-3 py-1 text-xs font-bold rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400">Android</span>
+                                class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 shrink-0">
+                                <i class="fab fa-android text-xs"></i>
+                                <span>Android</span>
+                            </span>
+                        </div>
+
+                        <!-- Title and Subtitle Block (Full Width) -->
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                                CapitalCurb AI
+                            </h3>
+                            <span class="text-xs text-slate-400 font-medium block mt-1">Financial Expense &amp; Health Manager</span>
                         </div>
 
                         <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                            Intelligent expense management app for businesses and professionals to monitor monthly burn rates, audit recurring SaaS subscriptions, and generate tax deduction reports.
+                            Intelligent expense management app for businesses and professionals to monitor monthly burn rates, audit recurring SaaS subscriptions, simulate purchase impact, and generate tax deduction reports.
                         </p>
                     </div>
 
-                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between mt-auto">
                         <a href="apps/capital-curb/index.html"
                             class="text-cyan-400 hover:text-cyan-300 text-xs font-bold inline-flex items-center gap-1.5">
                             <span>Open CapitalCurb Portal</span>
@@ -748,29 +779,76 @@
                     </div>
                 </div>
 
-                <!-- Product 3: Wakeo -->
-                <div id="wakeo"
-                    class="glass-card glass-card-hover rounded-3xl p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden group">
+                <!-- Product 3: CondiScan AI (New Flagship) -->
+                <div id="condiscan"
+                    class="glass-card glass-card-hover rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden group border border-slate-800/80 hover:border-emerald-500/40">
                     <div
-                        class="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl group-hover:bg-amber-500/20 transition-all">
+                        class="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl group-hover:bg-emerald-500/20 transition-all pointer-events-none">
                     </div>
 
                     <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="flex items-center gap-3">
-                                <div
-                                    class="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 text-xl font-bold">
-                                    <i class="fas fa-sun text-xl"></i>
-                                </div>
-                                <div>
-                                    <h3
-                                        class="text-2xl font-bold text-white group-hover:text-amber-400 transition-colors">
-                                        Wakeo</h3>
-                                    <span class="text-xs text-slate-400 font-medium">Remote Parental Alarm App</span>
-                                </div>
+                        <!-- Header Row: Real App Icon (Squircle) + Android Chip -->
+                        <div class="flex items-center justify-between gap-3 mb-5">
+                            <div
+                                class="relative w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-700/80 p-0.5 bg-slate-900 group-hover:border-emerald-500/50 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.25)] transition-all shrink-0">
+                                <img src="apps/condiscan/assets/app_icon_512.jpg" alt="CondiScan AI Logo" class="w-full h-full object-cover rounded-xl" loading="lazy">
                             </div>
                             <span
-                                class="px-3 py-1 text-xs font-bold rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400">Android</span>
+                                class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 shrink-0">
+                                <i class="fab fa-android text-xs"></i>
+                                <span>Android</span>
+                            </span>
+                        </div>
+
+                        <!-- Title and Subtitle Block (Full Width) -->
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors">
+                                CondiScan AI
+                            </h3>
+                            <span class="text-xs text-slate-400 font-medium block mt-1">Clinical Label &amp; Ingredient Scanner</span>
+                        </div>
+
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Clinical-grade food label scanner evaluating ingredients against chronic conditions (Diabetes, Hypertension, Celiac) and life stages. Features live laser viewfinder, radial health gauge, and on-device ML Kit OCR.
+                        </p>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between mt-auto">
+                        <a href="apps/condiscan/index.html"
+                            class="text-emerald-400 hover:text-emerald-300 text-xs font-bold inline-flex items-center gap-1.5">
+                            <span>Open CondiScan Portal</span>
+                            <i class="fas fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 4: Wakeo -->
+                <div id="wakeo"
+                    class="glass-card glass-card-hover rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden group border border-slate-800/80 hover:border-amber-500/40">
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl group-hover:bg-amber-500/20 transition-all pointer-events-none">
+                    </div>
+
+                    <div>
+                        <!-- Header Row: Real App Icon (Squircle) + Android Chip -->
+                        <div class="flex items-center justify-between gap-3 mb-5">
+                            <div
+                                class="relative w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-700/80 p-0.5 bg-slate-900 group-hover:border-amber-500/50 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.25)] transition-all shrink-0">
+                                <img src="apps/wakeo/assets/app_icon_512.jpg" alt="Wakeo Logo" class="w-full h-full object-cover rounded-xl" loading="lazy">
+                            </div>
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 shrink-0">
+                                <i class="fab fa-android text-xs"></i>
+                                <span>Android</span>
+                            </span>
+                        </div>
+
+                        <!-- Title and Subtitle Block (Full Width) -->
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-amber-400 transition-colors">
+                                Wakeo
+                            </h3>
+                            <span class="text-xs text-slate-400 font-medium block mt-1">Remote Parental Alarm App</span>
                         </div>
 
                         <p class="text-slate-300 text-sm leading-relaxed mb-6">
@@ -778,7 +856,7 @@
                         </p>
                     </div>
 
-                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between mt-auto">
                         <a href="apps/wakeo/index.html"
                             class="text-amber-400 hover:text-amber-300 text-xs font-bold inline-flex items-center gap-1.5">
                             <span>Open Wakeo Portal</span>
@@ -787,29 +865,33 @@
                     </div>
                 </div>
 
-                <!-- Product 4: HastVault -->
+                <!-- Product 5: HastVault -->
                 <div id="hastvault"
-                    class="glass-card glass-card-hover rounded-3xl p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden group">
+                    class="glass-card glass-card-hover rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden group border border-slate-800/80 hover:border-yellow-500/40">
                     <div
-                        class="absolute top-0 right-0 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl group-hover:bg-yellow-500/20 transition-all">
+                        class="absolute top-0 right-0 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl group-hover:bg-yellow-500/20 transition-all pointer-events-none">
                     </div>
 
                     <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <div class="flex items-center gap-3">
-                                <div
-                                    class="w-12 h-12 rounded-2xl bg-yellow-500/20 border border-yellow-500/40 flex items-center justify-center text-yellow-400 text-xl font-bold">
-                                    <i class="fas fa-shield-halved text-xl"></i>
-                                </div>
-                                <div>
-                                    <h3
-                                        class="text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors">
-                                        HastVault</h3>
-                                    <span class="text-xs text-slate-400 font-medium">Offline Financial Asset Vault</span>
-                                </div>
+                        <!-- Header Row: Real App Icon (Squircle) + Android Chip -->
+                        <div class="flex items-center justify-between gap-3 mb-5">
+                            <div
+                                class="relative w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-700/80 p-0.5 bg-slate-900 group-hover:border-yellow-500/50 group-hover:shadow-[0_0_20px_rgba(234,179,8,0.25)] transition-all shrink-0">
+                                <img src="apps/hastvault/assets/app_icon_512.jpg" alt="HastVault Logo" class="w-full h-full object-cover rounded-xl" loading="lazy">
                             </div>
                             <span
-                                class="px-3 py-1 text-xs font-bold rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400">Android</span>
+                                class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 shrink-0">
+                                <i class="fab fa-android text-xs"></i>
+                                <span>Android</span>
+                            </span>
+                        </div>
+
+                        <!-- Title and Subtitle Block (Full Width) -->
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors">
+                                HastVault
+                            </h3>
+                            <span class="text-xs text-slate-400 font-medium block mt-1">Offline Financial Asset Vault</span>
                         </div>
 
                         <p class="text-slate-300 text-sm leading-relaxed mb-6">
@@ -817,7 +899,7 @@
                         </p>
                     </div>
 
-                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between mt-auto">
                         <a href="apps/hastvault/index.html"
                             class="text-yellow-400 hover:text-yellow-300 text-xs font-bold inline-flex items-center gap-1.5">
                             <span>Open HastVault Portal</span>
@@ -1294,6 +1376,7 @@
                         <li><a href="#legaltech" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5"><i class="fas fa-robot text-[10px] text-cyan-400"></i> AI Legal Platform</a></li>
                         <li><a href="apps/brick-track/index.html" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5"><i class="fas fa-building text-[10px] text-emerald-400"></i> BrickTrack AI App</a></li>
                         <li><a href="apps/capital-curb/index.html" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5"><i class="fas fa-chart-pie text-[10px] text-cyan-400"></i> CapitalCurb AI App</a></li>
+                        <li><a href="apps/condiscan/index.html" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5"><i class="fas fa-qrcode text-[10px] text-emerald-400"></i> CondiScan AI Scanner</a></li>
                         <li><a href="apps/wakeo/index.html" class="hover:text-amber-400 transition-colors flex items-center gap-1.5"><i class="fas fa-sun text-[10px] text-amber-400"></i> Wakeo Parental Alarm</a></li>
                         <li><a href="apps/hastvault/index.html" class="hover:text-yellow-400 transition-colors flex items-center gap-1.5"><i class="fas fa-shield-halved text-[10px] text-yellow-400"></i> HastVault Asset Vault</a></li>
                     </ul>

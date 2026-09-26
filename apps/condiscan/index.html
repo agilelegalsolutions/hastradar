@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CondiScan AI — Clinical-Grade Food &amp; Chemical Label Scanner | Hastradar</title>
+    <meta name="description" content="CondiScan AI by Hastradar. Clinical-grade grocery label scanner evaluating food ingredients against Diabetes, Hypertension, Celiac, and household health profiles using on-device ML Kit OCR.">
+    <meta name="keywords" content="CondiScan, CondiScan AI, food label scanner Android, chemical ingredient scanner, diabetes food scanner, hypertension nutrition app, celiac scanner, UPF NOVA 4 detector, INS E numbers, Hastradar apps">
+    <link rel="canonical" href="https://www.hastradar.com/apps/condiscan/">
+
+    <!-- Security & Revision Meta Tags -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="revised" content="2026-09-26">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: file:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com file:; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: file:; connect-src 'self' https: file:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <!-- Favicon Icons -->
+    <link rel="icon" type="image/jpeg" href="assets/app_icon_512.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/app_icon_512.jpg">
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.hastradar.com/apps/condiscan/">
+    <meta property="og:title" content="CondiScan AI — Clinical-Grade Food &amp; Chemical Label Scanner">
+    <meta property="og:description" content="Decode packaged grocery ingredients with clinical precision. Evaluates ingredients against chronic health conditions and pediatric life stages.">
+    <meta property="og:image" content="https://www.hastradar.com/apps/condiscan/assets/feature_graphic_1024x500.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CondiScan AI — Food &amp; Ingredient Health Scanner">
+    <meta name="twitter:description" content="AI food label scanner on Android. 100% on-device OCR, clinical condition evaluation, and UPF additive classification.">
+    <meta name="twitter:image" content="https://www.hastradar.com/apps/condiscan/assets/feature_graphic_1024x500.jpg">
+
+    <!-- Fonts & Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../styles.css">
+
+    <!-- Tailwind Config for Rapid Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#060d13',
+                        brandCard: '#0d1b24',
+                        brandEmerald: '#10b981',
+                        brandCyan: '#06b6d4',
+                        brandTeal: '#14b8a6',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Schema.org SoftwareApplication Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "CondiScan AI: Clinical Food Label Scanner",
+      "operatingSystem": "Android 7.0 and up (API 24-36)",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Clinical-grade food and chemical label scanner evaluating packaged grocery ingredients against chronic conditions (Diabetes, Hypertension, Celiac) using on-device ML Kit OCR.",
+      "image": "https://www.hastradar.com/apps/condiscan/assets/app_icon_512.jpg",
+      "screenshot": [
+        "https://www.hastradar.com/apps/condiscan/assets/screenshots/01_scanner_home.png",
+        "https://www.hastradar.com/apps/condiscan/assets/screenshots/02_results_radial_gauge.png",
+        "https://www.hastradar.com/apps/condiscan/assets/screenshots/03_additives_and_upf.png",
+        "https://www.hastradar.com/apps/condiscan/assets/screenshots/04_safe_whole_foods.png",
+        "https://www.hastradar.com/apps/condiscan/assets/screenshots/05_profiles_and_preferences.png"
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hastradar Consultancy",
+        "url": "https://hastradar.com"
+      }
+    }
+    </script>
+</head>
+<body class="bg-brandDark text-slate-100 antialiased selection:bg-emerald-500 selection:text-black">
+
+    <!-- Atmospheric Glows -->
+    <div class="bg-glow-container">
+        <div class="bg-glow-1"></div>
+        <div class="bg-glow-2"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/app_icon_512.jpg" alt="CondiScan AI Icon" class="nav-logo-icon">
+                <div>
+                    <span class="nav-brand-text">CondiScan AI</span>
+                    <span class="nav-brand-badge">Clinical Tech</span>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#overview" class="nav-link">Overview</a></li>
+                <li><a href="#scanner" class="nav-link">Laser Scanner</a></li>
+                <li><a href="#gauge" class="nav-link">Radial Gauge</a></li>
+                <li><a href="#upf" class="nav-link">Additives &amp; UPF</a></li>
+                <li><a href="#profiles" class="nav-link">Household Profiles</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#download" class="btn-primary">
+                    <i class="fab fa-android"></i>
+                    <span>Get App</span>
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header id="overview" class="relative pt-36 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left: Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                        <i class="fas fa-camera text-emerald-400"></i>
+                        <span>Clinical-Grade Food &amp; Chemical Label Scanner</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12]">
+                        Decode Food Labels With <span class="gradient-text-emerald">Clinical Precision.</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Stop relying on arbitrary generic nutrition scores. CondiScan AI evaluates packaged food and grocery ingredient lists against your family's specific <strong>chronic conditions</strong> and <strong>life stages</strong>—cross-referencing authoritative guidelines from the WHO, ICMR, EFSA, FDA, ADA, and AHA.
+                    </p>
+
+                    <!-- Key Spec Pills -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-2">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-semibold text-slate-300">
+                            <i class="fas fa-bolt text-emerald-400"></i> 100% On-Device ML Kit OCR
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-semibold text-slate-300">
+                            <i class="fas fa-shield-halved text-cyan-400"></i> Zero Cloud Uploads
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-semibold text-slate-300">
+                            <i class="fas fa-gauge-high text-amber-400"></i> 16–96 Health Score Arc
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-semibold text-slate-300">
+                            <i class="fas fa-ban text-rose-400"></i> 0 Ads &bull; 0 Tracking
+                        </span>
+                    </div>
+
+                    <!-- CTA Actions -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#download" class="btn-primary w-full sm:w-auto justify-center">
+                            <i class="fab fa-android text-lg"></i>
+                            <span>Download Android Release</span>
+                        </a>
+                        <a href="https://github.com/hareramjha2007/CandiScan" target="_blank" rel="noopener noreferrer" class="btn-secondary w-full sm:w-auto justify-center">
+                            <i class="fab fa-github text-lg"></i>
+                            <span>View Source on GitHub</span>
+                        </a>
+                    </div>
+
+                    <!-- Clinical Authority Notice -->
+                    <div class="pt-4 flex items-center justify-center lg:justify-start gap-4 text-xs text-slate-400">
+                        <span class="flex items-center gap-1.5"><i class="fas fa-check text-emerald-400"></i> WHO &bull; ICMR &bull; EFSA</span>
+                        <span>&bull;</span>
+                        <span class="flex items-center gap-1.5"><i class="fas fa-check text-emerald-400"></i> FDA &bull; ADA &bull; AHA</span>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Interactive App Mockup -->
+                <div class="lg:col-span-5 flex justify-center relative">
+                    <div class="relative w-full max-w-[320px] sm:max-w-[350px]">
+                        <!-- Glow Halo behind device -->
+                        <div class="absolute -inset-4 bg-gradient-to-tr from-emerald-500/20 via-cyan-500/20 to-emerald-400/10 rounded-[48px] blur-2xl"></div>
+
+                        <!-- Phone Bezel Frame -->
+                        <div class="relative bg-slate-950 p-2.5 rounded-[44px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] border border-slate-700/80">
+                            <div class="relative rounded-[36px] overflow-hidden bg-slate-900 aspect-[9/19.5]">
+                                <img src="assets/screenshots/01_scanner_home.png" alt="CondiScan AI Sweeping Laser Scanner Screen" class="w-full h-full object-cover">
+                                
+                                <!-- Simulated Laser Sweep Overlay Effect -->
+                                <div class="absolute inset-x-0 h-1 bg-gradient-to-r from-transparent via-emerald-400 to-transparent shadow-[0_0_15px_#10b981] animate-pulse pointer-events-none top-1/3"></div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Micro Badges -->
+                        <div class="absolute -bottom-6 -left-6 glass-panel p-3.5 rounded-2xl flex items-center gap-3 border border-emerald-500/40 shadow-xl hidden sm:flex">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg">
+                                <i class="fas fa-barcode"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider block">Live Camera HUD</span>
+                                <span class="text-xs font-bold text-white">Top-to-Bottom Laser Sweep</span>
+                            </div>
+                        </div>
+
+                        <div class="absolute -top-4 -right-4 glass-panel p-3 rounded-2xl flex items-center gap-2.5 border border-cyan-500/40 shadow-xl hidden sm:flex">
+                            <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-sm">
+                                <i class="fas fa-heart-pulse"></i>
+                            </div>
+                            <span class="text-xs font-bold text-white">Personalized Health Index</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: CORE CAPABILITIES -->
+    <section class="py-24 bg-brandCard/40 relative border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <div class="section-tag">
+                    <i class="fas fa-sparkles"></i>
+                    <span>Engineered For Precision</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    Five Pillar Architecture for Dietary Safety
+                </h2>
+                <p class="text-slate-400 text-base">
+                    Every ingredient token is analyzed against clinical threshold databases in milliseconds—completely offline.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Pillar 1 -->
+                <div class="glass-panel p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-xl font-bold">
+                        <i class="fas fa-qrcode text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Live Sweeping Laser Viewfinder</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Hardware-accelerated CameraX viewfinder with real-time HUD, dynamic top-to-bottom emerald laser beam sweep, and instantaneous ML Kit on-device OCR.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Low latency auto-focus reticle</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Camera shutter &amp; gallery import</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="glass-panel p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-400 text-xl font-bold">
+                        <i class="fas fa-gauge text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">260&deg; Radial Speedometer Gauge</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Canvas-rendered speedometer arc with glowing gradient transitions (A/B/C/D/F), glowing indicator dot, and a calibrated 16–96 clinical health score.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Single-line risk distribution badge</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Calibrated against condition conflicts</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="glass-panel p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 text-xl font-bold">
+                        <i class="fas fa-triangle-exclamation text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">INS &amp; E-Number Additive Engine</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Detects and categorizes industrial additives (e.g., Colour INS 160c, Acidity Regulator 330, E150d, INS 451, INS 635) and classifies NOVA 4 ultra-processed foods.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-400"></i> Hydrogenated palm oil &amp; HFCS flags</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-400"></i> Balanced parenthesis parser</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="glass-panel p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-teal-500/20 border border-teal-500/40 flex items-center justify-center text-teal-400 text-xl font-bold">
+                        <i class="fas fa-users text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Multi-Member Household Profiles</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Configure customized clinical profiles for infants, children, adults, and seniors with zero hardcoded seed data. Switch profiles with a single tap.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-teal-400"></i> Diabetes, Hypertension, Celiac rules</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-teal-400"></i> Pediatric sodium &amp; sugar guardrails</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 5 -->
+                <div class="glass-panel p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-xl font-bold">
+                        <i class="fas fa-leaf text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Safe Whole Food Clearance</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Positively rewards natural whole grains, pulses, spices, and unrefined ingredients with clean-label clearance cards and zero dietary warnings.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Whole ingredient recognition</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Natural fiber &amp; protein bonuses</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 6 -->
+                <div class="glass-panel p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400 text-xl font-bold">
+                        <i class="fas fa-shield-halved text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">100% Offline Sandboxed Privacy</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Operates completely inside your private Android sandbox. Zero server telemetry, zero third-party tracking cookies, and 1-tap local data erasure.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-400"></i> Sandboxed local SQLite database</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-400"></i> Immediate volatile memory discard</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: INTERACTIVE SCREENSHOT SHOWCASE -->
+    <section id="scanner" class="py-24 bg-brandDark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <div class="section-tag">
+                    <i class="fas fa-mobile-screen"></i>
+                    <span>Native Android Experience</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    Explore CondiScan AI in Action
+                </h2>
+                <p class="text-slate-400 text-base">
+                    Click through verified production screens from the signed release APK.
+                </p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
+                <button class="showcase-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-emerald-500 text-black shadow-lg"
+                        data-img="assets/screenshots/01_scanner_home.png"
+                        data-title="Live AI Scanner &amp; Viewfinder HUD"
+                        data-desc="Real-time CameraX preview with pulsating HUD, hardware torch toggle, and dynamic sweeping laser beam.">
+                    <i class="fas fa-camera mr-1.5"></i> 1. Scanner HUD
+                </button>
+                <button class="showcase-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-900 border border-slate-700 text-slate-300 hover:text-white"
+                        data-img="assets/screenshots/02_results_radial_gauge.png"
+                        data-title="Radial Speedometer Health Gauge"
+                        data-desc="260° arc speedometer calibrated from 16 to 96 with Grade letters and clean risk breakdown legend.">
+                    <i class="fas fa-gauge-high mr-1.5"></i> 2. Radial Gauge
+                </button>
+                <button class="showcase-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-900 border border-slate-700 text-slate-300 hover:text-white"
+                        data-img="assets/screenshots/03_additives_and_upf.png"
+                        data-title="Manufactured Additives &amp; UPF Classification"
+                        data-desc="Detects INS/E-numbers and flags NOVA 4 ultra-processed food markers with clinical evidence citations.">
+                    <i class="fas fa-flask mr-1.5"></i> 3. Additives &amp; UPF
+                </button>
+                <button class="showcase-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-900 border border-slate-700 text-slate-300 hover:text-white"
+                        data-img="assets/screenshots/04_safe_whole_foods.png"
+                        data-title="Safe &amp; Whole Food Clearance"
+                        data-desc="Identifies natural, whole grain, and spice ingredients cleared with zero dietary contraindications.">
+                    <i class="fas fa-seedling mr-1.5"></i> 4. Safe Ingredients
+                </button>
+                <button class="showcase-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-slate-900 border border-slate-700 text-slate-300 hover:text-white"
+                        data-img="assets/screenshots/05_profiles_and_preferences.png"
+                        data-title="Household Health Profiles &amp; History"
+                        data-desc="Manage profiles for family members, active condition tags, and 1-tap local history wipe.">
+                    <i class="fas fa-users mr-1.5"></i> 5. Household Profiles
+                </button>
+            </div>
+
+            <!-- Active Showcase Display -->
+            <div class="glass-panel p-8 sm:p-12 rounded-3xl max-w-4xl mx-auto grid md:grid-cols-12 gap-8 items-center border border-emerald-500/30">
+                <div class="md:col-span-6 flex justify-center">
+                    <div class="relative w-64 rounded-3xl overflow-hidden border-2 border-slate-700 shadow-2xl bg-black">
+                        <img src="assets/screenshots/01_scanner_home.png" alt="CondiScan AI Screen" id="showcaseImg" class="w-full h-auto object-cover transition-opacity duration-300">
+                    </div>
+                </div>
+
+                <div class="md:col-span-6 space-y-4 text-center md:text-left">
+                    <span class="text-xs uppercase font-extrabold tracking-wider text-emerald-400">Feature Highlight</span>
+                    <h3 class="text-2xl font-bold text-white" id="showcaseTitle">Live AI Scanner &amp; Viewfinder HUD</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed" id="showcaseDesc">
+                        Real-time CameraX preview with pulsating HUD, hardware torch toggle, and dynamic sweeping laser beam.
+                    </p>
+
+                    <div class="pt-4 border-t border-slate-800 space-y-2 text-xs text-slate-400">
+                        <p class="flex items-center gap-2"><i class="fas fa-microchip text-emerald-400"></i> Google Play Services ML Kit On-Device Engine</p>
+                        <p class="flex items-center gap-2"><i class="fas fa-lock text-cyan-400"></i> Zero network packets sent during OCR scanning</p>
+                        <p class="flex items-center gap-2"><i class="fas fa-bolt text-amber-400"></i> Average recognition latency: under 400ms</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 3: CLINICAL BENCHMARKS -->
+    <section id="gauge" class="py-24 bg-brandCard/60 relative border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="section-tag">
+                        <i class="fas fa-award"></i>
+                        <span>Evidence-Based Standards</span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                        Clinically Calibrated Dietary Evaluation
+                    </h2>
+
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Unlike apps that assign arbitrary green/red stickers based solely on high-level calories, CondiScan AI maps specific chemical and food tokens against peer-reviewed nutritional thresholds:
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                                <i class="fas fa-check-double"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">WHO &amp; ICMR Sodium Guardrails</h4>
+                                <p class="text-xs text-slate-400 mt-0.5">Strict salt and sodium threshold flags for hypertension profiles and pediatric life stages.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">ADA Glycemic Impact Index</h4>
+                                <p class="text-xs text-slate-400 mt-0.5">Detects maltodextrin, high-fructose corn syrup, and hidden refined sugar variants for diabetic health management.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+                                <i class="fas fa-wheat-awn-circle-exclamation"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">EFSA &amp; FDA Allergen Declarations</h4>
+                                <p class="text-xs text-slate-400 mt-0.5">Immediate high-priority red alerts for gluten, dairy, peanuts, soy, and cross-contamination warnings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <!-- Feature Graphic Display -->
+                    <div class="rounded-3xl overflow-hidden border border-emerald-500/40 shadow-2xl bg-slate-900">
+                        <img src="assets/feature_graphic_1024x500.jpg" alt="CondiScan AI Official Google Play Feature Graphic" class="w-full h-auto">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: MEDICAL DISCLAIMER NOTICE -->
+    <section class="py-12 bg-slate-950 border-y border-amber-500/20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+            <div class="inline-flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider">
+                <i class="fas fa-triangle-exclamation"></i>
+                <span>Clinical &amp; Regulatory Disclaimer</span>
+            </div>
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                CondiScan AI provides educational and informational dietary analysis based on published nutritional guidance. It does not diagnose, treat, or provide medical advice, and is not a substitute for guidance from a doctor, dietitian, or pediatrician. Always consult a qualified professional for decisions about your or your child's diet, especially where a medical condition is involved.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 5: FAQ -->
+    <section id="faq" class="py-24 bg-brandDark relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-3">
+                <div class="section-tag">
+                    <i class="fas fa-circle-question"></i>
+                    <span>Frequently Asked Questions</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-slate-400 text-sm">
+                    Everything you need to know about CondiScan AI and your dietary privacy.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <div class="faq-item glass-panel p-6 rounded-2xl border border-slate-800 cursor-pointer">
+                    <div class="faq-question flex items-center justify-between text-base font-bold text-white">
+                        <span>How does CondiScan AI evaluate food labels?</span>
+                        <i class="fas fa-chevron-down text-emerald-400 text-xs transition-transform"></i>
+                    </div>
+                    <div class="faq-answer text-slate-300 text-sm mt-3 pt-3 border-t border-slate-800/80 leading-relaxed">
+                        When you point your camera at an ingredient list, on-device OCR recognizes the text tokens in memory. Our rules engine parses INS and E-number additives, flags ultra-processed NOVA 4 indicators, and checks the ingredients against active dietary conditions configured for the selected family profile.
+                    </div>
+                </div>
+
+                <div class="faq-item glass-panel p-6 rounded-2xl border border-slate-800 cursor-pointer">
+                    <div class="faq-question flex items-center justify-between text-base font-bold text-white">
+                        <span>Does my camera or health data get sent to cloud servers?</span>
+                        <i class="fas fa-chevron-down text-emerald-400 text-xs transition-transform"></i>
+                    </div>
+                    <div class="faq-answer text-slate-300 text-sm mt-3 pt-3 border-t border-slate-800/80 leading-relaxed">
+                        No. Camera frames and text OCR are processed entirely in volatile device memory using Google Play Services ML Kit. All profiles and scan records are stored in a private sandboxed SQLite database on your device. We have zero user accounts and zero cloud telemetry.
+                    </div>
+                </div>
+
+                <div class="faq-item glass-panel p-6 rounded-2xl border border-slate-800 cursor-pointer">
+                    <div class="faq-question flex items-center justify-between text-base font-bold text-white">
+                        <span>Can I track different health profiles for my kids and parents?</span>
+                        <i class="fas fa-chevron-down text-emerald-400 text-xs transition-transform"></i>
+                    </div>
+                    <div class="faq-answer text-slate-300 text-sm mt-3 pt-3 border-t border-slate-800/80 leading-relaxed">
+                        Yes! CondiScan AI supports multi-member household profiles. You can configure individual profiles for Infants, Toddlers, Adults, or Seniors, each with their own conditions (e.g. Celiac, Diabetes, Hypertension, Clean-Label preference). Switching active profiles takes just one tap.
+                    </div>
+                </div>
+
+                <div class="faq-item glass-panel p-6 rounded-2xl border border-slate-800 cursor-pointer">
+                    <div class="faq-question flex items-center justify-between text-base font-bold text-white">
+                        <span>How is CondiScan AI optimized for Android?</span>
+                        <i class="fas fa-chevron-down text-emerald-400 text-xs transition-transform"></i>
+                    </div>
+                    <div class="faq-answer text-slate-300 text-sm mt-3 pt-3 border-t border-slate-800/80 leading-relaxed">
+                        CondiScan AI is engineered with Kotlin 2.0, Jetpack Compose, Material 3, and CameraX. Release builds are minified with R8 ProGuard rules, reducing bundle size down to just 8.4 MB with 100% unit test coverage.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: DOWNLOAD CTA -->
+    <section id="download" class="py-24 bg-gradient-to-b from-brandDark via-brandCard to-brandDark relative border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <div class="w-20 h-20 rounded-3xl bg-slate-900 border-2 border-emerald-500/50 p-2 mx-auto shadow-[0_0_30px_rgba(16,185,129,0.3)]">
+                <img src="assets/app_icon_512.jpg" alt="CondiScan AI Icon" class="w-full h-full object-cover rounded-2xl">
+            </div>
+
+            <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+                Take Control of Your Household Nutrition Today
+            </h2>
+            <p class="text-slate-300 text-base max-w-xl mx-auto">
+                Download the production release of CondiScan AI. 100% on-device OCR, zero advertisements, and clinical evidence grounding.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="https://github.com/hareramjha2007/CandiScan/releases" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                    <i class="fab fa-android text-xl"></i>
+                    <span>Download Production APK / AAB</span>
+                </a>
+                <a href="privacy-policy.html" class="btn-secondary">
+                    <i class="fas fa-shield-halved text-lg"></i>
+                    <span>Review Privacy Guarantee</span>
+                </a>
+            </div>
+
+            <p class="text-xs text-slate-500 pt-2">
+                Compatible with Android 7.0+ (API 24 to 36) &bull; Production Signed Keystore &bull; Bundle Size: 8.4 MB
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="assets/app_icon_512.jpg" alt="CondiScan AI Icon" class="w-10 h-10 rounded-xl border border-emerald-500/40">
+                        <span class="font-extrabold text-white text-lg">CondiScan AI</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Clinical-grade food and chemical label scanner engineered for family health governance. Powered by on-device ML Kit OCR and WHO/ICMR nutritional standards.
+                    </p>
+                    <span class="text-xs text-emerald-400 font-semibold uppercase tracking-wider">A Hastradar Software Product</span>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#scanner">Laser Scanner</a></li>
+                        <li><a href="#gauge">Radial Gauge</a></li>
+                        <li><a href="#upf">Additives &amp; UPF</a></li>
+                        <li><a href="#download">Download</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Compliance &amp; Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="delete-account.html">Account &amp; Data Deletion</a></li>
+                        <li><a href="contact.html">Support &amp; Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Hastradar Ecosystem</h4>
+                    <ul>
+                        <li><a href="../../index.html">Hastradar Home</a></li>
+                        <li><a href="../brick-track/index.html">BrickTrack AI</a></li>
+                        <li><a href="../capital-curb/index.html">CapitalCurb AI</a></li>
+                        <li><a href="../wakeo/index.html">Wakeo Parental Alarm</a></li>
+                        <li><a href="../hastvault/index.html">HastVault Asset Vault</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hastradar Consultancy &amp; CondiScan AI. All rights reserved.</p>
+                <p class="text-xs text-slate-500">100% On-Device OCR &bull; Sandboxed SQLite &bull; No Ads &bull; Zero Cloud Uploads</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
