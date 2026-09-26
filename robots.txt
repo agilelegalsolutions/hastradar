@@ -1,8 +1,27 @@
-# robots.txt for Hastradar Consultancy
+# robots.txt for Hastradar Consultancy Services (hastradar.com)
 User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-# Sitemap location
+# Explicitly welcome major search engine and AI knowledge crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Sitemap Index
 Sitemap: https://www.hastradar.com/sitemap.xml

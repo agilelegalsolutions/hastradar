@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page Not Found — Hastradar Consultancy</title>
+    <meta name="description" content="The page you requested could not be found. Explore Hastradar Consultancy's legal-tech advisory, practice areas, and proprietary AI mobile applications.">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Smart Redirect Script for Extensionless & Aliased URLs on GitHub Pages -->
+    <script>
+        (function() {
+            var path = window.location.pathname;
+            var cleanPath = path.replace(/\/+$/, ''); // remove trailing slash for comparison
+            
+            // Map of known alias routes to canonical URLs
+            var redirects = {
+                '/services/trademark-registration-protection': '/services/trademark-registration-protection.html',
+                '/services': '/services.html',
+                '/team': '/team.html',
+                '/blog': '/blog/',
+                '/privacy-policy': '/privacy-policy.html',
+                '/terms-of-service': '/terms-of-service.html',
+                '/apps/brick-track': '/apps/brick-track/',
+                '/apps/capital-curb': '/apps/capital-curb/',
+                '/apps/wakeo': '/apps/wakeo/',
+                '/apps/hastvault': '/apps/hastvault/',
+                '/apps/condiscan': '/apps/condiscan/'
+            };
+
+            if (redirects[cleanPath]) {
+                window.location.replace(redirects[cleanPath] + window.location.search + window.location.hash);
+                return;
+            }
+
+            // If path ends with /index.html, redirect to clean directory
+            if (path.endsWith('/index.html')) {
+                var newPath = path.substring(0, path.length - 10);
+                if (newPath === '') newPath = '/';
+                window.location.replace(newPath + window.location.search + window.location.hash);
+                return;
+            }
+        })();
+    </script>
+
+    <!-- Favicon Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" href="/static/images/Logo.png">
+    <link rel="icon" type="image/jpeg" href="/static/images/Logo.jpeg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+
+    <!-- Tailwind CSS & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#08090d',
+                        brandCard: '#11141e',
+                        brandEmerald: '#10b981',
+                        brandBlue: '#3b82f6',
+                        brandGold: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="bg-brandDark text-slate-100 min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-black">
+
+    <div class="ambient-glow-1 top-0 left-1/4"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="glass-nav fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="flex items-center space-x-3 group">
+                    <div class="relative flex items-center justify-center w-11 h-11 rounded-xl bg-slate-900 border border-emerald-500/30 p-1 group-hover:border-emerald-400 transition-colors shadow-lg shadow-emerald-500/10">
+                        <picture>
+                            <source srcset="/static/images/Logo.webp" type="image/webp">
+                            <img src="/static/images/Logo.jpeg" alt="HCS Logo" width="44" height="44" decoding="async" class="w-full h-full object-contain rounded-lg">
+                        </picture>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-lg tracking-tight text-white group-hover:text-emerald-400 transition-colors">Hastradar Consultancy</span>
+                        <span class="text-[10px] tracking-widest text-emerald-400 uppercase font-semibold">Legal & Technology Advisory</span>
+                    </div>
+                </a>
+                
+                <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                    <a href="/" class="text-slate-300 hover:text-emerald-400 transition-colors py-2">Home</a>
+                    <a href="/#products" class="text-slate-300 hover:text-emerald-400 transition-colors py-2">AI Apps</a>
+                    <a href="/services.html" class="text-slate-300 hover:text-emerald-400 transition-colors py-2">Practice Areas</a>
+                    <a href="/team.html" class="text-slate-300 hover:text-emerald-400 transition-colors py-2">Leadership</a>
+                    <a href="/blog/" class="text-slate-300 hover:text-emerald-400 transition-colors py-2">Insights</a>
+                    <a href="/#contact" class="text-slate-300 hover:text-emerald-400 transition-colors py-2">Contact</a>
+                </div>
+
+                <div class="hidden lg:flex items-center">
+                    <a href="/#contact" class="btn-primary px-5 py-2.5 rounded-xl text-sm font-semibold flex items-center gap-2">
+                        <i class="fas fa-headset text-xs"></i>
+                        <span>Contact Support</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 404 Hero Section -->
+    <main class="flex-grow flex items-center justify-center pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl w-full text-center space-y-8">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
+                <i class="fas fa-compass"></i>
+                <span>HTTP 404 — Navigation Guide</span>
+            </div>
+
+            <h1 class="text-6xl sm:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500 tracking-tight">
+                404
+            </h1>
+
+            <div class="space-y-3">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                    Page Not Found or Moved
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+                    The requested address does not exist or may have been updated. Use the quick navigation links below to explore our legal services and applications.
+                </p>
+            </div>
+
+            <!-- Helpful Navigation Grid -->
+            <div class="grid sm:grid-cols-3 gap-4 text-left pt-4">
+                <a href="/" class="glass-card p-5 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition-all group block">
+                    <div class="text-emerald-400 text-xl mb-2"><i class="fas fa-home"></i></div>
+                    <h3 class="text-sm font-bold text-white group-hover:text-emerald-400 transition-colors">Home Portal</h3>
+                    <p class="text-xs text-slate-400 mt-1">Overview of Hastradar's integrated legal advisory and technology.</p>
+                </a>
+
+                <a href="/services.html" class="glass-card p-5 rounded-2xl border border-slate-800 hover:border-amber-500/50 transition-all group block">
+                    <div class="text-amber-400 text-xl mb-2"><i class="fas fa-scale-balanced"></i></div>
+                    <h3 class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors">Practice Areas</h3>
+                    <p class="text-xs text-slate-400 mt-1">IPR, Trademark, Arbitration, Cyber Fraud, and Corporate Law.</p>
+                </a>
+
+                <a href="/#products" class="glass-card p-5 rounded-2xl border border-slate-800 hover:border-blue-500/50 transition-all group block">
+                    <div class="text-blue-400 text-xl mb-2"><i class="fas fa-mobile-screen"></i></div>
+                    <h3 class="text-sm font-bold text-white group-hover:text-blue-400 transition-colors">AI & Mobile Apps</h3>
+                    <p class="text-xs text-slate-400 mt-1">BrickTrack, CapitalCurb, Wakeo, HastVault &amp; CondiScan.</p>
+                </a>
+            </div>
+
+            <div class="pt-4 flex flex-wrap justify-center items-center gap-4">
+                <a href="/" class="btn-primary px-6 py-3 rounded-xl text-sm font-semibold flex items-center gap-2 shadow-lg shadow-emerald-500/20">
+                    <i class="fas fa-arrow-left text-xs"></i>
+                    <span>Return to Homepage</span>
+                </a>
+                <a href="/services/trademark-registration-protection.html" class="px-6 py-3 rounded-xl text-sm font-semibold bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 transition-all">
+                    <span>Trademark Services &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 text-xs py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <span>&copy; 2026 Hastradar Consultancy Services Pvt. Ltd. All Rights Reserved.</span>
+            </div>
+            <div class="flex items-center space-x-6 text-slate-400">
+                <a href="/" class="hover:text-emerald-400 transition-colors">Home</a>
+                <a href="/services.html" class="hover:text-emerald-400 transition-colors">Practice Areas</a>
+                <a href="/team.html" class="hover:text-emerald-400 transition-colors">Leadership</a>
+                <a href="/privacy-policy.html" class="hover:text-emerald-400 transition-colors">Privacy Policy</a>
+                <a href="/terms-of-service.html" class="hover:text-emerald-400 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
