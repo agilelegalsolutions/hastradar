@@ -171,6 +171,42 @@
         <priority>0.7</priority>
     </url>
     
+    <!-- Kall AI: Phone Assistant Pages -->
+    <url>
+        <loc>https://www.hastradar.com/apps/kall-ai/</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://www.hastradar.com/apps/kall-ai/privacy-policy.html</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://www.hastradar.com/apps/kall-ai/terms-of-service.html</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://www.hastradar.com/apps/kall-ai/delete-account.html</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://www.hastradar.com/apps/kall-ai/contact.html</loc>
+        <lastmod>2026-10-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
     <!-- Company Governance & Compliance Policies -->
     <url>
         <loc>https://www.hastradar.com/privacy-policy.html</loc>

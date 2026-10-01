@@ -276,7 +276,29 @@
     }
     </script>
 
-    <!-- Structured Data 8: FAQPage Schema -->
+    <!-- Structured Data 9: SoftwareApplication (Kall AI: Phone Assistant) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Kall AI: Phone Assistant",
+      "operatingSystem": "Android",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hastradar Consultancy Services Pvt. Ltd."
+      },
+      "description": "Smart 24/7 AI phone receptionist and call assistant for businesses, clinics, and professionals with 1-tap carrier forwarding and real-time Gemini Flash-Lite voice intelligence.",
+      "url": "https://www.hastradar.com/apps/kall-ai/"
+    }
+    </script>
+
+    <!-- Structured Data 10: FAQPage Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -408,9 +430,10 @@
                     </div>
                     <ul class="space-y-2 text-xs text-slate-300">
                         <li><a href="#legaltech" class="mobile-nav-link hover:text-cyan-400 transition-colors block py-1">AI Drafting & Workflow Automation</a></li>
+                        <li><a href="/apps/kall-ai/" class="mobile-nav-link hover:text-indigo-400 transition-colors block py-1 flex items-center gap-1.5"><i class="fas fa-phone-volume text-indigo-400"></i> Kall AI Phone Assistant</a></li>
+                        <li><a href="/apps/condiscan/" class="mobile-nav-link hover:text-emerald-400 transition-colors block py-1 flex items-center gap-1.5"><i class="fas fa-qrcode text-emerald-400"></i> CondiScan AI Clinical Scanner</a></li>
                         <li><a href="/apps/brick-track/" class="mobile-nav-link hover:text-emerald-400 transition-colors block py-1 flex items-center gap-1.5"><i class="fas fa-building text-emerald-400"></i> BrickTrack AI Construction App</a></li>
                         <li><a href="/apps/capital-curb/" class="mobile-nav-link hover:text-cyan-400 transition-colors block py-1 flex items-center gap-1.5"><i class="fas fa-chart-pie text-cyan-400"></i> CapitalCurb AI Expense App</a></li>
-                        <li><a href="/apps/condiscan/" class="mobile-nav-link hover:text-emerald-400 transition-colors block py-1 flex items-center gap-1.5"><i class="fas fa-qrcode text-emerald-400"></i> CondiScan AI Clinical Scanner</a></li>
                         <li><a href="/apps/wakeo/" class="mobile-nav-link hover:text-amber-400 transition-colors block py-1 flex items-center gap-1.5"><i class="fas fa-sun text-amber-400"></i> Wakeo Parental Alarm App</a></li>
                         <li><a href="/apps/hastvault/" class="mobile-nav-link hover:text-amber-300 transition-colors block py-1 flex items-center gap-1.5"><i class="fas fa-shield-halved text-amber-300"></i> HastVault Offline Asset Vault</a></li>
                         <li><a href="services.html" class="mobile-nav-link hover:text-emerald-400 transition-colors block py-1">Training, Education & Awareness Modules</a></li>
@@ -690,10 +713,53 @@
                 </p>
             </div>
 
-            <!-- Products Grid: 5 Flagship Apps with Full Logos & Un-truncated Android Chips -->
+            <!-- Products Grid: 6 Flagship Apps with Full Logos & Un-truncated Android Chips -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 
-                <!-- Product 1: BrickTrack AI -->
+                <!-- Product 1: Kall AI: Phone Assistant -->
+                <div id="kall-ai"
+                    class="glass-card glass-card-hover rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden group border border-slate-800/80 hover:border-indigo-500/40">
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl group-hover:bg-indigo-500/20 transition-all pointer-events-none">
+                    </div>
+
+                    <div>
+                        <!-- Header Row: Real App Icon (Squircle) + Android Chip -->
+                        <div class="flex items-center justify-between gap-3 mb-5">
+                            <div
+                                class="relative w-14 h-14 rounded-2xl overflow-hidden shadow-lg border border-slate-700/80 p-0.5 bg-slate-900 group-hover:border-indigo-500/50 group-hover:shadow-[0_0_20px_rgba(99,102,241,0.25)] transition-all shrink-0">
+                                <img src="apps/kall-ai/assets/app_icon_512.png" alt="Kall AI Logo" class="w-full h-full object-cover rounded-xl" loading="lazy">
+                            </div>
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 shrink-0">
+                                <i class="fab fa-android text-xs"></i>
+                                <span>Android</span>
+                            </span>
+                        </div>
+
+                        <!-- Title and Subtitle Block (Full Width) -->
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors">
+                                Kall AI
+                            </h3>
+                            <span class="text-xs text-slate-400 font-medium block mt-1">24/7 AI Receptionist &amp; Call Assistant</span>
+                        </div>
+
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Smart on-device call gate and cloud AI phone receptionist powered by Gemini Flash-Lite. Answers missed calls, takes clinic bookings and retail orders, provides 1-tap carrier forwarding (Airtel, Jio, Vi), and logs DPDPA-compliant instant summaries.
+                        </p>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between mt-auto">
+                        <a href="/apps/kall-ai/"
+                            class="text-indigo-400 hover:text-indigo-300 text-xs font-bold inline-flex items-center gap-1.5">
+                            <span>Open Kall AI Portal</span>
+                            <i class="fas fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 2: BrickTrack AI -->
                 <div id="bricktrack"
                     class="glass-card glass-card-hover rounded-3xl p-7 sm:p-8 flex flex-col justify-between relative overflow-hidden group border border-slate-800/80 hover:border-emerald-500/40">
                     <div
@@ -1374,9 +1440,10 @@
                     <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Legal-Tech & AI</h4>
                     <ul class="space-y-2 text-xs">
                         <li><a href="#legaltech" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5"><i class="fas fa-robot text-[10px] text-cyan-400"></i> AI Legal Platform</a></li>
+                        <li><a href="/apps/kall-ai/" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5"><i class="fas fa-phone-volume text-[10px] text-indigo-400"></i> Kall AI Phone Assistant</a></li>
+                        <li><a href="/apps/condiscan/" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5"><i class="fas fa-qrcode text-[10px] text-emerald-400"></i> CondiScan AI Scanner</a></li>
                         <li><a href="/apps/brick-track/" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5"><i class="fas fa-building text-[10px] text-emerald-400"></i> BrickTrack AI App</a></li>
                         <li><a href="/apps/capital-curb/" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5"><i class="fas fa-chart-pie text-[10px] text-cyan-400"></i> CapitalCurb AI App</a></li>
-                        <li><a href="/apps/condiscan/" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5"><i class="fas fa-qrcode text-[10px] text-emerald-400"></i> CondiScan AI Scanner</a></li>
                         <li><a href="/apps/wakeo/" class="hover:text-amber-400 transition-colors flex items-center gap-1.5"><i class="fas fa-sun text-[10px] text-amber-400"></i> Wakeo Parental Alarm</a></li>
                         <li><a href="/apps/hastvault/" class="hover:text-yellow-400 transition-colors flex items-center gap-1.5"><i class="fas fa-shield-halved text-[10px] text-yellow-400"></i> HastVault Asset Vault</a></li>
                     </ul>

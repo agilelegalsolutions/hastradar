@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kall AI: Phone Assistant — 24/7 Smart AI Receptionist &amp; Call Assistant | Hastradar</title>
+    <meta name="description" content="Kall AI: Phone Assistant by Hastradar. Smart AI receptionist for 24/7 business auto-answering, 1-tap carrier call forwarding, real-time Gemini Flash-Lite voice intelligence, and DPDPA-compliant appointment and order management.">
+    <meta name="keywords" content="Kall AI, AI Phone Assistant, AI receptionist for clinic, virtual call assistant, auto answer calls, 1 tap call forwarding Airtel Jio, missed call automatic reply, smart voicemail, business phone answering, AI voice agent India, Hastradar apps">
+    <link rel="canonical" href="https://www.hastradar.com/apps/kall-ai/">
+
+    <!-- Security & Revision Meta Tags -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="revised" content="2026-10-01">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: file:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com file:; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: file:; connect-src 'self' https: file:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <!-- Favicon Icons -->
+    <link rel="icon" type="image/png" href="assets/app_icon_512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/app_icon_512.png">
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.hastradar.com/apps/kall-ai/">
+    <meta property="og:title" content="Kall AI: Phone Assistant — 24/7 Smart AI Receptionist">
+    <meta property="og:description" content="Never miss a customer or client call again. Smart AI receptionist with 1-tap carrier forwarding, natural voice AI, and instant transcripts.">
+    <meta property="og:image" content="https://www.hastradar.com/apps/kall-ai/assets/feature_graphic_1024x500.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kall AI: Phone Assistant — 24/7 Smart AI Receptionist">
+    <meta name="twitter:description" content="Turn missed calls into booked clients. Real-time conversational AI call assistant powered by Gemini Flash-Lite and 1-tap carrier forwarding.">
+    <meta name="twitter:image" content="https://www.hastradar.com/apps/kall-ai/assets/feature_graphic_1024x500.png">
+
+    <!-- Fonts & Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../styles.css">
+
+    <!-- Tailwind Config for Rapid Grid Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        kallDark: '#080b13',
+                        kallCard: '#0f1523',
+                        kallCardElevated: '#161e31',
+                        kallIndigo: '#6366f1',
+                        kallViolet: '#8b5cf6',
+                        kallCyan: '#06b6d4',
+                        kallEmerald: '#10b981',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Schema.org SoftwareApplication Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Kall AI: Phone Assistant",
+      "operatingSystem": "Android 7.0 and up (Target SDK 34 - Android 14)",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "description": "Smart AI receptionist and call assistant for 24/7 business auto-answering. Features 1-tap carrier forwarding, real-time Gemini Flash-Lite voice conversations, automated order & appointment booking, and DPDPA-compliant mandatory AI disclosure.",
+      "image": "https://www.hastradar.com/apps/kall-ai/assets/app_icon_512.png",
+      "screenshot": [
+        "https://www.hastradar.com/apps/kall-ai/assets/screenshots/01_screen_home_dashboard.png",
+        "https://www.hastradar.com/apps/kall-ai/assets/screenshots/02_screen_call_forwarding.png",
+        "https://www.hastradar.com/apps/kall-ai/assets/screenshots/03_screen_ai_transcripts.png",
+        "https://www.hastradar.com/apps/kall-ai/assets/screenshots/04_screen_business_grounding.png",
+        "https://www.hastradar.com/apps/kall-ai/assets/screenshots/05_screen_minute_balance.png"
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hastradar Consultancy",
+        "url": "https://hastradar.com"
+      }
+    }
+    </script>
+</head>
+<body class="bg-kallDark text-slate-100 antialiased selection:bg-indigo-600 selection:text-white">
+
+    <!-- Atmospheric Ambient Glows -->
+    <div class="bg-glow-container">
+        <div class="bg-glow-1"></div>
+        <div class="bg-glow-2"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/apps/kall-ai/" class="nav-brand">
+                <img src="assets/app_icon_512.png" alt="Kall AI App Icon" class="nav-logo-icon">
+                <div>
+                    <span class="nav-brand-text">Kall AI</span>
+                    <span class="nav-brand-badge">Phone Assistant</span>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#overview" class="nav-link">Overview</a></li>
+                <li><a href="#features" class="nav-link">Core Features</a></li>
+                <li><a href="#screenshots" class="nav-link">Screenshots</a></li>
+                <li><a href="#forwarding" class="nav-link">1-Tap Forwarding</a></li>
+                <li><a href="#industries" class="nav-link">Industries</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#download" class="btn-primary">
+                    <i class="fab fa-google-play"></i>
+                    <span>Get App</span>
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+        <ul class="mobile-nav-links">
+            <li><a href="#overview"><i class="fas fa-home text-indigo-400 mr-2"></i> Overview</a></li>
+            <li><a href="#features"><i class="fas fa-sparkles text-indigo-400 mr-2"></i> Core Features</a></li>
+            <li><a href="#screenshots"><i class="fas fa-mobile-screen text-indigo-400 mr-2"></i> Screenshots</a></li>
+            <li><a href="#forwarding"><i class="fas fa-phone-arrow-up-right text-indigo-400 mr-2"></i> 1-Tap Forwarding</a></li>
+            <li><a href="#industries"><i class="fas fa-building text-indigo-400 mr-2"></i> Industries</a></li>
+            <li><a href="#faq"><i class="fas fa-circle-question text-indigo-400 mr-2"></i> FAQ</a></li>
+            <li><a href="privacy-policy.html"><i class="fas fa-shield-halved text-cyan-400 mr-2"></i> Privacy Policy</a></li>
+            <li><a href="terms-of-service.html"><i class="fas fa-file-contract text-cyan-400 mr-2"></i> Terms of Service</a></li>
+            <li><a href="delete-account.html"><i class="fas fa-user-xmark text-rose-400 mr-2"></i> Data Deletion</a></li>
+            <li><a href="contact.html"><i class="fas fa-headset text-indigo-400 mr-2"></i> Support &amp; Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- HERO SECTION -->
+    <header id="overview" class="relative pt-36 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left: Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-bold uppercase tracking-wider">
+                        <div class="waveform-bars">
+                            <span class="waveform-bar"></span>
+                            <span class="waveform-bar"></span>
+                            <span class="waveform-bar"></span>
+                            <span class="waveform-bar"></span>
+                            <span class="waveform-bar"></span>
+                        </div>
+                        <span>Smart 24/7 AI Receptionist &amp; Call Assistant</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12]">
+                        Never Miss a Customer or <span class="gradient-text-indigo">High-Value Call Again.</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        When you are busy in surgery, consulting a client, driving, or closed for the night, <strong>Kall AI</strong> automatically answers phone calls with natural, zero-latency voice AI. Powered by <strong>Gemini Flash-Lite</strong>, it takes orders, books appointments, answers FAQs, and logs instant actionable summaries directly into your phone.
+                    </p>
+
+                    <!-- Key Spec Pills -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-2">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-semibold text-slate-200">
+                            <i class="fas fa-tower-broadcast text-indigo-400"></i> 1-Tap Telecom Forwarding (Jio, Airtel, Vi)
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-semibold text-slate-200">
+                            <i class="fas fa-brain text-violet-400"></i> Gemini Flash-Lite &amp; Google Voice
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-semibold text-slate-200">
+                            <i class="fas fa-shield-check text-emerald-400"></i> DPDPA 2023 Compliant AI Disclosure
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-semibold text-slate-200">
+                            <i class="fas fa-clock-rotate-left text-cyan-400"></i> 30-Day Auto Retention
+                        </span>
+                    </div>
+
+                    <!-- CTA Actions -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#download" class="btn-primary w-full sm:w-auto justify-center">
+                            <i class="fab fa-google-play text-lg"></i>
+                            <span>Get App on Google Play</span>
+                        </a>
+                        <a href="#forwarding" class="btn-secondary w-full sm:w-auto justify-center">
+                            <i class="fas fa-bolt text-indigo-400 text-lg"></i>
+                            <span>View 1-Tap Carrier Setup</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Bar -->
+                    <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-slate-400">
+                        <span class="flex items-center gap-1.5"><i class="fas fa-check text-emerald-400"></i> Zero Latency Audio</span>
+                        <span>&bull;</span>
+                        <span class="flex items-center gap-1.5"><i class="fas fa-check text-emerald-400"></i> Google Play In-App Billing</span>
+                        <span>&bull;</span>
+                        <span class="flex items-center gap-1.5"><i class="fas fa-check text-emerald-400"></i> Zero Outbound Spam</span>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Mobile Mockup Preview -->
+                <div class="lg:col-span-5 flex justify-center relative">
+                    <div class="relative w-full max-w-[320px] sm:max-w-[350px]">
+                        <!-- Glow Halo -->
+                        <div class="absolute -inset-4 bg-gradient-to-tr from-indigo-500/25 via-violet-500/20 to-cyan-500/15 rounded-[48px] blur-2xl"></div>
+
+                        <!-- Phone Bezel Frame -->
+                        <div class="relative bg-slate-950 p-2.5 rounded-[44px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] border border-slate-700/80">
+                            <div class="relative rounded-[36px] overflow-hidden bg-slate-900 aspect-[9/19.5]">
+                                <img src="assets/screenshots/01_screen_home_dashboard.png" alt="Kall AI Home Dashboard &amp; Screening Gate" class="w-full h-full object-cover">
+                                
+                                <!-- Floating Interactive Live Voice Banner -->
+                                <div class="absolute bottom-4 inset-x-3 bg-slate-950/90 backdrop-blur-md border border-indigo-500/40 p-3 rounded-2xl shadow-xl flex items-center justify-between">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs">
+                                            <i class="fas fa-phone-volume animate-pulse"></i>
+                                        </div>
+                                        <div>
+                                            <span class="text-[10px] text-slate-400 block font-semibold">Live AI Receptionist</span>
+                                            <span class="text-xs font-bold text-white">Call Screening Active</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">DPDPA Safe</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Micro Badges -->
+                        <div class="absolute -bottom-6 -left-6 glass-panel p-3.5 rounded-2xl flex items-center gap-3 border border-indigo-500/40 shadow-xl hidden sm:flex">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-lg">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider block">Silent Intercept</span>
+                                <span class="text-xs font-bold text-white">Zero Phone Ringing</span>
+                            </div>
+                        </div>
+
+                        <div class="absolute -top-4 -right-4 glass-panel p-3 rounded-2xl flex items-center gap-2.5 border border-violet-500/40 shadow-xl hidden sm:flex">
+                            <div class="w-8 h-8 rounded-lg bg-violet-500/20 text-violet-300 flex items-center justify-center text-sm">
+                                <i class="fas fa-wand-magic-sparkles"></i>
+                            </div>
+                            <span class="text-xs font-bold text-white">Gemini Flash-Lite</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: CORE ARCHITECTURE & 5 PILLARS -->
+    <section id="features" class="py-24 bg-kallCard/40 relative border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <div class="section-tag">
+                    <i class="fas fa-microchip"></i>
+                    <span>Next-Generation Architecture</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    Five Technological Pillars of Kall AI
+                </h2>
+                <p class="text-slate-400 text-base">
+                    Engineered from the ground up for high-touch service businesses, doctors, and professionals who cannot afford to miss valuable leads.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Pillar 1 -->
+                <div class="glass-panel p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400 text-xl font-bold">
+                        <i class="fas fa-phone-slash"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Silent On-Device Call Screening Gate</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Kall AI leverages Android's native <code>RoleManager.ROLE_CALL_SCREENING</code> to inspect incoming caller IDs locally in milliseconds. When auto-answer is enabled, the call is declined silently without your phone ever ringing.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-400"></i> Zero network latency on local decision</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-400"></i> Respects weekly schedule windows</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="glass-panel p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-violet-500/20 border border-violet-500/40 flex items-center justify-center text-violet-400 text-xl font-bold">
+                        <i class="fas fa-tower-broadcast"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">1-Tap Universal Carrier Forwarding</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        No memorizing arcane MMI codes. Kall AI provisions standard telecom conditional call forwarding (*67 / *61 / *62) for Airtel, Jio, Vi, and BSNL in one single tap with auto SIM slot selection.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-violet-400"></i> Seamless dual-SIM support</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-violet-400"></i> Instant 1-tap deactivation anytime</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="glass-panel p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-400 text-xl font-bold">
+                        <i class="fas fa-waveform-lines"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Gemini Flash-Lite &amp; Cloud Speech</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Sub-second natural conversational flow. Callers speak freely in English, Hindi, or Hinglish; Kall AI transcribes with Google Cloud STT, generates context-aware replies via Gemini Flash-Lite, and speaks back in human tones.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Natural interruption handling</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-400"></i> Function calling for catalog &amp; slot booking</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="glass-panel p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-xl font-bold">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">DPDPA 2023 Mandatory AI Disclosure</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Every call begins with an unalterable verbal disclosure in the caller's language that they are speaking with an AI assistant. Every disclosure event is logged to immutable compliance audit records.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Indian DPDP Act 2023 statutory alignment</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> 100% Inbound only &bull; Zero spam outbound</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 5 -->
+                <div class="glass-panel p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 text-xl font-bold">
+                        <i class="fas fa-receipt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Actionable Summaries &amp; High-Priority Push</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        As soon as a call completes, Kall AI extracts caller intent, contact numbers, ordered items or booked clinic slots, and pushes high-priority FCM notifications with full transcripts to your dashboard.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-400"></i> Structured JSON extraction (Retail, Clinic, Personal)</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-amber-400"></i> 1-Tap call-back button directly in app</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 6 -->
+                <div class="glass-panel p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400 text-xl font-bold">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Live Minute Balance &amp; Play Store Billing</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Never worry about hidden call charges. Monitor your real-time included and bonus minutes directly on your dashboard. Subscriptions and affordable top-up minute packs are securely managed via Google Play Billing.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-slate-800">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-400"></i> Google Play In-App Purchases</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-400"></i> Cancel anytime with one tap</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: INTERACTIVE SCREENSHOTS SHOWCASE -->
+    <section id="screenshots" class="py-24 bg-kallDark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <div class="section-tag">
+                    <i class="fas fa-images"></i>
+                    <span>Production Android Interface</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    Inside Kall AI: Precision Engineering on Every Screen
+                </h2>
+                <p class="text-slate-400 text-base">
+                    Built using Jetpack Compose and modern Material Design 3. Clean, intuitive, and designed to save you hours every single week.
+                </p>
+            </div>
+
+            <!-- Screenshot Grid (5 Screens) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                
+                <!-- Screen 1 -->
+                <div class="group flex flex-col items-center">
+                    <div class="relative rounded-[32px] overflow-hidden bg-slate-900 border border-slate-800 group-hover:border-indigo-500/60 shadow-xl transition-all duration-300 group-hover:-translate-y-2 aspect-[9/19]">
+                        <img src="assets/screenshots/01_screen_home_dashboard.png" alt="Screen 1: Home Dashboard &amp; Screening Gate" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="mt-4 text-center">
+                        <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider block">Screen 1</span>
+                        <h4 class="text-sm font-bold text-white mt-0.5">Home Dashboard</h4>
+                        <p class="text-xs text-slate-400 mt-1">Auto-answer toggle &amp; today's filtered calls</p>
+                    </div>
+                </div>
+
+                <!-- Screen 2 -->
+                <div class="group flex flex-col items-center">
+                    <div class="relative rounded-[32px] overflow-hidden bg-slate-900 border border-slate-800 group-hover:border-violet-500/60 shadow-xl transition-all duration-300 group-hover:-translate-y-2 aspect-[9/19]">
+                        <img src="assets/screenshots/02_screen_call_forwarding.png" alt="Screen 2: 1-Tap Call Forwarding" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="mt-4 text-center">
+                        <span class="text-xs font-bold text-violet-400 uppercase tracking-wider block">Screen 2</span>
+                        <h4 class="text-sm font-bold text-white mt-0.5">1-Tap Forwarding</h4>
+                        <p class="text-xs text-slate-400 mt-1">Instant telecom routing for Airtel &amp; Jio</p>
+                    </div>
+                </div>
+
+                <!-- Screen 3 -->
+                <div class="group flex flex-col items-center">
+                    <div class="relative rounded-[32px] overflow-hidden bg-slate-900 border border-slate-800 group-hover:border-cyan-500/60 shadow-xl transition-all duration-300 group-hover:-translate-y-2 aspect-[9/19]">
+                        <img src="assets/screenshots/03_screen_ai_transcripts.png" alt="Screen 3: AI Transcripts &amp; Intent Tags" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="mt-4 text-center">
+                        <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider block">Screen 3</span>
+                        <h4 class="text-sm font-bold text-white mt-0.5">AI Transcripts</h4>
+                        <p class="text-xs text-slate-400 mt-1">Live dialog history &amp; actionable intent tags</p>
+                    </div>
+                </div>
+
+                <!-- Screen 4 -->
+                <div class="group flex flex-col items-center">
+                    <div class="relative rounded-[32px] overflow-hidden bg-slate-900 border border-slate-800 group-hover:border-emerald-500/60 shadow-xl transition-all duration-300 group-hover:-translate-y-2 aspect-[9/19]">
+                        <img src="assets/screenshots/04_screen_business_grounding.png" alt="Screen 4: Business Grounding &amp; Knowledge" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="mt-4 text-center">
+                        <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block">Screen 4</span>
+                        <h4 class="text-sm font-bold text-white mt-0.5">Business Grounding</h4>
+                        <p class="text-xs text-slate-400 mt-1">Hours, catalog, doctor slots &amp; FAQs</p>
+                    </div>
+                </div>
+
+                <!-- Screen 5 -->
+                <div class="group flex flex-col items-center">
+                    <div class="relative rounded-[32px] overflow-hidden bg-slate-900 border border-slate-800 group-hover:border-amber-500/60 shadow-xl transition-all duration-300 group-hover:-translate-y-2 aspect-[9/19]">
+                        <img src="assets/screenshots/05_screen_minute_balance.png" alt="Screen 5: Minute Balance &amp; Google Play Billing" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="mt-4 text-center">
+                        <span class="text-xs font-bold text-amber-400 uppercase tracking-wider block">Screen 5</span>
+                        <h4 class="text-sm font-bold text-white mt-0.5">Minute Balance</h4>
+                        <p class="text-xs text-slate-400 mt-1">Live tracking &amp; safe Google Play top-ups</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: 1-TAP CARRIER FORWARDING MATRIX -->
+    <section id="forwarding" class="py-24 bg-kallCard/30 relative border-t border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <div class="section-tag">
+                    <i class="fas fa-tower-cell"></i>
+                    <span>Telecom Compatibility</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    Instant 1-Tap Carrier Forwarding
+                </h2>
+                <p class="text-slate-400 text-base">
+                    Kall AI automates Indian telecom conditional forwarding standards. No complex manual setup. Tap activate inside the app and your AI receptionist is live.
+                </p>
+            </div>
+
+            <!-- Carrier Selector Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-3 mb-8">
+                <button data-carrier-tab="airtel" class="px-5 py-2.5 rounded-xl border border-indigo-500 bg-indigo-500/20 text-white font-bold text-sm transition-all flex items-center gap-2">
+                    <i class="fas fa-signal"></i>
+                    <span>Airtel</span>
+                </button>
+                <button data-carrier-tab="jio" class="px-5 py-2.5 rounded-xl border border-slate-800 text-slate-400 hover:text-white font-bold text-sm transition-all flex items-center gap-2">
+                    <i class="fas fa-signal"></i>
+                    <span>Reliance Jio</span>
+                </button>
+                <button data-carrier-tab="vi" class="px-5 py-2.5 rounded-xl border border-slate-800 text-slate-400 hover:text-white font-bold text-sm transition-all flex items-center gap-2">
+                    <i class="fas fa-signal"></i>
+                    <span>Vodafone Idea (Vi)</span>
+                </button>
+                <button data-carrier-tab="bsnl" class="px-5 py-2.5 rounded-xl border border-slate-800 text-slate-400 hover:text-white font-bold text-sm transition-all flex items-center gap-2">
+                    <i class="fas fa-signal"></i>
+                    <span>BSNL</span>
+                </button>
+            </div>
+
+            <!-- Carrier Panel: Airtel -->
+            <div data-carrier-panel="airtel" class="glass-panel p-8 rounded-3xl border border-slate-800 space-y-6">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+                    <div>
+                        <h3 class="text-xl font-bold text-white flex items-center gap-2.5">
+                            <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                            Airtel Conditional Forwarding
+                        </h3>
+                        <p class="text-xs text-slate-400 mt-1">Handled automatically in 1 tap by Kall AI</p>
+                    </div>
+                    <span class="text-xs font-semibold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Fully Verified</span>
+                </div>
+                
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800">
+                        <span class="text-xs text-slate-400 font-semibold block mb-1">When Busy (*67)</span>
+                        <div class="carrier-code-box w-full justify-between">
+                            <span>*67*01141182702#</span>
+                            <i class="fas fa-check text-emerald-400 text-xs"></i>
+                        </div>
+                    </div>
+                    <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800">
+                        <span class="text-xs text-slate-400 font-semibold block mb-1">When No Answer (*61)</span>
+                        <div class="carrier-code-box w-full justify-between">
+                            <span>*61*01141182702#</span>
+                            <i class="fas fa-check text-emerald-400 text-xs"></i>
+                        </div>
+                    </div>
+                    <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800">
+                        <span class="text-xs text-slate-400 font-semibold block mb-1">Deactivate All Forwarding</span>
+                        <div class="carrier-code-box w-full justify-between text-amber-400">
+                            <span>##002#</span>
+                            <i class="fas fa-arrow-rotate-left text-amber-400 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carrier Panel: Jio -->
+            <div data-carrier-panel="jio" class="glass-panel p-8 rounded-3xl border border-slate-800 space-y-6 hidden">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+                    <div>
+                        <h3 class="text-xl font-bold text-white flex items-center gap-2.5">
+                            <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                            Reliance Jio Conditional Forwarding
+                        </h3>
+                        <p class="text-xs text-slate-400 mt-1">Automatic MMI execution via Call Screening Service</p>
+                    </div>
+                    <span class="text-xs font-semibold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Fully Verified</span>
+                </div>
+                
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800">
+                        <span class="text-xs text-slate-400 font-semibold block mb-1">When Busy / Declined (*401)</span>
+                        <div class="carrier-code-box w-full justify-between">
+                            <span>*401*01141182702#</span>
+                            <i class="fas fa-check text-emerald-400 text-xs"></i>
+                        </div>
+                    </div>
+                    <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800">
+                        <span class="text-xs text-slate-400 font-semibold block mb-1">When Unanswered (*403)</span>
+                        <div class="carrier-code-box w-full justify-between">
+                            <span>*403*01141182702#</span>
+                            <i class="fas fa-check text-emerald-400 text-xs"></i>
+                        </div>
+                    </div>
+                    <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800">
+                        <span class="text-xs text-slate-400 font-semibold block mb-1">Deactivate Forwarding</span>
+                        <div class="carrier-code-box w-full justify-between text-amber-400">
+                            <span>*402 / *413</span>
+                            <i class="fas fa-arrow-rotate-left text-amber-400 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carrier Panel: Vi -->
+            <div data-carrier-panel="vi" class="glass-panel p-8 rounded-3xl border border-slate-800 space-y-6 hidden">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+                    <div>
+                        <h3 class="text-xl font-bold text-white flex items-center gap-2.5">
+                            <span class="w-3 h-3 rounded-full bg-red-600"></span>
+                            Vodafone Idea (Vi) Conditional Forwarding
+                        </h3>
+                        <p class="text-xs text-slate-400 mt-1">Standard GSM conditional call redirection</p>
+                    </div>
+                    <span class="text-xs font-semibold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Fully Verified</span>
+                </div>
+                
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800">
+                        <span class="text-xs text-slate-400 font-semibold block mb-1">When Busy (*67)</span>
+                        <div class="carrier-code-box w-full justify-between">
+                            <span>*67*01141182702#</span>
+                            <i class="fas fa-check text-emerald-400 text-xs"></i>
+                        </div>
+                    </div>
+                    <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800">
+                        <span class="text-xs text-slate-400 font-semibold block mb-1">When No Answer (*61)</span>
+                        <div class="carrier-code-box w-full justify-between">
+                            <span>*61*01141182702#</span>
+                            <i class="fas fa-check text-emerald-400 text-xs"></i>
+                        </div>
+                    </div>
+                    <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800">
+                        <span class="text-xs text-slate-400 font-semibold block mb-1">Deactivate Forwarding</span>
+                        <div class="carrier-code-box w-full justify-between text-amber-400">
+                            <span>##002#</span>
+                            <i class="fas fa-arrow-rotate-left text-amber-400 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carrier Panel: BSNL -->
+            <div data-carrier-panel="bsnl" class="glass-panel p-8 rounded-3xl border border-slate-800 space-y-6 hidden">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+                    <div>
+                        <h3 class="text-xl font-bold text-white flex items-center gap-2.5">
+                            <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                            BSNL Mobile Forwarding
+                        </h3>
+                        <p class="text-xs text-slate-400 mt-1">Universal GSM diversion codes</p>
+                    </div>
+                    <span class="text-xs font-semibold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Fully Verified</span>
+                </div>
+                
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800">
+                        <span class="text-xs text-slate-400 font-semibold block mb-1">When Busy (*67)</span>
+                        <div class="carrier-code-box w-full justify-between">
+                            <span>*67*01141182702#</span>
+                            <i class="fas fa-check text-emerald-400 text-xs"></i>
+                        </div>
+                    </div>
+                    <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800">
+                        <span class="text-xs text-slate-400 font-semibold block mb-1">When No Answer (*61)</span>
+                        <div class="carrier-code-box w-full justify-between">
+                            <span>*61*01141182702#</span>
+                            <i class="fas fa-check text-emerald-400 text-xs"></i>
+                        </div>
+                    </div>
+                    <div class="bg-slate-950/70 p-4 rounded-2xl border border-slate-800">
+                        <span class="text-xs text-slate-400 font-semibold block mb-1">Deactivate Forwarding</span>
+                        <div class="carrier-code-box w-full justify-between text-amber-400">
+                            <span>##002#</span>
+                            <i class="fas fa-arrow-rotate-left text-amber-400 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: BUILT FOR EVERY PROFESSIONAL VERTICAL -->
+    <section id="industries" class="py-24 bg-kallDark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <div class="section-tag">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Industry Specialized</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    Tailored Knowledge For Your Specific Business
+                </h2>
+                <p class="text-slate-400 text-base">
+                    Kall AI adapts its conversation persona, tools, and structured data schemas to your professional field.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Vertical 1: Doctors & Clinics -->
+                <div class="glass-panel p-8 rounded-3xl space-y-4 border border-slate-800 hover:border-indigo-500/50">
+                    <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl">
+                        <i class="fas fa-user-doctor"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Doctors &amp; Healthcare Clinics</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Consult patients without constant phone interruptions. Kall AI handles consultation fee inquiries, clinic timings, appointment booking, and emergency routing with complete DPDPA compliance.
+                    </p>
+                    <div class="pt-3 border-t border-slate-800/80 text-xs text-indigo-300 font-medium">
+                        Schema: <code>{ patientName, phone, reason, bookedSlot }</code>
+                    </div>
+                </div>
+
+                <!-- Vertical 2: Retail Shops -->
+                <div class="glass-panel p-8 rounded-3xl space-y-4 border border-slate-800 hover:border-violet-500/50">
+                    <div class="w-12 h-12 rounded-2xl bg-violet-500/20 text-violet-400 flex items-center justify-center text-xl">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Retail &amp; Local Grocery Stores</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Takes grocery and item orders over the phone by querying your live item catalog and stock availability. Logs delivery preferences and urgency level instantly.
+                    </p>
+                    <div class="pt-3 border-t border-slate-800/80 text-xs text-violet-300 font-medium">
+                        Schema: <code>{ items: [{ name, qty }], deliveryPref, urgency }</code>
+                    </div>
+                </div>
+
+                <!-- Vertical 3: Real Estate -->
+                <div class="glass-panel p-8 rounded-3xl space-y-4 border border-slate-800 hover:border-cyan-500/50">
+                    <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Real Estate Agents &amp; Brokers</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Never miss a prospective buyer or tenant. Kall AI asks qualifying questions (budget, desired location, 2BHK/3BHK) and captures verified callbacks around the clock.
+                    </p>
+                    <div class="pt-3 border-t border-slate-800/80 text-xs text-cyan-300 font-medium">
+                        Schema: <code>{ leadType, budget, configuration, siteVisitDate }</code>
+                    </div>
+                </div>
+
+                <!-- Vertical 4: Salons & Spas -->
+                <div class="glass-panel p-8 rounded-3xl space-y-4 border border-slate-800 hover:border-pink-500/50">
+                    <div class="w-12 h-12 rounded-2xl bg-pink-500/20 text-pink-400 flex items-center justify-center text-xl">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Salons, Spas &amp; Wellness</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Automatically manage service inquiries, haircut/spa booking requests, and treatment pricing while keeping your staff focused on pampering in-store clients.
+                    </p>
+                    <div class="pt-3 border-t border-slate-800/80 text-xs text-pink-300 font-medium">
+                        Schema: <code>{ serviceRequested, preferredTime, specialist }</code>
+                    </div>
+                </div>
+
+                <!-- Vertical 5: Contractors -->
+                <div class="glass-panel p-8 rounded-3xl space-y-4 border border-slate-800 hover:border-amber-500/50">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Contractors, Plumbers &amp; Electricians</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        When you are on a ladder or working with tools, let Kall AI capture emergency repair requests, customer address, and job urgency so you can call back when safe.
+                    </p>
+                    <div class="pt-3 border-t border-slate-800/80 text-xs text-amber-300 font-medium">
+                        Schema: <code>{ issueType, location, isEmergency, callbackNumber }</code>
+                    </div>
+                </div>
+
+                <!-- Vertical 6: Freelancers & Consultants -->
+                <div class="glass-panel p-8 rounded-3xl space-y-4 border border-slate-800 hover:border-emerald-500/50">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Freelancers &amp; Independent Consultants</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Protect your deep focus sprints. Kall AI intercepts calls, determines the caller's identity and intent, and lets you prioritize callbacks at your convenience.
+                    </p>
+                    <div class="pt-3 border-t border-slate-800/80 text-xs text-emerald-300 font-medium">
+                        Schema: <code>{ callerName, organization, reason, urgency }</code>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: COMPARISON TABLE (VOICEMAIL VS HUMAN VS KALL AI) -->
+    <section class="py-20 bg-kallCard/40 relative border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+                    Why Traditional Voicemail Fails Your Business
+                </h2>
+                <p class="text-slate-400 text-sm">
+                    Over 80% of callers hang up upon hearing a traditional voicemail beep. Kall AI provides an active human-like conversation.
+                </p>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm text-slate-300 border border-slate-800 rounded-2xl overflow-hidden">
+                    <thead class="bg-slate-900 text-xs uppercase text-slate-400 tracking-wider">
+                        <tr>
+                            <th class="p-4 border-b border-slate-800">Feature</th>
+                            <th class="p-4 border-b border-slate-800 text-rose-400">Traditional Voicemail</th>
+                            <th class="p-4 border-b border-slate-800 text-amber-400">Human Receptionist</th>
+                            <th class="p-4 border-b border-slate-800 text-indigo-400 font-bold bg-indigo-500/10">Kall AI Assistant</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/80">
+                        <tr>
+                            <td class="p-4 font-semibold text-white">24/7 Availability</td>
+                            <td class="p-4 text-slate-400">Yes (Passive Recording)</td>
+                            <td class="p-4 text-slate-400">No (8-hour shifts)</td>
+                            <td class="p-4 font-bold text-emerald-400 bg-indigo-500/5"><i class="fas fa-check mr-1.5"></i> 24/7 Active AI Voice</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-white">Answers Questions &amp; FAQs</td>
+                            <td class="p-4 text-rose-400"><i class="fas fa-times mr-1.5"></i> Cannot Answer</td>
+                            <td class="p-4 text-emerald-400"><i class="fas fa-check mr-1.5"></i> Yes</td>
+                            <td class="p-4 font-bold text-emerald-400 bg-indigo-500/5"><i class="fas fa-check mr-1.5"></i> Instant Grounded FAQs</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-white">Takes Orders &amp; Bookings</td>
+                            <td class="p-4 text-rose-400"><i class="fas fa-times mr-1.5"></i> No</td>
+                            <td class="p-4 text-emerald-400"><i class="fas fa-check mr-1.5"></i> Yes</td>
+                            <td class="p-4 font-bold text-emerald-400 bg-indigo-500/5"><i class="fas fa-check mr-1.5"></i> Real-time Tool Calling</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-white">Monthly Cost</td>
+                            <td class="p-4 text-slate-400">Low (Zero conversions)</td>
+                            <td class="p-4 text-rose-400">&#8377;15,000 - &#8377;30,000 / mo</td>
+                            <td class="p-4 font-bold text-emerald-400 bg-indigo-500/5"><i class="fas fa-check mr-1.5"></i> Fractional Cost Per Minute</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-white">DPDPA 2023 Compliance</td>
+                            <td class="p-4 text-slate-400">N/A</td>
+                            <td class="p-4 text-amber-400">Manual compliance</td>
+                            <td class="p-4 font-bold text-emerald-400 bg-indigo-500/5"><i class="fas fa-check mr-1.5"></i> Immutable Audit Logs</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: FAQ ACCORDION -->
+    <section id="faq" class="py-24 bg-kallDark relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <div class="section-tag">
+                    <i class="fas fa-circle-question"></i>
+                    <span>Answers to Common Questions</span>
+                </div>
+                <h2 class="text-3xl font-extrabold text-white tracking-tight">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-slate-400 text-sm">
+                    Everything you need to know about setting up and running Kall AI on your Android phone.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <div class="faq-item glass-panel rounded-2xl border border-slate-800 p-6 transition-all">
+                    <button class="faq-question w-full flex items-center justify-between text-left text-base font-bold text-white focus:outline-none" aria-expanded="false">
+                        <span>How does 1-tap call forwarding work with my carrier?</span>
+                        <i class="fas fa-chevron-down text-indigo-400 text-xs transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="text-slate-400 text-sm pt-4 leading-relaxed">
+                            When you tap "Activate Forwarding" inside Kall AI, the app automatically triggers standard carrier conditional diversion codes (e.g. *67 for busy, *61 for unanswered). When a call arrives that you reject or do not answer, your telecom carrier routes the audio stream to our dedicated cloud receptionist number. You can deactivate it at any time with one tap.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-panel rounded-2xl border border-slate-800 p-6 transition-all">
+                    <button class="faq-question w-full flex items-center justify-between text-left text-base font-bold text-white focus:outline-none" aria-expanded="false">
+                        <span>Why does Kall AI request the Call Screening role?</span>
+                        <i class="fas fa-chevron-down text-indigo-400 text-xs transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="text-slate-400 text-sm pt-4 leading-relaxed">
+                            Kall AI uses Android's official <code>RoleManager.ROLE_CALL_SCREENING</code> to inspect incoming calls on-device. When auto-answer is turned ON (or during your configured schedule), the screening service rejects the call silently without vibrating or ringing your phone. The carrier detects the busy signal and instantly routes the caller to the AI assistant.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-panel rounded-2xl border border-slate-800 p-6 transition-all">
+                    <button class="faq-question w-full flex items-center justify-between text-left text-base font-bold text-white focus:outline-none" aria-expanded="false">
+                        <span>Is Kall AI compliant with the Digital Personal Data Protection Act (DPDPA 2023)?</span>
+                        <i class="fas fa-chevron-down text-indigo-400 text-xs transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="text-slate-400 text-sm pt-4 leading-relaxed">
+                            Yes, strictly so. Every call starts with a mandatory verbatim AI disclosure greeting disclosing that the caller is speaking with an AI assistant in their language. Furthermore, each disclosure event is recorded in an immutable audit log, data is held under strict user-specific Firestore security rules, and all transcripts are subject to user-governed 30-day retention policies.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-panel rounded-2xl border border-slate-800 p-6 transition-all">
+                    <button class="faq-question w-full flex items-center justify-between text-left text-base font-bold text-white focus:outline-none" aria-expanded="false">
+                        <span>How are minutes billed?</span>
+                        <i class="fas fa-chevron-down text-indigo-400 text-xs transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="text-slate-400 text-sm pt-4 leading-relaxed">
+                            Minutes are counted only while your AI assistant is actively speaking with an incoming caller. You can view your real-time balance on the dashboard. Subscriptions and minute recharge top-up packs are purchased safely through Google Play In-App Billing.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-panel rounded-2xl border border-slate-800 p-6 transition-all">
+                    <button class="faq-question w-full flex items-center justify-between text-left text-base font-bold text-white focus:outline-none" aria-expanded="false">
+                        <span>Does Kall AI make outbound marketing or cold calls?</span>
+                        <i class="fas fa-chevron-down text-indigo-400 text-xs transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="text-slate-400 text-sm pt-4 leading-relaxed">
+                            No. Kall AI is strictly an inbound reception tool. It never initiates unsolicited calls or conducts telemarketing campaigns.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: DOWNLOAD & GET STARTED CTA -->
+    <section id="download" class="py-24 bg-gradient-to-b from-kallDark via-kallCard to-kallDark relative border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <div class="w-20 h-20 rounded-3xl bg-slate-900 border-2 border-indigo-500/50 p-2 mx-auto shadow-[0_0_35px_rgba(99,102,241,0.35)]">
+                <img src="assets/app_icon_512.png" alt="Kall AI Icon" class="w-full h-full object-cover rounded-2xl">
+            </div>
+
+            <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+                Turn Every Missed Call Into a Delighted Customer
+            </h2>
+            <p class="text-slate-300 text-base max-w-xl mx-auto">
+                Download Kall AI: Phone Assistant for Android today. Get started in under 60 seconds with our free starter minute package.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="https://play.google.com/store/apps/details?id=com.hastradar.kall" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                    <i class="fab fa-google-play text-xl"></i>
+                    <span>Get on Google Play</span>
+                </a>
+                <a href="privacy-policy.html" class="btn-secondary">
+                    <i class="fas fa-shield-halved text-lg text-indigo-400"></i>
+                    <span>Review Privacy Guarantee</span>
+                </a>
+            </div>
+
+            <p class="text-xs text-slate-500 pt-2">
+                Compatible with Android 7.0+ (API 24 to 34) &bull; Google Play Verified &bull; Lightweight 5.2 MB Bundle
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="assets/app_icon_512.png" alt="Kall AI Icon" class="w-10 h-10 rounded-xl border border-indigo-500/40">
+                        <span class="font-extrabold text-white text-lg">Kall AI</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Smart 24/7 AI receptionist &amp; call assistant for small businesses, healthcare clinics, and professionals. Powered by Gemini Flash-Lite and Google Cloud Speech.
+                    </p>
+                    <span class="text-xs text-indigo-400 font-semibold uppercase tracking-wider">A Hastradar Software Product</span>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#features">Core Features</a></li>
+                        <li><a href="#screenshots">Screenshots</a></li>
+                        <li><a href="#forwarding">1-Tap Forwarding</a></li>
+                        <li><a href="#industries">Industries</a></li>
+                        <li><a href="#download">Download</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Compliance &amp; Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="delete-account.html">Account &amp; Data Deletion</a></li>
+                        <li><a href="contact.html">Support &amp; Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Hastradar Ecosystem</h4>
+                    <ul>
+                        <li><a href="/">Hastradar Home</a></li>
+                        <li><a href="/apps/condiscan/">CondiScan AI Clinical Scanner</a></li>
+                        <li><a href="/apps/brick-track/">BrickTrack AI Construction</a></li>
+                        <li><a href="/apps/capital-curb/">CapitalCurb AI Expense App</a></li>
+                        <li><a href="/apps/wakeo/">Wakeo Parental Alarm</a></li>
+                        <li><a href="/apps/hastvault/">HastVault Offline Asset Vault</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hastradar Consultancy &amp; Kall AI. All rights reserved.</p>
+                <p class="text-xs text-slate-500">Gemini Flash-Lite &bull; DPDPA 2023 Compliant &bull; 1-Tap Telecom Forwarding &bull; Google Play Verified</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
