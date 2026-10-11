@@ -1,6 +1,13 @@
 /* Hastradar Consultancy - Modern Enterprise Black & Gold/Emerald/Blue Design System */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
+/* CSS Reset & Defensive Box Model */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --bg-main: #08090d;
     --bg-card: #11141e;
@@ -23,16 +30,44 @@
     --text-muted: #64748b;
 }
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--bg-main);
     color: var(--text-primary);
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    max-width: 100%;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Modern overflow containment to prevent mobile horizontal blowout */
+@supports (overflow-x: clip) {
+    html, body {
+        overflow-x: clip;
+    }
 }
 
 .font-serif-legal {
     font-family: 'Cinzel', serif;
+}
+
+/* Media Containment */
+img, picture, video, canvas, svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Glassmorphism containers */
@@ -66,41 +101,53 @@ body {
 
 /* Navigation Bar */
 .glass-nav {
-    background: rgba(8, 9, 13, 0.85);
+    background: rgba(8, 9, 13, 0.90);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-glass);
 }
 
-/* Ambient Background Glows */
+/* Ambient Background Glow Wrapper & Glows */
+.ambient-glow-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+    contain: strict;
+}
+
 .ambient-glow-1 {
     position: absolute;
-    width: 600px;
-    height: 600px;
+    width: min(600px, 90vw);
+    height: min(600px, 90vw);
     border-radius: 50%;
     background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(8, 9, 13, 0) 70%);
     pointer-events: none;
-    z-index: 0;
+    filter: blur(40px);
 }
 
 .ambient-glow-2 {
     position: absolute;
-    width: 500px;
-    height: 500px;
+    width: min(500px, 80vw);
+    height: min(500px, 80vw);
     border-radius: 50%;
     background: radial-gradient(circle, rgba(16, 185, 129, 0.10) 0%, rgba(8, 9, 13, 0) 70%);
     pointer-events: none;
-    z-index: 0;
+    filter: blur(40px);
 }
 
 .ambient-glow-gold {
     position: absolute;
-    width: 450px;
-    height: 450px;
+    width: min(450px, 75vw);
+    height: min(450px, 75vw);
     border-radius: 50%;
     background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, rgba(8, 9, 13, 0) 70%);
     pointer-events: none;
-    z-index: 0;
+    filter: blur(40px);
 }
 
 /* Gradient Text Utilities */
@@ -272,10 +319,15 @@ input:focus, select:focus, textarea:focus {
 
 /* Responsive Media Queries */
 @media (max-width: 768px) {
+    /* Prevent iOS safari auto-zooming on focus when font-size is below 16px */
+    input, select, textarea {
+        font-size: 16px !important;
+    }
+
     .gdpr-banner {
-        left: 1rem;
-        right: 1rem;
-        bottom: 1rem;
+        left: 0.75rem;
+        right: 0.75rem;
+        bottom: 0.75rem;
         padding: 1rem;
     }
 
@@ -287,3 +339,10 @@ input:focus, select:focus, textarea:focus {
     }
 }
 
+/* Extra small mobile responsiveness (< 480px) */
+@media (max-width: 480px) {
+    .glass-card {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

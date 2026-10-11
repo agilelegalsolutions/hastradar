@@ -141,22 +141,25 @@
 </head>
 <body class="bg-brandDark text-slate-100 antialiased selection:bg-emerald-500 selection:text-black">
 
-    <div class="ambient-glow-1 top-0 left-1/3"></div>
+    <!-- Ambient FX Wrapper -->
+    <div class="ambient-glow-wrapper" aria-hidden="true">
+        <div class="ambient-glow-1 top-0 left-1/3"></div>
+    </div>
 
     <!-- Navigation -->
     <nav class="glass-nav fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <a href="/" class="flex items-center space-x-3 group">
-                    <div class="relative flex items-center justify-center w-11 h-11 rounded-xl bg-slate-900 border border-emerald-500/30 p-1 group-hover:border-emerald-400 transition-colors shadow-lg shadow-emerald-500/10">
+                <a href="/" class="flex items-center space-x-2.5 sm:space-x-3 group min-w-0 pr-2">
+                    <div class="relative flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-slate-900 border border-emerald-500/30 p-1 group-hover:border-emerald-400 transition-colors shadow-lg shadow-emerald-500/10 shrink-0">
                         <picture>
                             <source srcset="/static/images/Logo.webp" type="image/webp">
                             <img src="/static/images/Logo.jpeg" alt="HCS Logo" width="44" height="44" decoding="async" class="w-full h-full object-contain rounded-lg">
                         </picture>
                     </div>
-                    <div class="flex flex-col">
-                        <span class="font-bold text-lg tracking-tight text-white group-hover:text-emerald-400 transition-colors">Hastradar Consultancy</span>
-                        <span class="text-[10px] tracking-widest text-emerald-400 uppercase font-semibold">Legal &amp; Technology Advisory</span>
+                    <div class="flex flex-col min-w-0">
+                        <span class="font-bold text-base sm:text-lg tracking-tight text-white group-hover:text-emerald-400 transition-colors truncate">Hastradar<span class="hidden xs:inline"> Consultancy</span></span>
+                        <span class="text-[9px] sm:text-[10px] tracking-wider text-emerald-400 uppercase font-semibold truncate hidden xs:block">Legal &amp; Technology Advisory</span>
                     </div>
                 </a>
                 
@@ -169,13 +172,35 @@
                     <a href="/#contact" class="text-slate-300 hover:text-emerald-400 transition-colors py-2">Contact</a>
                 </div>
 
-                <div class="hidden lg:flex items-center">
-                    <a href="/#contact" class="btn-primary px-5 py-2.5 rounded-xl text-sm font-semibold flex items-center gap-2">
+                <div class="flex items-center space-x-2 sm:space-x-3 shrink-0">
+                    <a href="/#contact" class="hidden sm:inline-flex btn-primary px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold items-center gap-2 whitespace-nowrap">
                         <i class="fas fa-gavel text-xs"></i>
                         <span>Get Advisory</span>
                     </a>
+
+                    <button id="mobile-menu-btn" class="lg:hidden p-2 sm:p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 focus:outline-none border border-slate-700/80 transition-colors flex items-center justify-center gap-2" aria-label="Toggle navigation menu" title="All Menu Options">
+                        <i class="fas fa-bars text-lg" id="menu-icon"></i>
+                    </button>
                 </div>
             </div>
+        </div>
+
+        <!-- Full Glassmorphic Menu Drawer -->
+        <div id="mobile-menu" class="hidden bg-slate-950/95 backdrop-blur-2xl border-b border-slate-800 px-4 sm:px-8 py-6 max-w-7xl mx-auto space-y-4 shadow-2xl transition-all max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain">
+            <div class="sm:hidden pb-3 border-b border-slate-800">
+                <a href="/#contact" class="mobile-nav-link btn-primary w-full py-3 rounded-xl text-center text-xs font-bold flex items-center justify-center gap-2">
+                    <i class="fas fa-gavel text-xs"></i>
+                    <span>Get Advisory</span>
+                </a>
+            </div>
+            <ul class="space-y-2 text-sm text-slate-300">
+                <li><a href="/" class="mobile-nav-link hover:text-emerald-400 transition-colors block py-2 border-b border-slate-800/60">Home</a></li>
+                <li><a href="/#products" class="mobile-nav-link hover:text-emerald-400 transition-colors block py-2 border-b border-slate-800/60">AI Apps</a></li>
+                <li><a href="/services.html" class="mobile-nav-link hover:text-emerald-400 transition-colors block py-2 border-b border-slate-800/60">Practice Areas</a></li>
+                <li><a href="/team.html" class="mobile-nav-link hover:text-emerald-400 transition-colors block py-2 border-b border-slate-800/60">Leadership</a></li>
+                <li><a href="/blog/" class="mobile-nav-link text-emerald-400 font-bold block py-2 border-b border-slate-800/60">Insights</a></li>
+                <li><a href="/#contact" class="mobile-nav-link hover:text-emerald-400 transition-colors block py-2">Contact Advisory</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -385,6 +410,32 @@
         </div>
     </div>
     <script>
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                } else {
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-xmark');
+                }
+            });
+
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                });
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             var banner = document.getElementById('gdpr-cookie-banner');
             if (!banner) return;
